@@ -1,0 +1,22 @@
+<Channel xmlVersion="1.0">
+  <Name>Conax Channel Testing</Name>
+  <!-- Edit ChannelId and LCN so that they are unigue -->
+  <ChannelId>6501</ChannelId>
+  <RadioChannel>false</RadioChannel>
+  <IsAdult>false</IsAdult>
+  <DefaultConfiguration>
+    <Lcn>6501</Lcn>
+    <Title>MPS_Channel_6501</Title>
+    <Assets>
+      <Asset device="STB" highDefinition="true" MPP5_Asset_ID="35c80ab8-f59c-420e-82e4-80d15a975a4f">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+      <Asset device="PC" highDefinition="true" MPP5_Asset_ID="41b407b6-ec81-4843-96c3-068c66e7a6da">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+      <Asset device="MAC" highDefinition="true" MPP5_Asset_ID="45653b74-f9f0-401e-9c6a-d0aa2ef716f2">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+      <Asset device="AndroidMobile" highDefinition="true" MPP5_Asset_ID="cac4ed1e-ea20-42a9-9f9e-0162756c6f08">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+      <Asset device="AndroidTablet" highDefinition="true" MPP5_Asset_ID="7d0eda8a-d041-4ced-9e74-22e43fbe3b59">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+    </Assets>
+    <NPVR enable="true" />
+    <Catchup enable="true" />
+    <BoxCover>MPS_Channel_6501.png</BoxCover>
+  </DefaultConfiguration>
+  <MPP5_ID>4479051c-d1e8-46c3-9b46-325bb4645dfc</MPP5_ID>
+</Channel>

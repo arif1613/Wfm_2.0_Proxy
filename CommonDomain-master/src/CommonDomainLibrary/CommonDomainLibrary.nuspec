@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>CommonDomainLibrary</id>
+        <version>1.0.0</version>
+        <authors>MPS Broadband AB</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>CommonDomainLibrary</description>
+	    <dependencies>
+			<dependency id="Edit" version="" />
+			<dependency id="NodaTime" version="[1.1.1]" />
+			<dependency id="NLog" version="[2.1.0]" />
+			<dependency id="windowsazure.mediaservices" version="[3.0.0.5]" />
+			<dependency id="Newtonsoft.Json" version="[6.0.2]" />
+	    </dependencies>
+    </metadata>
+	<files>
+		<file src="CommonDomainLibrary.dll" target="lib\net45" />
+		<file src="CommonDomainLibrary.pdb" target="lib\net45" />
+	</files>
+</package>

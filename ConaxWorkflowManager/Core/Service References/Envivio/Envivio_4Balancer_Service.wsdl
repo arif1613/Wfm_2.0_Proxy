@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSDL:definitions xmlns:tns="urn:envivio:balancer:1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="urn:envivio:balancer:1.0" name="Envivio_4Balancer_Service" targetNamespace="urn:envivio:balancer:1.0" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/">
+  <WSDL:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:envivio:balancer:1.0">
+      <xsd:complexType name="params">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="param" type="ns:param" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="param">
+        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="value" type="xsd:string" />
+      </xsd:complexType>
+      <xsd:complexType name="resourcelist">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="resource" type="ns:resource" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resource">
+        <xsd:attribute name="id" type="xsd:string" />
+        <xsd:attribute name="url" type="xsd:string" />
+        <xsd:attribute name="type" type="xsd:string" />
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:complexType>
+      <xsd:complexType name="jobstatusinfo">
+        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="value" type="xsd:string" />
+      </xsd:complexType>
+      <xsd:complexType name="jobstatusinfolist">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="info" type="ns:jobstatusinfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="jobstatesummary">
+        <xsd:attribute name="name" type="xsd:string" />
+        <xsd:attribute name="count" type="xsd:int" />
+      </xsd:complexType>
+      <xsd:complexType name="jobstatesummarylist">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="state" type="ns:jobstatesummary" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </WSDL:types>
+  <WSDL:message name="addResourceRequest">
+    <WSDL:part name="resource" type="ns:resource" />
+  </WSDL:message>
+  <WSDL:message name="addResourceResponse">
+    <WSDL:part name="resourceid" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="getAllResourcesRequest" />
+  <WSDL:message name="getAllResourcesResponse">
+    <WSDL:part name="resources" type="ns:resourcelist" />
+  </WSDL:message>
+  <WSDL:message name="removeResourceRequest">
+    <WSDL:part name="resourceid" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="removeResourceResponse" />
+  <WSDL:message name="getPresetDescriptionRequest">
+    <WSDL:part name="presetid" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="launchJobRequest">
+    <WSDL:part name="presetid" type="xsd:string" />
+    <WSDL:part name="jobparams" type="ns:params" />
+    <WSDL:part name="jobname" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="launchJobResponse">
+    <WSDL:part name="jobid" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="cancelJobRequest">
+    <WSDL:part name="jobid" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="cancelJobResponse" />
+  <WSDL:message name="getJobStatusRequest">
+    <WSDL:part name="jobid" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="getJobStatusResponse">
+    <WSDL:part name="state" type="xsd:string" />
+    <WSDL:part name="infos" type="ns:jobstatusinfolist" />
+  </WSDL:message>
+  <WSDL:message name="getStatusRequest" />
+  <WSDL:message name="getStatusResponse">
+    <WSDL:part name="status" type="xsd:string" />
+  </WSDL:message>
+  <WSDL:message name="startRequest" />
+  <WSDL:message name="startResponse" />
+  <WSDL:message name="stopRequest" />
+  <WSDL:message name="stopResponse" />
+  <WSDL:message name="getJobStateSummaryRequest" />
+  <WSDL:message name="getJobStateSummaryResponse">
+    <WSDL:part name="states" type="ns:jobstatesummarylist" />
+  </WSDL:message>
+  <WSDL:portType name="ServicePortType">
+    <WSDL:operation name="addResource">
+      <WSDL:input message="ns:addResourceRequest" />
+      <WSDL:output message="ns:addResourceResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="getAllResources">
+      <WSDL:input message="ns:getAllResourcesRequest" />
+      <WSDL:output message="ns:getAllResourcesResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="removeResource">
+      <WSDL:input message="ns:removeResourceRequest" />
+      <WSDL:output message="ns:removeResourceResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="launchJob">
+      <WSDL:input message="ns:launchJobRequest" />
+      <WSDL:output message="ns:launchJobResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="cancelJob">
+      <WSDL:input message="ns:cancelJobRequest" />
+      <WSDL:output message="ns:cancelJobResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="getJobStatus">
+      <WSDL:input message="ns:getJobStatusRequest" />
+      <WSDL:output message="ns:getJobStatusResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="getStatus">
+      <WSDL:input message="ns:getStatusRequest" />
+      <WSDL:output message="ns:getStatusResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="start">
+      <WSDL:input message="ns:startRequest" />
+      <WSDL:output message="ns:startResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="stop">
+      <WSDL:input message="ns:stopRequest" />
+      <WSDL:output message="ns:stopResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="getJobStateSummary">
+      <WSDL:input message="ns:getJobStateSummaryRequest" />
+      <WSDL:output message="ns:getJobStateSummaryResponse" />
+    </WSDL:operation>
+  </WSDL:portType>
+  <WSDL:binding name="Envivio_4Balancer" type="ns:ServicePortType">
+    <SOAP:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <WSDL:operation name="launchJob">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/launchJob" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="cancelJob">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/cancelJob" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="getJobStatus">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/getJobStatus" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="addResource">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/addResource" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="getAllResources">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/getAllResources" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="removeResource">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/removeResource" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="getStatus">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/getStatus" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="start">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/start" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="stop">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/stop" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="getJobStateSummary">
+      <SOAP:operation soapAction="urn:envivio:balancer:1.0/getJobStatusSummary" />
+      <WSDL:input>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" namespace="urn:envivio:balancer:1.0" />
+      </WSDL:output>
+    </WSDL:operation>
+  </WSDL:binding>
+  <WSDL:service name="Envivio_4Balancer_Service">
+    <documentation>Envivio 4Balancer</documentation>
+    <WSDL:port name="Service" binding="ns:Envivio_4Balancer">
+      <SOAP:address location="http://10.4.1.10/balancerSOAP" />
+    </WSDL:port>
+  </WSDL:service>
+</WSDL:definitions>

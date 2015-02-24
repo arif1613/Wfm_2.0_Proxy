@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ADI>
+	<Metadata>
+	<!--AMS Provider=CRO, Asset_Name=Content Name-->
+		<AMS Provider="CP1" Asset_Name="Conax_Test_1" /> 
+		<App_Data App="MOD" Name="Metadata_Spec_Version" Value="CableLabsVOD1.0"/> 
+	</Metadata>
+	<Asset>
+		<Metadata>	
+			<!--Content Sort name-->
+			<App_Data App="MOD" Name="Title_Sort_Name" Value="Conax Test 1"/> 
+			<!--Content Title-->
+			<App_Data App="MOD" Name="Title" Value="Conax Test 1"/> 
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Episode_Name" Value="Conax Test 1"/>
+			<!--Content Long Description-->
+			<App_Data App="MOD" Name="Summary_Long" Value="Conax Test 1"/> 
+			<!--Content Short Description-->
+			<App_Data App="MOD" Name="Summary_Short" Value="Conax Test 1"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Rating" Value="PG"/>
+			<!--Content Runtime-->
+			<App_Data App="MOD" Name="Run_Time" Value="03:14:00"/>
+			<!--Content Production Year-->
+			<App_Data App="MOD" Name="Year" Value="2012"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Country_of_Origin" Value="Sweden"/>
+			<!--All "Actors" value are added as a content property named Cast-->
+			<App_Data App="MOD" Name="Actors" Value="Conax Test 1"/> 
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Director" Value="Conax Test 1"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Producer" Value="Conax Test 1"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Category" Value="Action"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Genre" Value="Comedy"/>
+			<!--Content Event Period-->
+			<App_Data App="MOD" Name="Licensing_Window_Start" Value="2002-02-01"/> 
+			<App_Data App="MOD" Name="Licensing_Window_End" Value="2013-12-28"/> 
+		</Metadata>
+		<Asset>
+		<!--Asset information-->
+			<Metadata>
+			<!--Main Video Asset-->
+				<App_Data App="MOD" Name="Type" Value="movie"/>
+			<!--Asset Language-->
+				<App_Data App="MOD" Name="Languages" Value="en"/>
+				<App_Data App="MOD" Name="Resolution_Type" Value="SD"/>
+				<App_Data App="MOD" Name="Content_FileSize" Value="3907840625"/>
+			</Metadata>
+			<!--Asset file name-->
+			<Content Value="conax.ts"/> 
+		</Asset>
+		<Asset>
+			<Metadata>
+			<!--Trailer Asset-->
+				<App_Data App="MOD" Name="Type" Value="preview"/> 
+				<App_Data App="MOD" Name="Languages" Value="en"/> 
+				<App_Data App="MOD" Name="Resolution_Type" Value="SD"/>
+				<App_Data App="MOD" Name="Content_FileSize" Value="25284375"/> 
+			</Metadata>
+			<!--Trailer Asset file name-->
+			<Content Value="conax_preview.ts"/> 
+		</Asset>
+		<Asset>
+		<!--Image Asset-->
+			<Metadata>
+				<App_Data App="MOD" Name="Type" Value="box cover"/> 
+				<App_Data App="MOD" Name="Image_Aspect_Ratio" Value="320x240"/>
+			</Metadata>
+			<Content Value="conax.jpg"/>
+		</Asset>
+	</Asset>
+</ADI>

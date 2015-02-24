@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Rhozet.com/Rhozet.Services.IWfcJmServices" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Rhozet.com/Rhozet.Services.IWfcJmServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Rhozet.com/Rhozet.Services.IWfcJmServices/Imports">
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd0" namespace="http://Rhozet.com/Rhozet.Services.IJmLib" />
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Rhozet.ApiLib" />
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd5" namespace="http://Rhozet.com/Rhozet.Services.IWfcJmServices" />
+      <xsd:import schemaLocation="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Rhozet.JobManager" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWfcJmServices_GetServerDefinitionList_InputMessage">
+    <wsdl:part xmlns:q1="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q1:GetServerDefinitionList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetServerDefinitionList_OutputMessage">
+    <wsdl:part xmlns:q2="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q2:GetServerDefinitionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreServerDefinition_InputMessage">
+    <wsdl:part xmlns:q3="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q3:StoreServerDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreServerDefinition_OutputMessage">
+    <wsdl:part xmlns:q4="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q4:StoreServerDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveServerDefinition_InputMessage">
+    <wsdl:part xmlns:q5="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q5:RemoveServerDefinition" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveServerDefinition_OutputMessage">
+    <wsdl:part xmlns:q6="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q6:RemoveServerDefinitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetNextAvailableJobPriority_InputMessage">
+    <wsdl:part xmlns:q7="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q7:GetNextAvailableJobPriority" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetNextAvailableJobPriority_OutputMessage">
+    <wsdl:part xmlns:q8="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q8:GetNextAvailableJobPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateJobPriority_InputMessage">
+    <wsdl:part xmlns:q9="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q9:UpdateJobPriority" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateJobPriority_OutputMessage">
+    <wsdl:part xmlns:q10="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q10:UpdateJobPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateReport_InputMessage">
+    <wsdl:part xmlns:q11="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q11:GenerateReport" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateReport_OutputMessage">
+    <wsdl:part xmlns:q12="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q12:GenerateReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJobs_InputMessage">
+    <wsdl:part xmlns:q13="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q13:RemoveJobs" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJobs_OutputMessage">
+    <wsdl:part xmlns:q14="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q14:RemoveJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_PurgeAllJobs_InputMessage">
+    <wsdl:part xmlns:q15="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q15:PurgeAllJobs" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_PurgeAllJobs_OutputMessage">
+    <wsdl:part xmlns:q16="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q16:PurgeAllJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_PauseJobs_InputMessage">
+    <wsdl:part xmlns:q17="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q17:PauseJobs" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_PauseJobs_OutputMessage">
+    <wsdl:part xmlns:q18="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q18:PauseJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_ResumeJobs_InputMessage">
+    <wsdl:part xmlns:q19="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q19:ResumeJobs" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_ResumeJobs_OutputMessage">
+    <wsdl:part xmlns:q20="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q20:ResumeJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchFolderById_InputMessage">
+    <wsdl:part xmlns:q21="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q21:GetWatchFolderById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchFolderById_OutputMessage">
+    <wsdl:part xmlns:q22="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q22:GetWatchFolderByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchConfigById_InputMessage">
+    <wsdl:part xmlns:q23="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q23:GetWatchConfigById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchConfigById_OutputMessage">
+    <wsdl:part xmlns:q24="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q24:GetWatchConfigByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchConfigPage_InputMessage">
+    <wsdl:part xmlns:q25="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q25:GetWatchConfigPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchConfigPage_OutputMessage">
+    <wsdl:part xmlns:q26="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q26:GetWatchConfigPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchConfigPageLean_InputMessage">
+    <wsdl:part xmlns:q27="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q27:GetWatchConfigPageLean" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchConfigPageLean_OutputMessage">
+    <wsdl:part xmlns:q28="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q28:GetWatchConfigPageLeanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreWatchConfig_InputMessage">
+    <wsdl:part xmlns:q29="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q29:StoreWatchConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreWatchConfig_OutputMessage">
+    <wsdl:part xmlns:q30="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q30:StoreWatchConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveWatchConfig_InputMessage">
+    <wsdl:part xmlns:q31="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q31:RemoveWatchConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveWatchConfig_OutputMessage">
+    <wsdl:part xmlns:q32="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q32:RemoveWatchConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowTemplateById_InputMessage">
+    <wsdl:part xmlns:q33="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q33:GetWorkflowTemplateById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowTemplateById_OutputMessage">
+    <wsdl:part xmlns:q34="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q34:GetWorkflowTemplateByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowXMLById_InputMessage">
+    <wsdl:part xmlns:q35="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q35:GetWorkflowXMLById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowXMLById_OutputMessage">
+    <wsdl:part xmlns:q36="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q36:GetWorkflowXMLByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowIdList_InputMessage">
+    <wsdl:part xmlns:q37="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q37:GetWorkflowIdList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowIdList_OutputMessage">
+    <wsdl:part xmlns:q38="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q38:GetWorkflowIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowTemplatePage_InputMessage">
+    <wsdl:part xmlns:q39="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q39:GetWorkflowTemplatePage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWorkflowTemplatePage_OutputMessage">
+    <wsdl:part xmlns:q40="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q40:GetWorkflowTemplatePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreWorkflowTemplate_InputMessage">
+    <wsdl:part xmlns:q41="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q41:StoreWorkflowTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreWorkflowTemplate_OutputMessage">
+    <wsdl:part xmlns:q42="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q42:StoreWorkflowTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveWorkflowTemplate_InputMessage">
+    <wsdl:part xmlns:q43="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q43:RemoveWorkflowTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveWorkflowTemplate_OutputMessage">
+    <wsdl:part xmlns:q44="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q44:RemoveWorkflowTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchFoldersAssociatedWithWorkflow_InputMessage">
+    <wsdl:part xmlns:q45="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q45:GetWatchFoldersAssociatedWithWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetWatchFoldersAssociatedWithWorkflow_OutputMessage">
+    <wsdl:part xmlns:q46="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q46:GetWatchFoldersAssociatedWithWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreConfig_InputMessage">
+    <wsdl:part xmlns:q47="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q47:StoreConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreConfig_OutputMessage">
+    <wsdl:part xmlns:q48="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q48:StoreConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveConfig_InputMessage">
+    <wsdl:part xmlns:q49="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q49:RemoveConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveConfig_OutputMessage">
+    <wsdl:part xmlns:q50="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q50:RemoveConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConfigList_InputMessage">
+    <wsdl:part xmlns:q51="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q51:GetConfigList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConfigList_OutputMessage">
+    <wsdl:part xmlns:q52="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q52:GetConfigListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConfigPage_InputMessage">
+    <wsdl:part xmlns:q53="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q53:GetConfigPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConfigPage_OutputMessage">
+    <wsdl:part xmlns:q54="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q54:GetConfigPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConfig_InputMessage">
+    <wsdl:part xmlns:q55="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q55:GetConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConfig_OutputMessage">
+    <wsdl:part xmlns:q56="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q56:GetConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetActiveTaskByMachine_InputMessage">
+    <wsdl:part xmlns:q57="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q57:GetActiveTaskByMachine" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetActiveTaskByMachine_OutputMessage">
+    <wsdl:part xmlns:q58="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q58:GetActiveTaskByMachineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobManagerMachineTime_InputMessage">
+    <wsdl:part xmlns:q59="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q59:GetJobManagerMachineTime" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobManagerMachineTime_OutputMessage">
+    <wsdl:part xmlns:q60="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q60:GetJobManagerMachineTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetMachineGroupById_InputMessage">
+    <wsdl:part xmlns:q61="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q61:GetMachineGroupById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetMachineGroupById_OutputMessage">
+    <wsdl:part xmlns:q62="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q62:GetMachineGroupByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetMachineGroupList_InputMessage">
+    <wsdl:part xmlns:q63="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q63:GetMachineGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetMachineGroupList_OutputMessage">
+    <wsdl:part xmlns:q64="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q64:GetMachineGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetSystemMachineGroupList_InputMessage">
+    <wsdl:part xmlns:q65="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q65:GetSystemMachineGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetSystemMachineGroupList_OutputMessage">
+    <wsdl:part xmlns:q66="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q66:GetSystemMachineGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreMachineGroup_InputMessage">
+    <wsdl:part xmlns:q67="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q67:StoreMachineGroup" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreMachineGroup_OutputMessage">
+    <wsdl:part xmlns:q68="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q68:StoreMachineGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveMachineGroup_InputMessage">
+    <wsdl:part xmlns:q69="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q69:RemoveMachineGroup" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveMachineGroup_OutputMessage">
+    <wsdl:part xmlns:q70="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q70:RemoveMachineGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetServerDefinitionById_InputMessage">
+    <wsdl:part xmlns:q71="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q71:GetServerDefinitionById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetServerDefinitionById_OutputMessage">
+    <wsdl:part xmlns:q72="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q72:GetServerDefinitionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskCountByTaskType_InputMessage">
+    <wsdl:part xmlns:q73="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q73:GetTaskCountByTaskType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskCountByTaskType_OutputMessage">
+    <wsdl:part xmlns:q74="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q74:GetTaskCountByTaskTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskActiveCountEx_InputMessage">
+    <wsdl:part xmlns:q75="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q75:GetTaskActiveCountEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskActiveCountEx_OutputMessage">
+    <wsdl:part xmlns:q76="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q76:GetTaskActiveCountExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetActiveTaskCount_InputMessage">
+    <wsdl:part xmlns:q77="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q77:GetActiveTaskCount" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetActiveTaskCount_OutputMessage">
+    <wsdl:part xmlns:q78="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q78:GetActiveTaskCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPage_InputMessage">
+    <wsdl:part xmlns:q79="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q79:GetTaskPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPage_OutputMessage">
+    <wsdl:part xmlns:q80="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q80:GetTaskPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPageBySchedule_InputMessage">
+    <wsdl:part xmlns:q81="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q81:GetTaskPageBySchedule" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPageBySchedule_OutputMessage">
+    <wsdl:part xmlns:q82="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q82:GetTaskPageByScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskById_InputMessage">
+    <wsdl:part xmlns:q83="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q83:GetTaskById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskById_OutputMessage">
+    <wsdl:part xmlns:q84="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q84:GetTaskByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskListByType_InputMessage">
+    <wsdl:part xmlns:q85="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q85:GetTaskListByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskListByType_OutputMessage">
+    <wsdl:part xmlns:q86="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q86:GetTaskListByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPageByType_InputMessage">
+    <wsdl:part xmlns:q87="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q87:GetTaskPageByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPageByType_OutputMessage">
+    <wsdl:part xmlns:q88="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q88:GetTaskPageByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskGuidPageByType_InputMessage">
+    <wsdl:part xmlns:q89="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q89:GetTaskGuidPageByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskGuidPageByType_OutputMessage">
+    <wsdl:part xmlns:q90="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q90:GetTaskGuidPageByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJob_InputMessage">
+    <wsdl:part xmlns:q91="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q91:QueueJob" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJob_OutputMessage">
+    <wsdl:part xmlns:q92="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q92:QueueJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueComplexJob_InputMessage">
+    <wsdl:part xmlns:q93="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q93:QueueComplexJob" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueComplexJob_OutputMessage">
+    <wsdl:part xmlns:q94="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q94:QueueComplexJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobAssets_InputMessage">
+    <wsdl:part xmlns:q95="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q95:GetJobAssets" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobAssets_OutputMessage">
+    <wsdl:part xmlns:q96="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q96:GetJobAssetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueWorkflowJob_InputMessage">
+    <wsdl:part xmlns:q97="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q97:QueueWorkflowJob" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueWorkflowJob_OutputMessage">
+    <wsdl:part xmlns:q98="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q98:QueueWorkflowJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueWorkflowJobEx_InputMessage">
+    <wsdl:part xmlns:q99="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q99:QueueWorkflowJobEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueWorkflowJobEx_OutputMessage">
+    <wsdl:part xmlns:q100="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q100:QueueWorkflowJobExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueWorkflowTemplateJob_InputMessage">
+    <wsdl:part xmlns:q101="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q101:QueueWorkflowTemplateJob" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueWorkflowTemplateJob_OutputMessage">
+    <wsdl:part xmlns:q102="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q102:QueueWorkflowTemplateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateTemplateExJobByWorkflow_InputMessage">
+    <wsdl:part xmlns:q103="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q103:GenerateTemplateExJobByWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateTemplateExJobByWorkflow_OutputMessage">
+    <wsdl:part xmlns:q104="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q104:GenerateTemplateExJobByWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobByWorkflowGuid_InputMessage">
+    <wsdl:part xmlns:q105="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q105:QueueJobByWorkflowGuid" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobByWorkflowGuid_OutputMessage">
+    <wsdl:part xmlns:q106="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q106:QueueJobByWorkflowGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateJobByWorkflowGuid_InputMessage">
+    <wsdl:part xmlns:q107="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q107:GenerateJobByWorkflowGuid" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateJobByWorkflowGuid_OutputMessage">
+    <wsdl:part xmlns:q108="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q108:GenerateJobByWorkflowGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobByWorkflow_InputMessage">
+    <wsdl:part xmlns:q109="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q109:QueueJobByWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobByWorkflow_OutputMessage">
+    <wsdl:part xmlns:q110="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q110:QueueJobByWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateJobByWorkflowGuidAndType_InputMessage">
+    <wsdl:part xmlns:q111="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q111:GenerateJobByWorkflowGuidAndType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateJobByWorkflowGuidAndType_OutputMessage">
+    <wsdl:part xmlns:q112="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q112:GenerateJobByWorkflowGuidAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobByWatchFolderGuid_InputMessage">
+    <wsdl:part xmlns:q113="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q113:QueueJobByWatchFolderGuid" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobByWatchFolderGuid_OutputMessage">
+    <wsdl:part xmlns:q114="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q114:QueueJobByWatchFolderGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateJobByWorkflow_InputMessage">
+    <wsdl:part xmlns:q115="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q115:GenerateJobByWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GenerateJobByWorkflow_OutputMessage">
+    <wsdl:part xmlns:q116="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q116:GenerateJobByWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobXMLByWorkflowGuid_InputMessage">
+    <wsdl:part xmlns:q117="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q117:QueueJobXMLByWorkflowGuid" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobXMLByWorkflowGuid_OutputMessage">
+    <wsdl:part xmlns:q118="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q118:QueueJobXMLByWorkflowGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobXML_InputMessage">
+    <wsdl:part xmlns:q119="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q119:QueueJobXML" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_QueueJobXML_OutputMessage">
+    <wsdl:part xmlns:q120="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q120:QueueJobXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateJobStatus_InputMessage">
+    <wsdl:part xmlns:q121="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q121:UpdateJobStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateJobStatus_OutputMessage">
+    <wsdl:part xmlns:q122="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q122:UpdateJobStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJob_InputMessage">
+    <wsdl:part xmlns:q123="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q123:GetJob" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJob_OutputMessage">
+    <wsdl:part xmlns:q124="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q124:GetJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_JobUpdate_InputMessage">
+    <wsdl:part xmlns:q125="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q125:JobUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_JobUpdate_OutputMessage">
+    <wsdl:part xmlns:q126="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q126:JobUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobDashboard_InputMessage">
+    <wsdl:part xmlns:q127="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q127:GetJobDashboard" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobDashboard_OutputMessage">
+    <wsdl:part xmlns:q128="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q128:GetJobDashboardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetReplicationDashboard_InputMessage">
+    <wsdl:part xmlns:q129="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q129:GetReplicationDashboard" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetReplicationDashboard_OutputMessage">
+    <wsdl:part xmlns:q130="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q130:GetReplicationDashboardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageWithStatus_InputMessage">
+    <wsdl:part xmlns:q131="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q131:GetJobPageWithStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageWithStatus_OutputMessage">
+    <wsdl:part xmlns:q132="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q132:GetJobPageWithStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetActiveJobsPage_InputMessage">
+    <wsdl:part xmlns:q133="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q133:GetActiveJobsPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetActiveJobsPage_OutputMessage">
+    <wsdl:part xmlns:q134="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q134:GetActiveJobsPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageByServiceId_InputMessage">
+    <wsdl:part xmlns:q135="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q135:GetJobPageByServiceId" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageByServiceId_OutputMessage">
+    <wsdl:part xmlns:q136="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q136:GetJobPageByServiceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageBySchedule_InputMessage">
+    <wsdl:part xmlns:q137="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q137:GetJobPageBySchedule" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageBySchedule_OutputMessage">
+    <wsdl:part xmlns:q138="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q138:GetJobPageByScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageByTaskStatusAndType_InputMessage">
+    <wsdl:part xmlns:q139="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q139:GetJobPageByTaskStatusAndType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageByTaskStatusAndType_OutputMessage">
+    <wsdl:part xmlns:q140="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q140:GetJobPageByTaskStatusAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageWithTaskAndStatus_InputMessage">
+    <wsdl:part xmlns:q141="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q141:GetJobPageWithTaskAndStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageWithTaskAndStatus_OutputMessage">
+    <wsdl:part xmlns:q142="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q142:GetJobPageWithTaskAndStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJobsWithStatusByTaskStatusAndType_InputMessage">
+    <wsdl:part xmlns:q143="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q143:RemoveJobsWithStatusByTaskStatusAndType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJobsWithStatusByTaskStatusAndType_OutputMessage">
+    <wsdl:part xmlns:q144="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q144:RemoveJobsWithStatusByTaskStatusAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJobsWithStatus_InputMessage">
+    <wsdl:part xmlns:q145="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q145:RemoveJobsWithStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJobsWithStatus_OutputMessage">
+    <wsdl:part xmlns:q146="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q146:RemoveJobsWithStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPage_InputMessage">
+    <wsdl:part xmlns:q147="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q147:GetJobPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPage_OutputMessage">
+    <wsdl:part xmlns:q148="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q148:GetJobPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageWithTask_InputMessage">
+    <wsdl:part xmlns:q149="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q149:GetJobPageWithTask" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobPageWithTask_OutputMessage">
+    <wsdl:part xmlns:q150="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q150:GetJobPageWithTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobCount_InputMessage">
+    <wsdl:part xmlns:q151="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q151:GetJobCount" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobCount_OutputMessage">
+    <wsdl:part xmlns:q152="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q152:GetJobCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJob_InputMessage">
+    <wsdl:part xmlns:q153="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q153:RemoveJob" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveJob_OutputMessage">
+    <wsdl:part xmlns:q154="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q154:RemoveJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTemplateModuleListByType_InputMessage">
+    <wsdl:part xmlns:q155="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q155:GetTemplateModuleListByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTemplateModuleListByType_OutputMessage">
+    <wsdl:part xmlns:q156="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q156:GetTemplateModuleListByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModulePage_InputMessage">
+    <wsdl:part xmlns:q157="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q157:GetModulePage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModulePage_OutputMessage">
+    <wsdl:part xmlns:q158="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q158:GetModulePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModulePageBySubType_InputMessage">
+    <wsdl:part xmlns:q159="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q159:GetModulePageBySubType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModulePageBySubType_OutputMessage">
+    <wsdl:part xmlns:q160="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q160:GetModulePageBySubTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTemplateModulePageByType_InputMessage">
+    <wsdl:part xmlns:q161="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q161:GetTemplateModulePageByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTemplateModulePageByType_OutputMessage">
+    <wsdl:part xmlns:q162="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q162:GetTemplateModulePageByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetDistinctModuleSubTypes_InputMessage">
+    <wsdl:part xmlns:q163="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q163:GetDistinctModuleSubTypes" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetDistinctModuleSubTypes_OutputMessage">
+    <wsdl:part xmlns:q164="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q164:GetDistinctModuleSubTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveModuleScheme_InputMessage">
+    <wsdl:part xmlns:q165="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q165:RemoveModuleScheme" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveModuleScheme_OutputMessage">
+    <wsdl:part xmlns:q166="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q166:RemoveModuleSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreModuleScheme_InputMessage">
+    <wsdl:part xmlns:q167="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q167:StoreModuleScheme" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreModuleScheme_OutputMessage">
+    <wsdl:part xmlns:q168="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q168:StoreModuleSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleScheme_InputMessage">
+    <wsdl:part xmlns:q169="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q169:GetModuleScheme" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleScheme_OutputMessage">
+    <wsdl:part xmlns:q170="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q170:GetModuleSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleSchemeList_InputMessage">
+    <wsdl:part xmlns:q171="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q171:GetModuleSchemeList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleSchemeList_OutputMessage">
+    <wsdl:part xmlns:q172="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q172:GetModuleSchemeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleSchemePage_InputMessage">
+    <wsdl:part xmlns:q173="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q173:GetModuleSchemePage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleSchemePage_OutputMessage">
+    <wsdl:part xmlns:q174="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q174:GetModuleSchemePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_EnableFetcher_InputMessage">
+    <wsdl:part xmlns:q175="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q175:EnableFetcher" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_EnableFetcher_OutputMessage">
+    <wsdl:part xmlns:q176="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q176:EnableFetcherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_IsFetcherEnabledEx_InputMessage">
+    <wsdl:part xmlns:q177="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q177:IsFetcherEnabledEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_IsFetcherEnabledEx_OutputMessage">
+    <wsdl:part xmlns:q178="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q178:IsFetcherEnabledExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RegisterFetcherEx_InputMessage">
+    <wsdl:part xmlns:q179="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q179:RegisterFetcherEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RegisterFetcherEx_OutputMessage">
+    <wsdl:part xmlns:q180="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q180:RegisterFetcherExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RegisterFetcher_InputMessage">
+    <wsdl:part xmlns:q181="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q181:RegisterFetcher" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RegisterFetcher_OutputMessage">
+    <wsdl:part xmlns:q182="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q182:RegisterFetcherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateFetcherStatus_InputMessage">
+    <wsdl:part xmlns:q183="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q183:UpdateFetcherStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateFetcherStatus_OutputMessage">
+    <wsdl:part xmlns:q184="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q184:UpdateFetcherStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateMachineStatus_InputMessage">
+    <wsdl:part xmlns:q185="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q185:UpdateMachineStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateMachineStatus_OutputMessage">
+    <wsdl:part xmlns:q186="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q186:UpdateMachineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherById_InputMessage">
+    <wsdl:part xmlns:q187="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q187:GetFetcherById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherById_OutputMessage">
+    <wsdl:part xmlns:q188="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q188:GetFetcherByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherList_InputMessage">
+    <wsdl:part xmlns:q189="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q189:GetFetcherList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherList_OutputMessage">
+    <wsdl:part xmlns:q190="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q190:GetFetcherListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherPage_InputMessage">
+    <wsdl:part xmlns:q191="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q191:GetFetcherPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherPage_OutputMessage">
+    <wsdl:part xmlns:q192="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q192:GetFetcherPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveFetcher_InputMessage">
+    <wsdl:part xmlns:q193="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q193:RemoveFetcher" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveFetcher_OutputMessage">
+    <wsdl:part xmlns:q194="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q194:RemoveFetcherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherConfig_InputMessage">
+    <wsdl:part xmlns:q195="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q195:GetFetcherConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetFetcherConfig_OutputMessage">
+    <wsdl:part xmlns:q196="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q196:GetFetcherConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreFetcherConfig_InputMessage">
+    <wsdl:part xmlns:q197="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q197:StoreFetcherConfig" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreFetcherConfig_OutputMessage">
+    <wsdl:part xmlns:q198="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q198:StoreFetcherConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTask_InputMessage">
+    <wsdl:part xmlns:q199="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q199:FetchTask" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTask_OutputMessage">
+    <wsdl:part xmlns:q200="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q200:FetchTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTaskWithComplexity_InputMessage">
+    <wsdl:part xmlns:q201="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q201:FetchTaskWithComplexity" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTaskWithComplexity_OutputMessage">
+    <wsdl:part xmlns:q202="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q202:FetchTaskWithComplexityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTaskByType_InputMessage">
+    <wsdl:part xmlns:q203="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q203:FetchTaskByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTaskByType_OutputMessage">
+    <wsdl:part xmlns:q204="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q204:FetchTaskByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTaskById_InputMessage">
+    <wsdl:part xmlns:q205="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q205:FetchTaskById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_FetchTaskById_OutputMessage">
+    <wsdl:part xmlns:q206="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q206:FetchTaskByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateTaskStatus_InputMessage">
+    <wsdl:part xmlns:q207="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q207:UpdateTaskStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_UpdateTaskStatus_OutputMessage">
+    <wsdl:part xmlns:q208="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q208:UpdateTaskStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskListByJobId_InputMessage">
+    <wsdl:part xmlns:q209="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q209:GetTaskListByJobId" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskListByJobId_OutputMessage">
+    <wsdl:part xmlns:q210="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q210:GetTaskListByJobIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTasksUpdatedSinceByJobId_InputMessage">
+    <wsdl:part xmlns:q211="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q211:GetTasksUpdatedSinceByJobId" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTasksUpdatedSinceByJobId_OutputMessage">
+    <wsdl:part xmlns:q212="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q212:GetTasksUpdatedSinceByJobIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskCountEx_InputMessage">
+    <wsdl:part xmlns:q213="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q213:GetTaskCountEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskCountEx_OutputMessage">
+    <wsdl:part xmlns:q214="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q214:GetTaskCountExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskCount_InputMessage">
+    <wsdl:part xmlns:q215="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q215:GetTaskCount" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskCount_OutputMessage">
+    <wsdl:part xmlns:q216="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q216:GetTaskCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetVersion_InputMessage">
+    <wsdl:part xmlns:q217="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q217:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetVersion_OutputMessage">
+    <wsdl:part xmlns:q218="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q218:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConnectionString_InputMessage">
+    <wsdl:part xmlns:q219="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q219:GetConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetConnectionString_OutputMessage">
+    <wsdl:part xmlns:q220="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q220:GetConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJMGroup_InputMessage">
+    <wsdl:part xmlns:q221="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q221:GetJMGroup" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJMGroup_OutputMessage">
+    <wsdl:part xmlns:q222="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q222:GetJMGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetBindingPort_InputMessage">
+    <wsdl:part xmlns:q223="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q223:GetBindingPort" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetBindingPort_OutputMessage">
+    <wsdl:part xmlns:q224="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q224:GetBindingPortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreLogs_InputMessage">
+    <wsdl:part xmlns:q225="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q225:StoreLogs" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreLogs_OutputMessage">
+    <wsdl:part xmlns:q226="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q226:StoreLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLog_InputMessage">
+    <wsdl:part xmlns:q227="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q227:GetErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLog_OutputMessage">
+    <wsdl:part xmlns:q228="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q228:GetErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLogByReferenceId_InputMessage">
+    <wsdl:part xmlns:q229="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q229:GetErrorLogByReferenceId" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLogByReferenceId_OutputMessage">
+    <wsdl:part xmlns:q230="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q230:GetErrorLogByReferenceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLogPage_InputMessage">
+    <wsdl:part xmlns:q231="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q231:GetErrorLogPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLogPage_OutputMessage">
+    <wsdl:part xmlns:q232="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q232:GetErrorLogPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLogList_InputMessage">
+    <wsdl:part xmlns:q233="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q233:GetErrorLogList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetErrorLogList_OutputMessage">
+    <wsdl:part xmlns:q234="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q234:GetErrorLogListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreTaskPropertyEx_InputMessage">
+    <wsdl:part xmlns:q235="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q235:StoreTaskPropertyEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreTaskPropertyEx_OutputMessage">
+    <wsdl:part xmlns:q236="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q236:StoreTaskPropertyExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreTaskPropertiesEx_InputMessage">
+    <wsdl:part xmlns:q237="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q237:StoreTaskPropertiesEx" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreTaskPropertiesEx_OutputMessage">
+    <wsdl:part xmlns:q238="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q238:StoreTaskPropertiesExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExById_InputMessage">
+    <wsdl:part xmlns:q239="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q239:GetTaskPropertyExById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExById_OutputMessage">
+    <wsdl:part xmlns:q240="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q240:GetTaskPropertyExByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExByReferenceId_InputMessage">
+    <wsdl:part xmlns:q241="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q241:GetTaskPropertyExByReferenceId" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExByReferenceId_OutputMessage">
+    <wsdl:part xmlns:q242="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q242:GetTaskPropertyExByReferenceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExByRefNamSeq_InputMessage">
+    <wsdl:part xmlns:q243="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q243:GetTaskPropertyExByRefNamSeq" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExByRefNamSeq_OutputMessage">
+    <wsdl:part xmlns:q244="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q244:GetTaskPropertyExByRefNamSeqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExPage_InputMessage">
+    <wsdl:part xmlns:q245="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q245:GetTaskPropertyExPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetTaskPropertyExPage_OutputMessage">
+    <wsdl:part xmlns:q246="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q246:GetTaskPropertyExPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemovePreset_InputMessage">
+    <wsdl:part xmlns:q247="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q247:RemovePreset" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemovePreset_OutputMessage">
+    <wsdl:part xmlns:q248="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q248:RemovePresetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StorePreset_InputMessage">
+    <wsdl:part xmlns:q249="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q249:StorePreset" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StorePreset_OutputMessage">
+    <wsdl:part xmlns:q250="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q250:StorePresetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreXMLPreset_InputMessage">
+    <wsdl:part xmlns:q251="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q251:StoreXMLPreset" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreXMLPreset_OutputMessage">
+    <wsdl:part xmlns:q252="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q252:StoreXMLPresetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPreset_InputMessage">
+    <wsdl:part xmlns:q253="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q253:GetPreset" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPreset_OutputMessage">
+    <wsdl:part xmlns:q254="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q254:GetPresetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetXmlById_InputMessage">
+    <wsdl:part xmlns:q255="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q255:GetPresetXmlById" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetXmlById_OutputMessage">
+    <wsdl:part xmlns:q256="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q256:GetPresetXmlByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresets_InputMessage">
+    <wsdl:part xmlns:q257="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q257:GetPresets" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresets_OutputMessage">
+    <wsdl:part xmlns:q258="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q258:GetPresetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetList_InputMessage">
+    <wsdl:part xmlns:q259="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q259:GetPresetList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetList_OutputMessage">
+    <wsdl:part xmlns:q260="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q260:GetPresetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetIdList_InputMessage">
+    <wsdl:part xmlns:q261="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q261:GetPresetIdList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetIdList_OutputMessage">
+    <wsdl:part xmlns:q262="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q262:GetPresetIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetListByType_InputMessage">
+    <wsdl:part xmlns:q263="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q263:GetPresetListByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetListByType_OutputMessage">
+    <wsdl:part xmlns:q264="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q264:GetPresetListByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetListByCategory_InputMessage">
+    <wsdl:part xmlns:q265="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q265:GetPresetListByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetListByCategory_OutputMessage">
+    <wsdl:part xmlns:q266="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q266:GetPresetListByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetPage_InputMessage">
+    <wsdl:part xmlns:q267="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q267:GetPresetPage" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetPage_OutputMessage">
+    <wsdl:part xmlns:q268="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q268:GetPresetPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetPageByType_InputMessage">
+    <wsdl:part xmlns:q269="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q269:GetPresetPageByType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetPageByType_OutputMessage">
+    <wsdl:part xmlns:q270="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q270:GetPresetPageByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetPageByCategory_InputMessage">
+    <wsdl:part xmlns:q271="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q271:GetPresetPageByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetPresetPageByCategory_OutputMessage">
+    <wsdl:part xmlns:q272="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q272:GetPresetPageByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_IsPresetNameAvailable_InputMessage">
+    <wsdl:part xmlns:q273="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q273:IsPresetNameAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_IsPresetNameAvailable_OutputMessage">
+    <wsdl:part xmlns:q274="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q274:IsPresetNameAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetDistinctPresetTypes_InputMessage">
+    <wsdl:part xmlns:q275="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q275:GetDistinctPresetTypes" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetDistinctPresetTypes_OutputMessage">
+    <wsdl:part xmlns:q276="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q276:GetDistinctPresetTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveModule_InputMessage">
+    <wsdl:part xmlns:q277="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q277:RemoveModule" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_RemoveModule_OutputMessage">
+    <wsdl:part xmlns:q278="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q278:RemoveModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreModule_InputMessage">
+    <wsdl:part xmlns:q279="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q279:StoreModule" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_StoreModule_OutputMessage">
+    <wsdl:part xmlns:q280="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q280:StoreModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModule_InputMessage">
+    <wsdl:part xmlns:q281="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q281:GetModule" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModule_OutputMessage">
+    <wsdl:part xmlns:q282="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q282:GetModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleList_InputMessage">
+    <wsdl:part xmlns:q283="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q283:GetModuleList" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleList_OutputMessage">
+    <wsdl:part xmlns:q284="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q284:GetModuleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleListBySubType_InputMessage">
+    <wsdl:part xmlns:q285="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q285:GetModuleListBySubType" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetModuleListBySubType_OutputMessage">
+    <wsdl:part xmlns:q286="http://Rhozet.com/Rhozet.Services.IJmLib" name="parameters" element="q286:GetModuleListBySubTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetLocalBindingIp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalBindingIp" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetLocalBindingIp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalBindingIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_SetConnectionString_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_SetConnectionString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_SetLocalBindingIp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetLocalBindingIp" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_SetLocalBindingIp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetLocalBindingIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_TestConnectionString_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_TestConnectionString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobManagerStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobManagerStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetJobManagerStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobManagerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_ApplyConfigurationChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyConfigurationChanges" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_ApplyConfigurationChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyConfigurationChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetDatabaseReplicationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabaseReplicationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IWfcJmServices_GetDatabaseReplicationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabaseReplicationStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWfcJmServices">
+    <wsdl:operation name="GetServerDefinitionList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionList" message="tns:IWfcJmServices_GetServerDefinitionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionListResponse" message="tns:IWfcJmServices_GetServerDefinitionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreServerDefinition">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreServerDefinition" message="tns:IWfcJmServices_StoreServerDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreServerDefinitionResponse" message="tns:IWfcJmServices_StoreServerDefinition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveServerDefinition">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveServerDefinition" message="tns:IWfcJmServices_RemoveServerDefinition_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveServerDefinitionResponse" message="tns:IWfcJmServices_RemoveServerDefinition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextAvailableJobPriority">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetNextAvailableJobPriority" message="tns:IWfcJmServices_GetNextAvailableJobPriority_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetNextAvailableJobPriorityResponse" message="tns:IWfcJmServices_GetNextAvailableJobPriority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobPriority">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobPriority" message="tns:IWfcJmServices_UpdateJobPriority_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobPriorityResponse" message="tns:IWfcJmServices_UpdateJobPriority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateReport" message="tns:IWfcJmServices_GenerateReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateReportResponse" message="tns:IWfcJmServices_GenerateReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobs">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobs" message="tns:IWfcJmServices_RemoveJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsResponse" message="tns:IWfcJmServices_RemoveJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeAllJobs">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PurgeAllJobs" message="tns:IWfcJmServices_PurgeAllJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PurgeAllJobsResponse" message="tns:IWfcJmServices_PurgeAllJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PauseJobs">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PauseJobs" message="tns:IWfcJmServices_PauseJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PauseJobsResponse" message="tns:IWfcJmServices_PauseJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJobs">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/ResumeJobs" message="tns:IWfcJmServices_ResumeJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/ResumeJobsResponse" message="tns:IWfcJmServices_ResumeJobs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchFolderById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFolderById" message="tns:IWfcJmServices_GetWatchFolderById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFolderByIdResponse" message="tns:IWfcJmServices_GetWatchFolderById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigById" message="tns:IWfcJmServices_GetWatchConfigById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigByIdResponse" message="tns:IWfcJmServices_GetWatchConfigById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPage" message="tns:IWfcJmServices_GetWatchConfigPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPageResponse" message="tns:IWfcJmServices_GetWatchConfigPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigPageLean">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPageLean" message="tns:IWfcJmServices_GetWatchConfigPageLean_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPageLeanResponse" message="tns:IWfcJmServices_GetWatchConfigPageLean_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreWatchConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWatchConfig" message="tns:IWfcJmServices_StoreWatchConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWatchConfigResponse" message="tns:IWfcJmServices_StoreWatchConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWatchConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWatchConfig" message="tns:IWfcJmServices_RemoveWatchConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWatchConfigResponse" message="tns:IWfcJmServices_RemoveWatchConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowTemplateById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplateById" message="tns:IWfcJmServices_GetWorkflowTemplateById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplateByIdResponse" message="tns:IWfcJmServices_GetWorkflowTemplateById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowXMLById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowXMLById" message="tns:IWfcJmServices_GetWorkflowXMLById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowXMLByIdResponse" message="tns:IWfcJmServices_GetWorkflowXMLById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowIdList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowIdList" message="tns:IWfcJmServices_GetWorkflowIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowIdListResponse" message="tns:IWfcJmServices_GetWorkflowIdList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowTemplatePage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplatePage" message="tns:IWfcJmServices_GetWorkflowTemplatePage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplatePageResponse" message="tns:IWfcJmServices_GetWorkflowTemplatePage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreWorkflowTemplate">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWorkflowTemplate" message="tns:IWfcJmServices_StoreWorkflowTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWorkflowTemplateResponse" message="tns:IWfcJmServices_StoreWorkflowTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWorkflowTemplate">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWorkflowTemplate" message="tns:IWfcJmServices_RemoveWorkflowTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWorkflowTemplateResponse" message="tns:IWfcJmServices_RemoveWorkflowTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchFoldersAssociatedWithWorkflow">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFoldersAssociatedWithWorkflow" message="tns:IWfcJmServices_GetWatchFoldersAssociatedWithWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFoldersAssociatedWithWorkflowResponse" message="tns:IWfcJmServices_GetWatchFoldersAssociatedWithWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreConfig" message="tns:IWfcJmServices_StoreConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreConfigResponse" message="tns:IWfcJmServices_StoreConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveConfig" message="tns:IWfcJmServices_RemoveConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveConfigResponse" message="tns:IWfcJmServices_RemoveConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigList" message="tns:IWfcJmServices_GetConfigList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigListResponse" message="tns:IWfcJmServices_GetConfigList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigPage" message="tns:IWfcJmServices_GetConfigPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigPageResponse" message="tns:IWfcJmServices_GetConfigPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfig" message="tns:IWfcJmServices_GetConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigResponse" message="tns:IWfcJmServices_GetConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTaskByMachine">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskByMachine" message="tns:IWfcJmServices_GetActiveTaskByMachine_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskByMachineResponse" message="tns:IWfcJmServices_GetActiveTaskByMachine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobManagerMachineTime">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobManagerMachineTime" message="tns:IWfcJmServices_GetJobManagerMachineTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobManagerMachineTimeResponse" message="tns:IWfcJmServices_GetJobManagerMachineTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineGroupById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupById" message="tns:IWfcJmServices_GetMachineGroupById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupByIdResponse" message="tns:IWfcJmServices_GetMachineGroupById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineGroupList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupList" message="tns:IWfcJmServices_GetMachineGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupListResponse" message="tns:IWfcJmServices_GetMachineGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemMachineGroupList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetSystemMachineGroupList" message="tns:IWfcJmServices_GetSystemMachineGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetSystemMachineGroupListResponse" message="tns:IWfcJmServices_GetSystemMachineGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreMachineGroup">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreMachineGroup" message="tns:IWfcJmServices_StoreMachineGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreMachineGroupResponse" message="tns:IWfcJmServices_StoreMachineGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMachineGroup">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveMachineGroup" message="tns:IWfcJmServices_RemoveMachineGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveMachineGroupResponse" message="tns:IWfcJmServices_RemoveMachineGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerDefinitionById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionById" message="tns:IWfcJmServices_GetServerDefinitionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionByIdResponse" message="tns:IWfcJmServices_GetServerDefinitionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCountByTaskType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountByTaskType" message="tns:IWfcJmServices_GetTaskCountByTaskType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountByTaskTypeResponse" message="tns:IWfcJmServices_GetTaskCountByTaskType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskActiveCountEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskActiveCountEx" message="tns:IWfcJmServices_GetTaskActiveCountEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskActiveCountExResponse" message="tns:IWfcJmServices_GetTaskActiveCountEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTaskCount">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskCount" message="tns:IWfcJmServices_GetActiveTaskCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskCountResponse" message="tns:IWfcJmServices_GetActiveTaskCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPage" message="tns:IWfcJmServices_GetTaskPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageResponse" message="tns:IWfcJmServices_GetTaskPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPageBySchedule">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageBySchedule" message="tns:IWfcJmServices_GetTaskPageBySchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageByScheduleResponse" message="tns:IWfcJmServices_GetTaskPageBySchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskById" message="tns:IWfcJmServices_GetTaskById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskByIdResponse" message="tns:IWfcJmServices_GetTaskById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByType" message="tns:IWfcJmServices_GetTaskListByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByTypeResponse" message="tns:IWfcJmServices_GetTaskListByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPageByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageByType" message="tns:IWfcJmServices_GetTaskPageByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageByTypeResponse" message="tns:IWfcJmServices_GetTaskPageByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGuidPageByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskGuidPageByType" message="tns:IWfcJmServices_GetTaskGuidPageByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskGuidPageByTypeResponse" message="tns:IWfcJmServices_GetTaskGuidPageByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueJob">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJob" message="tns:IWfcJmServices_QueueJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobResponse" message="tns:IWfcJmServices_QueueJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueComplexJob">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueComplexJob" message="tns:IWfcJmServices_QueueComplexJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueComplexJobResponse" message="tns:IWfcJmServices_QueueComplexJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobAssets">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobAssets" message="tns:IWfcJmServices_GetJobAssets_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobAssetsResponse" message="tns:IWfcJmServices_GetJobAssets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowJob">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJob" message="tns:IWfcJmServices_QueueWorkflowJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJobResponse" message="tns:IWfcJmServices_QueueWorkflowJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowJobEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJobEx" message="tns:IWfcJmServices_QueueWorkflowJobEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJobExResponse" message="tns:IWfcJmServices_QueueWorkflowJobEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowTemplateJob">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowTemplateJob" message="tns:IWfcJmServices_QueueWorkflowTemplateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowTemplateJobResponse" message="tns:IWfcJmServices_QueueWorkflowTemplateJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTemplateExJobByWorkflow">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateTemplateExJobByWorkflow" message="tns:IWfcJmServices_GenerateTemplateExJobByWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateTemplateExJobByWorkflowResponse" message="tns:IWfcJmServices_GenerateTemplateExJobByWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWorkflowGuid">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflowGuid" message="tns:IWfcJmServices_QueueJobByWorkflowGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflowGuidResponse" message="tns:IWfcJmServices_QueueJobByWorkflowGuid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflowGuid">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuid" message="tns:IWfcJmServices_GenerateJobByWorkflowGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuidResponse" message="tns:IWfcJmServices_GenerateJobByWorkflowGuid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWorkflow">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflow" message="tns:IWfcJmServices_QueueJobByWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflowResponse" message="tns:IWfcJmServices_QueueJobByWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflowGuidAndType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuidAndType" message="tns:IWfcJmServices_GenerateJobByWorkflowGuidAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuidAndTypeResponse" message="tns:IWfcJmServices_GenerateJobByWorkflowGuidAndType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWatchFolderGuid">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWatchFolderGuid" message="tns:IWfcJmServices_QueueJobByWatchFolderGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWatchFolderGuidResponse" message="tns:IWfcJmServices_QueueJobByWatchFolderGuid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflow">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflow" message="tns:IWfcJmServices_GenerateJobByWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowResponse" message="tns:IWfcJmServices_GenerateJobByWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobXMLByWorkflowGuid">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXMLByWorkflowGuid" message="tns:IWfcJmServices_QueueJobXMLByWorkflowGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXMLByWorkflowGuidResponse" message="tns:IWfcJmServices_QueueJobXMLByWorkflowGuid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobXML">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXML" message="tns:IWfcJmServices_QueueJobXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXMLResponse" message="tns:IWfcJmServices_QueueJobXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobStatus" message="tns:IWfcJmServices_UpdateJobStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobStatusResponse" message="tns:IWfcJmServices_UpdateJobStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJob" message="tns:IWfcJmServices_GetJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobResponse" message="tns:IWfcJmServices_GetJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JobUpdate">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/JobUpdate" message="tns:IWfcJmServices_JobUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/JobUpdateResponse" message="tns:IWfcJmServices_JobUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDashboard">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobDashboard" message="tns:IWfcJmServices_GetJobDashboard_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobDashboardResponse" message="tns:IWfcJmServices_GetJobDashboard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReplicationDashboard">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetReplicationDashboard" message="tns:IWfcJmServices_GetReplicationDashboard_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetReplicationDashboardResponse" message="tns:IWfcJmServices_GetReplicationDashboard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithStatus" message="tns:IWfcJmServices_GetJobPageWithStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithStatusResponse" message="tns:IWfcJmServices_GetJobPageWithStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveJobsPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveJobsPage" message="tns:IWfcJmServices_GetActiveJobsPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveJobsPageResponse" message="tns:IWfcJmServices_GetActiveJobsPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageByServiceId">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByServiceId" message="tns:IWfcJmServices_GetJobPageByServiceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByServiceIdResponse" message="tns:IWfcJmServices_GetJobPageByServiceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageBySchedule">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageBySchedule" message="tns:IWfcJmServices_GetJobPageBySchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByScheduleResponse" message="tns:IWfcJmServices_GetJobPageBySchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageByTaskStatusAndType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByTaskStatusAndType" message="tns:IWfcJmServices_GetJobPageByTaskStatusAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByTaskStatusAndTypeResponse" message="tns:IWfcJmServices_GetJobPageByTaskStatusAndType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithTaskAndStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTaskAndStatus" message="tns:IWfcJmServices_GetJobPageWithTaskAndStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTaskAndStatusResponse" message="tns:IWfcJmServices_GetJobPageWithTaskAndStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobsWithStatusByTaskStatusAndType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatusByTaskStatusAndType" message="tns:IWfcJmServices_RemoveJobsWithStatusByTaskStatusAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatusByTaskStatusAndTypeResponse" message="tns:IWfcJmServices_RemoveJobsWithStatusByTaskStatusAndType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobsWithStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatus" message="tns:IWfcJmServices_RemoveJobsWithStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatusResponse" message="tns:IWfcJmServices_RemoveJobsWithStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPage" message="tns:IWfcJmServices_GetJobPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageResponse" message="tns:IWfcJmServices_GetJobPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithTask">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTask" message="tns:IWfcJmServices_GetJobPageWithTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTaskResponse" message="tns:IWfcJmServices_GetJobPageWithTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobCount" message="tns:IWfcJmServices_GetJobCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobCountResponse" message="tns:IWfcJmServices_GetJobCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJob">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJob" message="tns:IWfcJmServices_RemoveJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobResponse" message="tns:IWfcJmServices_RemoveJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateModuleListByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModuleListByType" message="tns:IWfcJmServices_GetTemplateModuleListByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModuleListByTypeResponse" message="tns:IWfcJmServices_GetTemplateModuleListByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModulePage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePage" message="tns:IWfcJmServices_GetModulePage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePageResponse" message="tns:IWfcJmServices_GetModulePage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModulePageBySubType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePageBySubType" message="tns:IWfcJmServices_GetModulePageBySubType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePageBySubTypeResponse" message="tns:IWfcJmServices_GetModulePageBySubType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateModulePageByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModulePageByType" message="tns:IWfcJmServices_GetTemplateModulePageByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModulePageByTypeResponse" message="tns:IWfcJmServices_GetTemplateModulePageByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctModuleSubTypes">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctModuleSubTypes" message="tns:IWfcJmServices_GetDistinctModuleSubTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctModuleSubTypesResponse" message="tns:IWfcJmServices_GetDistinctModuleSubTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveModuleScheme">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModuleScheme" message="tns:IWfcJmServices_RemoveModuleScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModuleSchemeResponse" message="tns:IWfcJmServices_RemoveModuleScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreModuleScheme">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModuleScheme" message="tns:IWfcJmServices_StoreModuleScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModuleSchemeResponse" message="tns:IWfcJmServices_StoreModuleScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleScheme">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleScheme" message="tns:IWfcJmServices_GetModuleScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemeResponse" message="tns:IWfcJmServices_GetModuleScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleSchemeList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemeList" message="tns:IWfcJmServices_GetModuleSchemeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemeListResponse" message="tns:IWfcJmServices_GetModuleSchemeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleSchemePage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemePage" message="tns:IWfcJmServices_GetModuleSchemePage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemePageResponse" message="tns:IWfcJmServices_GetModuleSchemePage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableFetcher">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/EnableFetcher" message="tns:IWfcJmServices_EnableFetcher_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/EnableFetcherResponse" message="tns:IWfcJmServices_EnableFetcher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsFetcherEnabledEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsFetcherEnabledEx" message="tns:IWfcJmServices_IsFetcherEnabledEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsFetcherEnabledExResponse" message="tns:IWfcJmServices_IsFetcherEnabledEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFetcherEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcherEx" message="tns:IWfcJmServices_RegisterFetcherEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcherExResponse" message="tns:IWfcJmServices_RegisterFetcherEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFetcher">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcher" message="tns:IWfcJmServices_RegisterFetcher_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcherResponse" message="tns:IWfcJmServices_RegisterFetcher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFetcherStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateFetcherStatus" message="tns:IWfcJmServices_UpdateFetcherStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateFetcherStatusResponse" message="tns:IWfcJmServices_UpdateFetcherStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMachineStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateMachineStatus" message="tns:IWfcJmServices_UpdateMachineStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateMachineStatusResponse" message="tns:IWfcJmServices_UpdateMachineStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherById" message="tns:IWfcJmServices_GetFetcherById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherByIdResponse" message="tns:IWfcJmServices_GetFetcherById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherList" message="tns:IWfcJmServices_GetFetcherList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherListResponse" message="tns:IWfcJmServices_GetFetcherList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherPage" message="tns:IWfcJmServices_GetFetcherPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherPageResponse" message="tns:IWfcJmServices_GetFetcherPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFetcher">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveFetcher" message="tns:IWfcJmServices_RemoveFetcher_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveFetcherResponse" message="tns:IWfcJmServices_RemoveFetcher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherConfig" message="tns:IWfcJmServices_GetFetcherConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherConfigResponse" message="tns:IWfcJmServices_GetFetcherConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreFetcherConfig">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreFetcherConfig" message="tns:IWfcJmServices_StoreFetcherConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreFetcherConfigResponse" message="tns:IWfcJmServices_StoreFetcherConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTask">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTask" message="tns:IWfcJmServices_FetchTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskResponse" message="tns:IWfcJmServices_FetchTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskWithComplexity">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskWithComplexity" message="tns:IWfcJmServices_FetchTaskWithComplexity_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskWithComplexityResponse" message="tns:IWfcJmServices_FetchTaskWithComplexity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskByType" message="tns:IWfcJmServices_FetchTaskByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskByTypeResponse" message="tns:IWfcJmServices_FetchTaskByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskById" message="tns:IWfcJmServices_FetchTaskById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskByIdResponse" message="tns:IWfcJmServices_FetchTaskById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaskStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateTaskStatus" message="tns:IWfcJmServices_UpdateTaskStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateTaskStatusResponse" message="tns:IWfcJmServices_UpdateTaskStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListByJobId">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByJobId" message="tns:IWfcJmServices_GetTaskListByJobId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByJobIdResponse" message="tns:IWfcJmServices_GetTaskListByJobId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTasksUpdatedSinceByJobId">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTasksUpdatedSinceByJobId" message="tns:IWfcJmServices_GetTasksUpdatedSinceByJobId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTasksUpdatedSinceByJobIdResponse" message="tns:IWfcJmServices_GetTasksUpdatedSinceByJobId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCountEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountEx" message="tns:IWfcJmServices_GetTaskCountEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountExResponse" message="tns:IWfcJmServices_GetTaskCountEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCount">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCount" message="tns:IWfcJmServices_GetTaskCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountResponse" message="tns:IWfcJmServices_GetTaskCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetVersion" message="tns:IWfcJmServices_GetVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetVersionResponse" message="tns:IWfcJmServices_GetVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConnectionString" message="tns:IWfcJmServices_GetConnectionString_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConnectionStringResponse" message="tns:IWfcJmServices_GetConnectionString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJMGroup">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJMGroup" message="tns:IWfcJmServices_GetJMGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJMGroupResponse" message="tns:IWfcJmServices_GetJMGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBindingPort">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetBindingPort" message="tns:IWfcJmServices_GetBindingPort_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetBindingPortResponse" message="tns:IWfcJmServices_GetBindingPort_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreLogs">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreLogs" message="tns:IWfcJmServices_StoreLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreLogsResponse" message="tns:IWfcJmServices_StoreLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLog">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLog" message="tns:IWfcJmServices_GetErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogResponse" message="tns:IWfcJmServices_GetErrorLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogByReferenceId">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogByReferenceId" message="tns:IWfcJmServices_GetErrorLogByReferenceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogByReferenceIdResponse" message="tns:IWfcJmServices_GetErrorLogByReferenceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogPage" message="tns:IWfcJmServices_GetErrorLogPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogPageResponse" message="tns:IWfcJmServices_GetErrorLogPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogList" message="tns:IWfcJmServices_GetErrorLogList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogListResponse" message="tns:IWfcJmServices_GetErrorLogList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreTaskPropertyEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertyEx" message="tns:IWfcJmServices_StoreTaskPropertyEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertyExResponse" message="tns:IWfcJmServices_StoreTaskPropertyEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreTaskPropertiesEx">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertiesEx" message="tns:IWfcJmServices_StoreTaskPropertiesEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertiesExResponse" message="tns:IWfcJmServices_StoreTaskPropertiesEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExById" message="tns:IWfcJmServices_GetTaskPropertyExById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByIdResponse" message="tns:IWfcJmServices_GetTaskPropertyExById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExByReferenceId">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByReferenceId" message="tns:IWfcJmServices_GetTaskPropertyExByReferenceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByReferenceIdResponse" message="tns:IWfcJmServices_GetTaskPropertyExByReferenceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExByRefNamSeq">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByRefNamSeq" message="tns:IWfcJmServices_GetTaskPropertyExByRefNamSeq_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByRefNamSeqResponse" message="tns:IWfcJmServices_GetTaskPropertyExByRefNamSeq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExPage" message="tns:IWfcJmServices_GetTaskPropertyExPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExPageResponse" message="tns:IWfcJmServices_GetTaskPropertyExPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePreset">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemovePreset" message="tns:IWfcJmServices_RemovePreset_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemovePresetResponse" message="tns:IWfcJmServices_RemovePreset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StorePreset">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StorePreset" message="tns:IWfcJmServices_StorePreset_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StorePresetResponse" message="tns:IWfcJmServices_StorePreset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreXMLPreset">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreXMLPreset" message="tns:IWfcJmServices_StoreXMLPreset_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreXMLPresetResponse" message="tns:IWfcJmServices_StoreXMLPreset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreset">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPreset" message="tns:IWfcJmServices_GetPreset_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetResponse" message="tns:IWfcJmServices_GetPreset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetXmlById">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetXmlById" message="tns:IWfcJmServices_GetPresetXmlById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetXmlByIdResponse" message="tns:IWfcJmServices_GetPresetXmlById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresets">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresets" message="tns:IWfcJmServices_GetPresets_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetsResponse" message="tns:IWfcJmServices_GetPresets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetList" message="tns:IWfcJmServices_GetPresetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListResponse" message="tns:IWfcJmServices_GetPresetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetIdList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetIdList" message="tns:IWfcJmServices_GetPresetIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetIdListResponse" message="tns:IWfcJmServices_GetPresetIdList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetListByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByType" message="tns:IWfcJmServices_GetPresetListByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByTypeResponse" message="tns:IWfcJmServices_GetPresetListByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetListByCategory">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByCategory" message="tns:IWfcJmServices_GetPresetListByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByCategoryResponse" message="tns:IWfcJmServices_GetPresetListByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPage">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPage" message="tns:IWfcJmServices_GetPresetPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageResponse" message="tns:IWfcJmServices_GetPresetPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPageByType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByType" message="tns:IWfcJmServices_GetPresetPageByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByTypeResponse" message="tns:IWfcJmServices_GetPresetPageByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPageByCategory">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByCategory" message="tns:IWfcJmServices_GetPresetPageByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByCategoryResponse" message="tns:IWfcJmServices_GetPresetPageByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPresetNameAvailable">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsPresetNameAvailable" message="tns:IWfcJmServices_IsPresetNameAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsPresetNameAvailableResponse" message="tns:IWfcJmServices_IsPresetNameAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctPresetTypes">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctPresetTypes" message="tns:IWfcJmServices_GetDistinctPresetTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctPresetTypesResponse" message="tns:IWfcJmServices_GetDistinctPresetTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveModule">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModule" message="tns:IWfcJmServices_RemoveModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModuleResponse" message="tns:IWfcJmServices_RemoveModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreModule">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModule" message="tns:IWfcJmServices_StoreModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModuleResponse" message="tns:IWfcJmServices_StoreModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModule" message="tns:IWfcJmServices_GetModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleResponse" message="tns:IWfcJmServices_GetModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleList">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleList" message="tns:IWfcJmServices_GetModuleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleListResponse" message="tns:IWfcJmServices_GetModuleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleListBySubType">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleListBySubType" message="tns:IWfcJmServices_GetModuleListBySubType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleListBySubTypeResponse" message="tns:IWfcJmServices_GetModuleListBySubType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalBindingIp">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetLocalBindingIp" message="tns:IWfcJmServices_GetLocalBindingIp_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetLocalBindingIpResponse" message="tns:IWfcJmServices_GetLocalBindingIp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConnectionString">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetConnectionString" message="tns:IWfcJmServices_SetConnectionString_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetConnectionStringResponse" message="tns:IWfcJmServices_SetConnectionString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLocalBindingIp">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetLocalBindingIp" message="tns:IWfcJmServices_SetLocalBindingIp_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetLocalBindingIpResponse" message="tns:IWfcJmServices_SetLocalBindingIp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnectionString">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/TestConnectionString" message="tns:IWfcJmServices_TestConnectionString_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/TestConnectionStringResponse" message="tns:IWfcJmServices_TestConnectionString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobManagerStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetJobManagerStatus" message="tns:IWfcJmServices_GetJobManagerStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetJobManagerStatusResponse" message="tns:IWfcJmServices_GetJobManagerStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyConfigurationChanges">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/ApplyConfigurationChanges" message="tns:IWfcJmServices_ApplyConfigurationChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/ApplyConfigurationChangesResponse" message="tns:IWfcJmServices_ApplyConfigurationChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseReplicationStatus">
+      <wsdl:input wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetDatabaseReplicationStatus" message="tns:IWfcJmServices_GetDatabaseReplicationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetDatabaseReplicationStatusResponse" message="tns:IWfcJmServices_GetDatabaseReplicationStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

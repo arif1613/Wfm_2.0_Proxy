@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<TimeZones>
+  <TimeZone>
+    <ID>Dateline Standard Time</ID>
+    <Name><![CDATA[(UTC-12:00) International Date Line West]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>UTC-11</ID>
+    <Name><![CDATA[(UTC-11:00) Coordinated Universal Time-11]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Hawaiian Standard Time</ID>
+    <Name><![CDATA[(UTC-10:00) Hawaii]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Alaskan Standard Time</ID>
+    <Name><![CDATA[(UTC-09:00) Alaska]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Pacific Standard Time (Mexico)</ID>
+    <Name><![CDATA[(UTC-08:00) Baja California]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Pacific Standard Time</ID>
+    <Name><![CDATA[(UTC-08:00) Pacific Time (US & Canada)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>US Mountain Standard Time</ID>
+    <Name><![CDATA[(UTC-07:00) Arizona]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Mountain Standard Time (Mexico)</ID>
+    <Name><![CDATA[(UTC-07:00) Chihuahua, La Paz, Mazatlan]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Mountain Standard Time</ID>
+    <Name><![CDATA[(UTC-07:00) Mountain Time (US & Canada)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central America Standard Time</ID>
+    <Name><![CDATA[(UTC-06:00) Central America]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central Standard Time</ID>
+    <Name><![CDATA[(UTC-06:00) Central Time (US & Canada)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central Standard Time (Mexico)</ID>
+    <Name><![CDATA[(UTC-06:00) Guadalajara, Mexico City, Monterrey]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Canada Central Standard Time</ID>
+    <Name><![CDATA[(UTC-06:00) Saskatchewan]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>SA Pacific Standard Time</ID>
+    <Name><![CDATA[(UTC-05:00) Bogota, Lima, Quito, Rio Branco]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Eastern Standard Time</ID>
+    <Name><![CDATA[(UTC-05:00) Eastern Time (US & Canada)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>US Eastern Standard Time</ID>
+    <Name><![CDATA[(UTC-05:00) Indiana (East)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Venezuela Standard Time</ID>
+    <Name><![CDATA[(UTC-04:30) Caracas]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Paraguay Standard Time</ID>
+    <Name><![CDATA[(UTC-04:00) Asuncion]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Atlantic Standard Time</ID>
+    <Name><![CDATA[(UTC-04:00) Atlantic Time (Canada)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central Brazilian Standard Time</ID>
+    <Name><![CDATA[(UTC-04:00) Cuiaba]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>SA Western Standard Time</ID>
+    <Name><![CDATA[(UTC-04:00) Georgetown, La Paz, Manaus, San Juan]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Pacific SA Standard Time</ID>
+    <Name><![CDATA[(UTC-04:00) Santiago]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Newfoundland Standard Time</ID>
+    <Name><![CDATA[(UTC-03:30) Newfoundland]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>E. South America Standard Time</ID>
+    <Name><![CDATA[(UTC-03:00) Brasilia]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Argentina Standard Time</ID>
+    <Name><![CDATA[(UTC-03:00) Buenos Aires]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>SA Eastern Standard Time</ID>
+    <Name><![CDATA[(UTC-03:00) Cayenne, Fortaleza]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Greenland Standard Time</ID>
+    <Name><![CDATA[(UTC-03:00) Greenland]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Montevideo Standard Time</ID>
+    <Name><![CDATA[(UTC-03:00) Montevideo]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Bahia Standard Time</ID>
+    <Name><![CDATA[(UTC-03:00) Salvador]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>UTC-02</ID>
+    <Name><![CDATA[(UTC-02:00) Coordinated Universal Time-02]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Mid-Atlantic Standard Time</ID>
+    <Name><![CDATA[(UTC-02:00) Mid-Atlantic - Old]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Azores Standard Time</ID>
+    <Name><![CDATA[(UTC-01:00) Azores]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Cape Verde Standard Time</ID>
+    <Name><![CDATA[(UTC-01:00) Cape Verde Is.]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Morocco Standard Time</ID>
+    <Name><![CDATA[(UTC) Casablanca]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>UTC</ID>
+    <Name><![CDATA[(UTC) Coordinated Universal Time]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>GMT Standard Time</ID>
+    <Name><![CDATA[(UTC) Dublin, Edinburgh, Lisbon, London]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Greenwich Standard Time</ID>
+    <Name><![CDATA[(UTC) Monrovia, Reykjavik]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>W. Europe Standard Time</ID>
+    <Name><![CDATA[(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central Europe Standard Time</ID>
+    <Name><![CDATA[(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Romance Standard Time</ID>
+    <Name><![CDATA[(UTC+01:00) Brussels, Copenhagen, Madrid, Paris]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central European Standard Time</ID>
+    <Name><![CDATA[(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>W. Central Africa Standard Time</ID>
+    <Name><![CDATA[(UTC+01:00) West Central Africa]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Namibia Standard Time</ID>
+    <Name><![CDATA[(UTC+01:00) Windhoek]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Jordan Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Amman]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>GTB Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Athens, Bucharest]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Middle East Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Beirut]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Egypt Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Cairo]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Syria Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Damascus]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>E. Europe Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) E. Europe]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>South Africa Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Harare, Pretoria]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>FLE Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Turkey Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Istanbul]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Israel Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Jerusalem]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Kaliningrad Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Kaliningrad (RTZ 1)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Libya Standard Time</ID>
+    <Name><![CDATA[(UTC+02:00) Tripoli]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Arabic Standard Time</ID>
+    <Name><![CDATA[(UTC+03:00) Baghdad]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Arab Standard Time</ID>
+    <Name><![CDATA[(UTC+03:00) Kuwait, Riyadh]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Belarus Standard Time</ID>
+    <Name><![CDATA[(UTC+03:00) Minsk]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Russian Standard Time</ID>
+    <Name><![CDATA[(UTC+03:00) Moscow, St. Petersburg, Volgograd (RTZ 2)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>E. Africa Standard Time</ID>
+    <Name><![CDATA[(UTC+03:00) Nairobi]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Iran Standard Time</ID>
+    <Name><![CDATA[(UTC+03:30) Tehran]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Arabian Standard Time</ID>
+    <Name><![CDATA[(UTC+04:00) Abu Dhabi, Muscat]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Azerbaijan Standard Time</ID>
+    <Name><![CDATA[(UTC+04:00) Baku]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Russia Time Zone 3</ID>
+    <Name><![CDATA[(UTC+04:00) Izhevsk, Samara (RTZ 3)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Mauritius Standard Time</ID>
+    <Name><![CDATA[(UTC+04:00) Port Louis]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Georgian Standard Time</ID>
+    <Name><![CDATA[(UTC+04:00) Tbilisi]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Caucasus Standard Time</ID>
+    <Name><![CDATA[(UTC+04:00) Yerevan]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Afghanistan Standard Time</ID>
+    <Name><![CDATA[(UTC+04:30) Kabul]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>West Asia Standard Time</ID>
+    <Name><![CDATA[(UTC+05:00) Ashgabat, Tashkent]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Ekaterinburg Standard Time</ID>
+    <Name><![CDATA[(UTC+05:00) Ekaterinburg (RTZ 4)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Pakistan Standard Time</ID>
+    <Name><![CDATA[(UTC+05:00) Islamabad, Karachi]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>India Standard Time</ID>
+    <Name><![CDATA[(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Sri Lanka Standard Time</ID>
+    <Name><![CDATA[(UTC+05:30) Sri Jayawardenepura]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Nepal Standard Time</ID>
+    <Name><![CDATA[(UTC+05:45) Kathmandu]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central Asia Standard Time</ID>
+    <Name><![CDATA[(UTC+06:00) Astana]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Bangladesh Standard Time</ID>
+    <Name><![CDATA[(UTC+06:00) Dhaka]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>N. Central Asia Standard Time</ID>
+    <Name><![CDATA[(UTC+06:00) Novosibirsk (RTZ 5)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Myanmar Standard Time</ID>
+    <Name><![CDATA[(UTC+06:30) Yangon (Rangoon)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>SE Asia Standard Time</ID>
+    <Name><![CDATA[(UTC+07:00) Bangkok, Hanoi, Jakarta]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>North Asia Standard Time</ID>
+    <Name><![CDATA[(UTC+07:00) Krasnoyarsk (RTZ 6)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>China Standard Time</ID>
+    <Name><![CDATA[(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>North Asia East Standard Time</ID>
+    <Name><![CDATA[(UTC+08:00) Irkutsk (RTZ 7)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Singapore Standard Time</ID>
+    <Name><![CDATA[(UTC+08:00) Kuala Lumpur, Singapore]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>W. Australia Standard Time</ID>
+    <Name><![CDATA[(UTC+08:00) Perth]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Taipei Standard Time</ID>
+    <Name><![CDATA[(UTC+08:00) Taipei]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Ulaanbaatar Standard Time</ID>
+    <Name><![CDATA[(UTC+08:00) Ulaanbaatar]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Tokyo Standard Time</ID>
+    <Name><![CDATA[(UTC+09:00) Osaka, Sapporo, Tokyo]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Korea Standard Time</ID>
+    <Name><![CDATA[(UTC+09:00) Seoul]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Yakutsk Standard Time</ID>
+    <Name><![CDATA[(UTC+09:00) Yakutsk (RTZ 8)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Cen. Australia Standard Time</ID>
+    <Name><![CDATA[(UTC+09:30) Adelaide]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>AUS Central Standard Time</ID>
+    <Name><![CDATA[(UTC+09:30) Darwin]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>E. Australia Standard Time</ID>
+    <Name><![CDATA[(UTC+10:00) Brisbane]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>AUS Eastern Standard Time</ID>
+    <Name><![CDATA[(UTC+10:00) Canberra, Melbourne, Sydney]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>West Pacific Standard Time</ID>
+    <Name><![CDATA[(UTC+10:00) Guam, Port Moresby]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Tasmania Standard Time</ID>
+    <Name><![CDATA[(UTC+10:00) Hobart]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Magadan Standard Time</ID>
+    <Name><![CDATA[(UTC+10:00) Magadan]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Vladivostok Standard Time</ID>
+    <Name><![CDATA[(UTC+10:00) Vladivostok, Magadan (RTZ 9)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Russia Time Zone 10</ID>
+    <Name><![CDATA[(UTC+11:00) Chokurdakh (RTZ 10)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Central Pacific Standard Time</ID>
+    <Name><![CDATA[(UTC+11:00) Solomon Is., New Caledonia]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Russia Time Zone 11</ID>
+    <Name><![CDATA[(UTC+12:00) Anadyr, Petropavlovsk-Kamchatsky (RTZ 11)]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>New Zealand Standard Time</ID>
+    <Name><![CDATA[(UTC+12:00) Auckland, Wellington]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>UTC+12</ID>
+    <Name><![CDATA[(UTC+12:00) Coordinated Universal Time+12]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Fiji Standard Time</ID>
+    <Name><![CDATA[(UTC+12:00) Fiji]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Kamchatka Standard Time</ID>
+    <Name><![CDATA[(UTC+12:00) Petropavlovsk-Kamchatsky - Old]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Tonga Standard Time</ID>
+    <Name><![CDATA[(UTC+13:00) Nuku'alofa]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Samoa Standard Time</ID>
+    <Name><![CDATA[(UTC+13:00) Samoa]]></Name>
+  </TimeZone>
+  <TimeZone>
+    <ID>Line Islands Standard Time</ID>
+    <Name><![CDATA[(UTC+14:00) Kiritimati Island]]></Name>
+  </TimeZone>
+</TimeZones>

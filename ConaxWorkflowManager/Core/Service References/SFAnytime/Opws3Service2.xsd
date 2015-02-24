@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://opws3/RootMediaDetails" elementFormDefault="qualified" targetNamespace="http://opws3/RootMediaDetails" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RootMediaDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="media" type="tns:FullMedia" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="image" type="tns:Image" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="category" type="tns:Category" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cast" type="tns:Cast" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="file" type="tns:File" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tsFile" type="tns:TsFile" />
+      <xs:element minOccurs="0" maxOccurs="1" name="smoothFiles" type="tns:SmoothFiles" />
+      <xs:element minOccurs="1" maxOccurs="1" name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="errorMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FullMedia">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="title" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="brieftitle" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="orgTitle" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="productionCountry" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ageLimit" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="regId" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="length" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="hd" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="short" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="info" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="subTitleFile" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="subTitleFileUtf8" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="publishDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="unPublishDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="modified" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sortName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="year" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="price" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="priceGroupId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="priceGroup" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="estPrice" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="estPriceGroupId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="estPriceGroup" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currency" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="duration" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="unitId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="unit" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dub" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Image">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="imageUrl" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Category">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="main" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Cast">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="categoryId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="categoryName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="firstname" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="lastname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="File">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bandwidth" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileUrlMms" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileUrlHttp" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="format" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="filePath" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileSize" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="language" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TsFile">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="typeId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="profileId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="profileName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileUrl" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="filePath" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileSize" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="language" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SmoothFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="serverManifests" type="tns:SmoothStreaming" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SmoothStreaming">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="profileId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="profileName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="filePath" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="serverManifest" type="tns:SmoothStreamingServerManifest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SmoothStreamingServerManifest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="typeId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="typeName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="manifestTypeId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="manifestTypeName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fileUrl" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

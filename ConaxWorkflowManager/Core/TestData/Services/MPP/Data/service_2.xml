@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceMetadata>
+  <MultipleContentService name="MPS Broadband" id="2" objectId="3343361" description="Default service for MPS Broadband" encryptedName="F984DF05E8C9A7BF403A6AB04C1C45D5" serviceProvider="MPS Broadband" serviceProviderObjectId="3334145">
+    <ServiceViewMatchRule serviceViewName="TSICMDS Demo" serviceViewObjectId="4213761" Region="World">
+      <ServiceView objectId="4213761" updated="2013-08-09 15:57:36" name="TSICMDS Demo" label="" caption="" renderTemplate="" associatedServiceName="MPS Broadband" associatedServiceObjId="3343361" associatedServiceId="2" lanugageISO="ENG" associatedServiceProviderName="MPS Broadband">
+        <Menu objectId="4218881" name="Content menu" label="" dontSortByName="False">
+          <Selectable objectId="4235265" name="Movies" label="movies" renderTemplateId="">
+            <OnSelect>
+              <ActionPut objectId="4236289" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="4361217" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="7088129" target="" groupOnPropertyKind="" hideAfterHours="0" maxRows="0" menuRenderTemplateId="" propertiesFilter="type!Movie" recentPublishedHours="0" recentPublishedText="" returnType="" showAllMetadata="False" showAsTree="False" showInfoOnFocus="False" showResource="False" soonUnpublishedHours="0" soonUnpublishedText="" sortingOption="8">
+                <ContentPropertySearchSource target=""/>
+              </ActionPut>
+            </OnSelect>
+          </Selectable>
+          <Selectable objectId="4257793" name="Series" label="series" renderTemplateId="">
+            <OnSelect>
+              <ActionPut objectId="4258817" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="4399105" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="7102465" target="" groupOnPropertyKind="" hideAfterHours="0" maxRows="0" menuRenderTemplateId="" propertiesFilter="type!Serie" recentPublishedHours="0" recentPublishedText="" returnType="" showAllMetadata="False" showAsTree="False" showInfoOnFocus="False" showResource="False" soonUnpublishedHours="0" soonUnpublishedText="" sortingOption="0">
+                <ContentPropertySearchSource target=""/>
+              </ActionPut>
+            </OnSelect>
+          </Selectable>
+          <Selectable objectId="4281345" name="Sport" label="sport" renderTemplateId="">
+            <OnSelect>
+              <ActionPut objectId="4282369" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="4558849" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="7116801" target="" groupOnPropertyKind="" hideAfterHours="0" maxRows="0" menuRenderTemplateId="" propertiesFilter="type!Sport" recentPublishedHours="0" recentPublishedText="" returnType="" showAllMetadata="False" showAsTree="False" showInfoOnFocus="False" showResource="False" soonUnpublishedHours="0" soonUnpublishedText="" sortingOption="0">
+                <ContentPropertySearchSource target=""/>
+              </ActionPut>
+            </OnSelect>
+          </Selectable>
+          <Selectable objectId="4694017" name="Live Sport" label="livesport" renderTemplateId="">
+            <OnSelect>
+              <ActionPut objectId="4695041" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="1255293953" target=""/>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="1256425473" target="" groupOnPropertyKind="" hideAfterHours="0" maxRows="0" menuRenderTemplateId="" propertiesFilter="MDS!Live" recentPublishedHours="0" recentPublishedText="" returnType="" showAllMetadata="False" showAsTree="False" showInfoOnFocus="False" showResource="False" soonUnpublishedHours="0" soonUnpublishedText="" sortingOption="0">
+                <ContentPropertySearchSource target=""/>
+              </ActionPut>
+            </OnSelect>
+          </Selectable>
+        </Menu>
+        <Menu objectId="4219905" name="Top menu" label="" dontSortByName="False">
+          <Selectable objectId="4725761" name="Start" label="" renderTemplateId="">
+            <OnSelect>
+              <ActionPut objectId="4726785" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+          </Selectable>
+          <Selectable objectId="4792321" name="Export Tool" label="exporttool" renderTemplateId="">
+            <OnSelect>
+              <ActionPut objectId="4793345" target="">
+                <StaticSource/>
+              </ActionPut>
+            </OnSelect>
+            <OnSelect>
+              <ActionPut objectId="7351297" target=""/>
+            </OnSelect>
+            <OnSelect>
+              <ActionGoURL objectId="7352321" URL="http://80.239.142.149/MPSBroadband_WebClient/export.aspx?regionoverride=51637b6207f64b83bc3a44a1b3a3a5d2"/>
+            </OnSelect>
+          </Selectable>
+        </Menu>
+        <Text objectId="4909057" name="ShowTipAFriend" renderTemplateId="">true</Text>
+        <Text objectId="4910081" name="SubscriberData" renderTemplateId="">&lt;Service objectid="3343361" name="MPS Broadband"&gt;&lt;SubscriberData name="FirstName" display="True" required="True" /&gt;&lt;SubscriberData name="LastName" display="True" required="True" /&gt;&lt;SubscriberData name="ContactStreet1" display="True" required="True" /&gt;&lt;SubscriberData name="ContactStreet2" display="True" required="True" /&gt;&lt;SubscriberData name="City" display="True" required="True" /&gt;&lt;SubscriberData name="Country" display="True" required="False" /&gt;&lt;SubscriberData name="ZipCode" display="True" required="False" /&gt;&lt;SubscriberData name="Email" display="True" required="True" /&gt;&lt;SubscriberData name="Phone" display="False" required="False" /&gt;&lt;SubscriberData name="Mobile" display="True" required="False" /&gt;&lt;SubscriberData name="AllowsNewsletter" display="True" required="False" /&gt;&lt;/Service&gt;</Text>
+        <Text objectId="4923393" name="ContentData" renderTemplateId="">&lt;Service objectid="3343361" name="MPS Broadband"&gt;&lt;Attributes&gt;&lt;SingleContent&gt;&lt;Attribute name="Duration" /&gt;&lt;Attribute name="LongDescription" /&gt;&lt;Attribute name="ProductionYear" /&gt;&lt;Attribute name="ShortDescription" /&gt;&lt;Attribute name="SmallImage" /&gt;&lt;Attribute name="Title" /&gt;&lt;/SingleContent&gt;&lt;ContentList&gt;&lt;Attribute name="PlayButtons" /&gt;&lt;Attribute name="SmallImage" /&gt;&lt;Attribute name="Title" /&gt;&lt;/ContentList&gt;&lt;SecondaryContentList&gt;&lt;Attribute name="PlayButtons" /&gt;&lt;Attribute name="SmallImage" /&gt;&lt;Attribute name="Title" /&gt;&lt;Attribute name="ShortDescription" /&gt;&lt;/SecondaryContentList&gt;&lt;/Attributes&gt;&lt;Properties&gt;&lt;SingleContent /&gt;&lt;ContentList /&gt;&lt;SecondaryContentList /&gt;&lt;/Properties&gt;&lt;/Service&gt;</Text>
+        <OnLoad>
+          <ActionPut objectId="1255649281" target="" groupOnPropertyKind="" hideAfterHours="0" maxRows="0" menuRenderTemplateId="" propertiesFilter="type!Sport#type!Movie" recentPublishedHours="0" recentPublishedText="" returnType="" showAllMetadata="False" showAsTree="False" showInfoOnFocus="False" showResource="False" soonUnpublishedHours="0" soonUnpublishedText="" sortingOption="8">
+            <ContentPropertySearchSource target=""/>
+          </ActionPut>
+        </OnLoad>
+      </ServiceView>
+    </ServiceViewMatchRule>
+  </MultipleContentService>
+</ServiceMetadata>

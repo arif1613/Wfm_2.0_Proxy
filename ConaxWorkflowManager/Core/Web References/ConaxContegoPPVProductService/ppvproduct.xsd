@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.conax.com/cas/xsd/common-types/v1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.conax.com/cas/xsd/common-types/v1" version="0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TransactionStatusType">
+    <xs:sequence>
+      <xs:element name="StatusCode" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CaClientIdType">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="PairingModuleIdType">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:simpleType name="EmmDeliveryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OVER_AIR" />
+      <xs:enumeration value="SYNCHRONOUS_RETURN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EmmDeliveryAggregatedStatusType">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+  <xs:complexType name="EmmType">
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="address" type="xs:long" use="required" />
+        <xs:anyAttribute namespace="##any" processContents="lax" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="RequestPriorityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EXPRESS" />
+      <xs:enumeration value="REGULAR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="VoidType">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetInfoResponseType">
+    <xs:sequence>
+      <xs:element name="InfoResponse" type="InfoResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InfoResponseType">
+    <xs:sequence>
+      <xs:element name="Info" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AbstractResponseType" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="TransactionStatus" type="TransactionStatusType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

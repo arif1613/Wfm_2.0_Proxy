@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://www.w3.org/2001/XMLSchema" xmlns="http://www.conax.com/cas/wsdl/ondemand-content/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:odc="http://www.conax.com/cas/xsd/ondemand-content/v1" targetNamespace="http://www.conax.com/cas/wsdl/ondemand-content/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:ns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="https://10.4.2.33/ca-server/webservices/ondemandcontent?xsd=cx-service-contract-ondemand-content-1.0.xsd" namespace="http://www.conax.com/cas/xsd/ondemand-content/v1" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetInfoMessage">
+    <wsdl:part name="parameters" element="odc:GetInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDvbAccessCriteriaResponse">
+    <wsdl:part name="parameters" element="odc:GetDvbAccessCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDvbAccessCriteriaMessage">
+    <wsdl:part name="parameters" element="odc:GetDvbAccessCriteria" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOnDemandContentMessage">
+    <wsdl:part name="parameters" element="odc:UpdateOnDemandContent" />
+  </wsdl:message>
+  <wsdl:message name="CreateOnDemandContentMessage">
+    <wsdl:part name="parameters" element="odc:CreateOnDemandContent" />
+  </wsdl:message>
+  <wsdl:message name="RemoveOnDemandContentResponse">
+    <wsdl:part name="parameters" element="odc:RemoveOnDemandContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOnDemandContentResponse">
+    <wsdl:part name="parameters" element="odc:UpdateOnDemandContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveOnDemandContentMessage">
+    <wsdl:part name="parameters" element="odc:RemoveOnDemandContent" />
+  </wsdl:message>
+  <wsdl:message name="GetOnDemandContentMessage">
+    <wsdl:part name="parameters" element="odc:GetOnDemandContent" />
+  </wsdl:message>
+  <wsdl:message name="CreateOnDemandContentResponse">
+    <wsdl:part name="parameters" element="odc:CreateOnDemandContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoResponse">
+    <wsdl:part name="parameters" element="odc:GetInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOnDemandContentResponse">
+    <wsdl:part name="parameters" element="odc:GetOnDemandContentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OnDemandContentServiceEndpoint">
+    <wsdl:operation name="CreateOnDemandContent">
+      <wsdl:input message="CreateOnDemandContentMessage" />
+      <wsdl:output message="CreateOnDemandContentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnDemandContent">
+      <wsdl:input message="GetOnDemandContentMessage" />
+      <wsdl:output message="GetOnDemandContentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDvbAccessCriteria">
+      <wsdl:input message="GetDvbAccessCriteriaMessage" />
+      <wsdl:output message="GetDvbAccessCriteriaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOnDemandContent">
+      <wsdl:input message="UpdateOnDemandContentMessage" />
+      <wsdl:output message="UpdateOnDemandContentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOnDemandContent">
+      <wsdl:input message="RemoveOnDemandContentMessage" />
+      <wsdl:output message="RemoveOnDemandContentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <wsdl:input message="GetInfoMessage" />
+      <wsdl:output message="GetInfoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OnDemandContentServiceSoapBinding" type="OnDemandContentServiceEndpoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateOnDemandContent">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnDemandContent">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDvbAccessCriteria">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOnDemandContent">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveOnDemandContent">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OnDemandContentWebService">
+    <wsdl:port name="OnDemandContentServiceEndpointPort" binding="OnDemandContentServiceSoapBinding">
+      <soap:address location="https://10.4.2.33/ca-server/webservices/ondemandcontent" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Steve Pan (MPS Broadband AB) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="NonEmptyString">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:pattern value=".*[^\s].*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Default_AMS">
+		<xs:attribute name="Provider" type="xs:string"/>
+		<xs:attribute name="Product" type="xs:string"/>
+		<xs:attribute name="Asset_Name" type="NonEmptyString"/>
+		<xs:attribute name="Version_Major" type="xs:string"/>
+		<xs:attribute name="Version_Minor" type="xs:string"/>
+		<xs:attribute name="Description" type="xs:string"/>
+		<xs:attribute name="Creation_Date" type="xs:string"/>
+	</xs:complexType>
+	<xs:element name="ADI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Metadata">
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="AMS">
+								<xs:complexType>
+									<xs:attribute name="Provider" type="NonEmptyString" use="required">
+										<xs:annotation>
+											<xs:documentation>Maps to Content Rights Owner in MPP</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="Product"/>
+									<xs:attribute name="Asset_Name" type="NonEmptyString" use="required">
+										<xs:annotation>
+											<xs:documentation>Maps to Content name in MPP</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="Version_Major"/>
+									<xs:attribute name="Version_Minor"/>
+									<xs:attribute name="Description"/>
+									<xs:attribute name="Creation_Date"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="App_Data" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="App" type="xs:string" use="optional" fixed="MOD"/>
+									<xs:attribute name="Name" use="required">
+										<xs:annotation>
+											<xs:documentation>Provider_Content_Tier and Metadata_Spec_Version is not in use, they will be ignored. MPS_CubiChannelId and MPS_ChannelLCN is for channel ingest only</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Provider_Content_Tier"/>
+												<xs:enumeration value="Metadata_Spec_Version"/>
+												<xs:enumeration value="MPS_DeviceType"/>
+												<xs:enumeration value="MPS_IngestSource"/>
+												<xs:enumeration value="MPS_ServicePriceId"/>
+												<xs:enumeration value="MPS_ContentPrice"/>
+												<xs:enumeration value="MPS_ContentPriceCurrency"/>
+												<xs:enumeration value="MPS_ContentPricePeriodLength"/>
+												<xs:enumeration value="MPS_URIProfile"/>
+                        <xs:enumeration value="MPS_ChannelId"/>
+                        <xs:enumeration value="MPS_ChannelLCN"/>
+                        <xs:enumeration value="MPS_CatchUpEnabled"/>
+                        <xs:enumeration value="MPS_CatchUpEnabledForService"/>
+                        <xs:enumeration value="MPS_NPVREnabledForService"/>
+                      </xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Asset">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Metadata">
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded">
+										<xs:element name="AMS" type="Default_AMS" minOccurs="0"/>
+										<xs:element name="App_Data" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>following names are in use, rest will be ignored. [Title_Sort_Name, Title, Episode_Name, Summary_Long, Summary_Short, Rating, Run_Time, Year, Country_of_Origin, Actors, Director, Producer, Category, Genre, Licensing_Window_Start, Licensing_Window_End]</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="App" type="xs:string" use="optional" fixed="MOD"/>
+												<xs:attribute name="Name" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Title_Sort_Name"/>
+															<xs:enumeration value="Title_Brief"/>
+															<xs:enumeration value="Title"/>
+															<xs:enumeration value="Episode_Name"/>
+															<xs:enumeration value="Episode_ID"/>
+															<xs:enumeration value="Summary_Long"/>
+															<xs:enumeration value="Summary_Medium"/>
+															<xs:enumeration value="Summary_Short"/>
+															<xs:enumeration value="Rating"/>
+															<xs:enumeration value="Advisories"/>
+															<xs:enumeration value="Closed_Captioning"/>
+															<xs:enumeration value="Run_Time"/>
+															<xs:enumeration value="Display_Run_Time"/>
+															<xs:enumeration value="Year"/>
+															<xs:enumeration value="Provider_Asset_ID"/>
+															<xs:enumeration value="Country_of_Origin"/>
+															<xs:enumeration value="Actors"/>
+															<xs:enumeration value="Actors_Display"/>
+															<xs:enumeration value="Writer_Display"/>
+															<xs:enumeration value="Director"/>
+															<xs:enumeration value="Producer"/>
+															<xs:enumeration value="Studio"/>
+															<xs:enumeration value="Category"/>
+															<xs:enumeration value="Genre"/>
+															<xs:enumeration value="Season_Premiere"/>
+															<xs:enumeration value="Season_Finale"/>
+															<xs:enumeration value="Chapter"/>
+															<xs:enumeration value="Box_Office"/>
+															<xs:enumeration value="Propagation_Priority"/>
+															<xs:enumeration value="Provider_Asset_ID"/>
+															<xs:enumeration value="Licensing_Window_Start"/>
+															<xs:enumeration value="Licensing_Window_End"/>
+															<xs:enumeration value="Preview_Period"/>
+															<xs:enumeration value="Home_Video_Window"/>
+															<xs:enumeration value="Display_As_New"/>
+															<xs:enumeration value="Display_As_Last_Chance"/>
+															<xs:enumeration value="Maximum_Viewing_Length"/>
+															<xs:enumeration value="Provider_QA_Contact"/>
+															<xs:enumeration value="Contract_Name"/>
+															<xs:enumeration value="Suggested_Price"/>
+															<xs:enumeration value="Distributor_Royalty_Percent"/>
+															<xs:enumeration value="Distributor_Royalty_Minimum"/>
+															<xs:enumeration value="Distributor_Royalty_Flat_Rate"/>
+															<xs:enumeration value="Distributor_Name"/>
+															<xs:enumeration value="Studio_Royalty_Percent"/>
+															<xs:enumeration value="Studio_Royalty_Minimum"/>
+															<xs:enumeration value="Studio_Royalty_Flat_Rate"/>
+															<xs:enumeration value="Studio_Name"/>
+															<xs:enumeration value="Subscriber_View_Limit"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Asset" minOccurs="2" maxOccurs="3">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Metadata">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element name="AMS" type="Default_AMS" minOccurs="0"/>
+													<xs:element name="App_Data" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="App" type="xs:string" fixed="MOD"/>
+															<xs:attribute name="Name" use="required">
+																<xs:annotation>
+																	<xs:documentation>following names are in use, rest will be ignored.[Type, Languages, Resolution_Type, Content_FileSize, Image_Aspect_Ratio]</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="Encryption"/>
+																		<xs:enumeration value="Type"/>
+																		<xs:enumeration value="Audio_Type"/>
+																		<xs:enumeration value="Screen_Format"/>
+																		<xs:enumeration value="Languages"/>
+																		<xs:enumeration value="Subtitle_Languages"/>
+																		<xs:enumeration value="Dubbed_Languages"/>
+																		<xs:enumeration value="Copy_Protection"/>
+																		<xs:enumeration value="Content_FileSize"/>
+																		<xs:enumeration value="Content_CheckSum"/>
+																		<xs:enumeration value="Rating"/>
+																		<xs:enumeration value="Run_Time"/>
+																		<xs:enumeration value="Image_Aspect_Ratio"/>
+																		<xs:enumeration value="Resolution_Type"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Content">
+											<xs:complexType>
+												<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

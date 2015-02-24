@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://10.4.2.33/ca-server/webservices/ondemandcontent?xsd=cx-service-contract-content-common-types-1.1.xsd" filename="ondemandcontent.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://10.4.2.33/ca-server/webservices/ondemandcontent?wsdl" filename="ondemandcontent.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://10.4.2.33/ca-server/webservices/ondemandcontent?xsd=cx-service-contract-ondemand-content-1.0.xsd" filename="ondemandcontent0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://10.4.2.33/ca-server/webservices/ondemandcontent?xsd=cx-service-contract-common-types-1.0.xsd" filename="ondemandcontent1.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

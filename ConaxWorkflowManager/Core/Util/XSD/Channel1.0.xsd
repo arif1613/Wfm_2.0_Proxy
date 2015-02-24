@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Martin Sjölander (MPS Broadband AB) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="ST_DeviceType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[sS][tT][bB]"/>
+			<xs:pattern value="[pP][cC]"/>
+			<xs:pattern value="[mM][aA][cC]"/>
+			<xs:pattern value="[iI][pP][hH][oO][nN][eE]"/>
+			<xs:pattern value="[iI][pP][aA][dD]"/>
+			<xs:pattern value="[aA][nN][dD][rR][oO][iI][dD][tT][aA][bB][lL][eE][tT]"/>
+			<xs:pattern value="[aA][nN][dD][rR][oO][iI][dD][mM][oO][bB][iI][lL][eE]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CX_Service" mixed="true">
+		<xs:choice maxOccurs="7">
+			<xs:element name="Lcn" type="xs:string"/>
+			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Assets">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="Asset" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:string">
+										<xs:attribute name="device" type="ST_DeviceType" use="required"/>
+										<xs:attribute name="highDefinition" type="xs:boolean" use="required"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="NPVR">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Asset" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:string">
+										<xs:attribute name="device" type="ST_DeviceType" use="required"/>
+										<xs:attribute name="highDefinition" type="xs:boolean" use="required"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+					<xs:attribute name="enable" type="xs:boolean" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Catchup">
+				<xs:complexType>
+					<xs:attribute name="enable" type="xs:boolean" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BoxCover" type="xs:string"/>
+			<xs:element name="UUID" type="xs:string" minOccurs="0"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="Channel">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="ChannelId" type="xs:string"/>
+				<xs:element name="RadioChannel" type="xs:boolean"/>
+				<xs:element name="IsAdult" type="xs:boolean" default="false" minOccurs="0"/>
+				<xs:element name="DefaultConfiguration" type="CX_Service" minOccurs="0"/>
+				<xs:element name="ConfigurationForServices" minOccurs="0">
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="Service" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:complexContent mixed="true">
+										<xs:extension base="CX_Service">
+											<xs:attribute name="serviceObjectId" type="xs:integer"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+			<xs:attribute name="xmlVersion" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

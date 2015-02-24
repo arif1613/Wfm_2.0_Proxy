@@ -1,0 +1,59 @@
+﻿<EPGChannelConfig>
+  <Feeds>
+    <!-- deifnes epg feeds and with timezone the dates in the feeds are using. -->
+    <Feed uri="http://82.99.24.12/VOD_HTTP/TEST/steve2.xml" feedTimezone="W. Europe Standard Time"/>
+    <!--<Feed uri="C:\Users\OlofK\Documents\CONAX\EPG\epg_nrk1_tore.xml" feedTimezone="W. Europe Standard Time"/>-->
+    <!--<Feed uri="C:\Users\OlofK\Documents\CONAX\EPG\tore_pa_sparet_nrk1.nrk.no_2013-01-07.xml" feedTimezone="W. Europe Standard Time"/>-->    
+    <!-- <Feed uri="http://82.99.24.12/VOD_HTTP/TEST/steve.xml" feedTimezone="W. Europe Standard Time"/>-->
+  </Feeds>
+  <Channels>
+    <Channel mppContentId="621" epgChannelId="nrk1.nrk.no" enableCatchUp="false" enableNPVR="true">
+      <DefaultConfiguration>
+        <Source encodeInTimezone="UTC">
+          <ForDevices>
+            <Device>PC</Device>
+            <Device>MAC</Device>
+            <Device>STB</Device>
+          </ForDevices>
+          <Stream>http://10.4.8.99/Content/SS/Live/Channel(nrk1_Clear2).isml/Manifest</Stream>
+          <CatchUpFSRoot>\\origin01.lab.conax.com\san\archive\nrk1</CatchUpFSRoot>
+          <CatchUpWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2</CatchUpWebRoot>
+          <CompositeFSRoot>C:\MPS\importserver\conax\HLS\composite\1</CompositeFSRoot>
+          <CompositeWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2/SS</CompositeWebRoot>
+          <NPVRFSRoot>C:\MPS\importserver\conax\HLS\composite\1</NPVRFSRoot>
+          <NPVRWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2/SS</NPVRWebRoot>
+        </Source>
+        <Source encodeInTimezone="UTC">
+          <ForDevices>
+            <Device>iPhone</Device>
+            <Device>iPad</Device>
+          </ForDevices>
+          <Stream>http://10.4.8.99/Content/hls/Live/Channel(nrk1_Clear2).m3u8</Stream>
+          <CatchUpFSRoot>\\origin01.lab.conax.com\san\archive\HLS\nrk2_archive</CatchUpFSRoot>
+          <CatchUpWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2</CatchUpWebRoot>
+          <CompositeFSRoot>C:\MPS\importserver\conax\HLS\composite\1</CompositeFSRoot>
+          <CompositeWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2/HLS</CompositeWebRoot>
+          <NPVRFSRoot>\\storage01.lab.conax.com\content\npvr</NPVRFSRoot>
+          <NPVRWebRoot>http://storage01.lab.conax.com/content/npvr</NPVRWebRoot>
+        </Source>
+      </DefaultConfiguration>
+      <ConfigurationForServices>
+        <Service serviceObjectId="3343361">
+          <Source encodeInTimezone="UTC">
+            <ForDevices>
+              <Device>iPad</Device>
+            </ForDevices>
+            <Stream/>
+            <CatchUpFSRoot>\\origin01.lab.conax.com\san\archive\HLS\nrk2_archive</CatchUpFSRoot>
+            <CatchUpWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2</CatchUpWebRoot>
+            <CompositeFSRoot>C:\MPS\importserver\conax\HLS\composite\1</CompositeFSRoot>
+            <CompositeWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2/HLS</CompositeWebRoot>
+            <NPVRFSRoot>\\storage01.lab.conax.com\content\npvr</NPVRFSRoot>
+            <NPVRWebRoot>http://storage01.lab.conax.com/content/npvr</NPVRWebRoot>
+          </Source>
+        </Service>
+      </ConfigurationForServices>
+      <CatchUpDBSource>C:\MPS\Work\Trunk\Conax_4.20.0\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\Database\SQLite\catchup.s3db</CatchUpDBSource>
+    </Channel>
+  </Channels>
+</EPGChannelConfig>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NPVRRightsManagement>
+  -<Channels>
+    
+    -<Channel enableNPVR="false" epgepgChannelId="NPVR1">
+      <!--The_NPVR_Testing_channel-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1">
+      <!--Channel 1-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="10338">
+      <!--Channel 10338-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="10447">
+      <!--Channel 10447-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="10561">
+      <!--Channel 10561-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="10636">
+      <!--Channel 10636-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="10990">
+      <!--Channel 10990-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1126">
+      <!--Channel 1126-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1158">
+      <!--Channel 1158-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1168">
+      <!--Channel 1168-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="11808">
+      <!--Channel 11808-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1184">
+      <!--Channel 1184-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1185">
+      <!--Channel 1185-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="11909">
+      <!--Channel 11909-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="11938">
+      <!--Channel 11938-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="11949">
+      <!--Channel 11949-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1202">
+      <!--Channel 1202-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1219">
+      <!--Channel 1219-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1232">
+      <!--Channel 1232-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="12472">
+      <!--Channel 12472-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1254">
+      <!--Channel 1254-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="1260">
+      <!--Channel 1260-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="13005">
+      <!--Channel 13005-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="13130">
+      <!--Channel 13130-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="13306">
+      <!--Channel 13306-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="13814">
+      <!--Channel 13814-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="15738">
+      <!--Channel 15738-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="15970">
+      <!--Channel 15970-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="16398">
+      <!--Channel 16398-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="16978">
+      <!--Channel 16978-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="17251">
+      <!--Channel 17251-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="17322">
+      <!--Channel 17322-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="17546">
+      <!--Channel 17546-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="17816">
+      <!--Channel 17816-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="17911">
+      <!--Channel 17911-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="19129">
+      <!--Channel 19129-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="19380">
+      <!--Channel 19380-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="19433">
+      <!--Channel 19433-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="19994">
+      <!--Channel 19994-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="2">
+      <!--Channel 2-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20256">
+      <!--Channel 20256-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20315">
+      <!--Channel 20315-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20541">
+      <!--Channel 20541-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20640">
+      <!--Channel 20640-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20730">
+      <!--Channel 20730-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20779">
+      <!--Channel 20779-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20877">
+      <!--Channel 20877-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="20995">
+      <!--Channel 20995-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="21129">
+      <!--Channel 21129-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="21353">
+      <!--Channel 21353-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="21660">
+      <!--Channel 21660-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="21787">
+      <!--Channel 21787-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="2181">
+      <!--Channel 2181-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="21923">
+      <!--Channel 21923-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="23523">
+      <!--Channel 23523-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="23556">
+      <!--Channel 23556-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="24462">
+      <!--Channel 24462-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="24484">
+      <!--Channel 24484-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="27375">
+      <!--Channel 27375-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="27380">
+      <!--Channel 27380-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="27381">
+      <!--Channel 27381-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="27382">
+      <!--Channel 27382-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28440">
+      <!--Channel 28440-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28536">
+      <!--Channel 28536-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28752">
+      <!--Channel 28752-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28768">
+      <!--Channel 28768-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28780">
+      <!--Channel 28780-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28821">
+      <!--Channel 28821-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28844">
+      <!--Channel 28844-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28846">
+      <!--Channel 28846-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28847">
+      <!--Channel 28847-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28848">
+      <!--Channel 28848-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28851">
+      <!--Channel 28851-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28852">
+      <!--Channel 28852-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28853">
+      <!--Channel 28853-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28854">
+      <!--Channel 28854-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28855">
+      <!--Channel 28855-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28856">
+      <!--Channel 28856-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28857">
+      <!--Channel 28857-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28866">
+      <!--Channel 28866-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28869">
+      <!--Channel 28869-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28889">
+      <!--Channel 28889-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28898">
+      <!--Channel 28898-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28920">
+      <!--Channel 28920-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28958">
+      <!--Channel 28958-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="28959">
+      <!--Channel 28959-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="29290">
+      <!--Channel 29290-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="29297">
+      <!--Channel 29297-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="29358">
+      <!--Channel 29358-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="29423">
+      <!--Channel 29423-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="29424">
+      <!--Channel 29424-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="29530">
+      <!--Channel 29530-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3">
+      <!--Channel 3-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="30578">
+      <!--Channel 30578-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="30579">
+      <!--Channel 30579-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3082">
+      <!--Channel 3082-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="32334">
+      <!--Channel 32334-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="33">
+      <!--Channel 33-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3343">
+      <!--Channel 3343-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="33551">
+      <!--Channel 33551-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="34197">
+      <!--Channel 34197-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="34494">
+      <!--Channel 34494-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="34515">
+      <!--Channel 34515-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3474">
+      <!--Channel 3474-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35476">
+      <!--Channel 35476-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35917">
+      <!--Channel 35917-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35973">
+      <!--Channel 35973-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35974">
+      <!--Channel 35974-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35977">
+      <!--Channel 35977-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35978">
+      <!--Channel 35978-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="35980">
+      <!--Channel 35980-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="36003">
+      <!--Channel 36003-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="36688">
+      <!--Channel 36688-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="37476">
+      <!--Channel 37476-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3752">
+      <!--Channel 3752-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3754">
+      <!--Channel 3754-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="381">
+      <!--Channel 381-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3858">
+      <!--Channel 3858-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3892">
+      <!--Channel 3892-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="3982">
+      <!--Channel 3982-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="408">
+      <!--Channel 408-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="4224">
+      <!--Channel 4224-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="424">
+      <!--Channel 424-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="426">
+      <!--Channel 426-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="428">
+      <!--Channel 428-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="430">
+      <!--Channel 430-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="4331">
+      <!--Channel 4331-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="4332">
+      <!--Channel 4332-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="4334">
+      <!--Channel 4334-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="4335">
+      <!--Channel 4335-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="4893">
+      <!--Channel 4893-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="5044">
+      <!--Channel 5044-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="5053">
+      <!--Channel 5053-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="5162">
+      <!--Channel 5162-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="5301">
+      <!--Channel 5301-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="5307">
+      <!--Channel 5307-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="6332">
+      <!--Channel 6332-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="9048">
+      <!--Channel 9048-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="9487">
+      <!--Channel 9487-->
+      <ContentPartners/>
+    </Channel> -<Channel enableNPVR="false" epgChannelId="9938">
+      <!--Channel 9938-->
+      <ContentPartners/>
+    </Channel>
+  </Channels> 
+  <ContentPartners/>
+</NPVRRightsManagement>

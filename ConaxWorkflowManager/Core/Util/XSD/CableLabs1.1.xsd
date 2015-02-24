@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Steve (MPS Broadband AB) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="NonEmptyString">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:pattern value=".*[^\s].*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AMS_Attributes">
+		<xs:attribute name="Provider" type="xs:string" use="required"/>
+		<xs:attribute name="Product" type="xs:string" use="required"/>
+		<xs:attribute name="Asset_Name" type="NonEmptyString" use="required"/>
+		<xs:attribute name="Version_Major" type="xs:string" use="required"/>
+		<xs:attribute name="Version_Minor" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string" use="required"/>
+		<xs:attribute name="Creation_Date" type="xs:string" use="required"/>
+		<xs:attribute name="Provider_ID" type="xs:string" use="required"/>
+		<xs:attribute name="Asset_ID" type="xs:string" use="required"/>
+		<xs:attribute name="Asset_Class" type="xs:string" use="required"/>
+		<xs:attribute name="Verb" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:element name="App_Data_Base">
+		<xs:complexType>
+			<xs:attribute name="App" type="MODorSVOD"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="MODorSVOD">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MOD"/>
+			<xs:enumeration value="SVOD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PCTorMSV">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Provider_Content_Tier"/>
+			<xs:enumeration value="Metadata_Spec_Version"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="ADI"><!--Package-->
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Metadata"><!--Package metadata-->
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AMS" type="AMS_Attributes"/>
+							<xs:element name="App_Data" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="App" type="MODorSVOD"/>
+									<xs:attribute name="Name" type="PCTorMSV"/>
+									<xs:attribute name="Value" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Asset">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Metadata"> <!--Title asset metadata-->
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded">
+										<xs:element name="AMS" type="AMS_Attributes"/>
+										<xs:element name="App_Data" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="App" type="MODorSVOD"/>
+												<xs:attribute name="Name" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Type"/>
+															<xs:enumeration value="Title_Sort_Name"/>
+															<xs:enumeration value="Subscriber_View_Limit"/>
+															<xs:enumeration value="Title_Brief"/>
+															<xs:enumeration value="Title"/>
+															<xs:enumeration value="EIDR"/>
+															<xs:enumeration value="ISAN"/>
+															<xs:enumeration value="Episode_Name"/>
+															<xs:enumeration value="Episode_ID"/>
+															<xs:enumeration value="Summary_Long"/>
+															<xs:enumeration value="Summary_Medium"/>
+															<xs:enumeration value="Summary_Short"/>
+															<xs:enumeration value="Rating"/>
+															<xs:enumeration value="MSORating"/>
+															<xs:enumeration value="Advisories"/>
+															<xs:enumeration value="Audience"/>
+															<xs:enumeration value="Closed_Captioning"/>
+															<xs:enumeration value="Run_Time"/>
+															<xs:enumeration value="Display_Run_Time"/>
+															<xs:enumeration value="Year"/>
+															<xs:enumeration value="Country_of_Origin"/>
+															<xs:enumeration value="Actors"/>
+															<xs:enumeration value="Actors_Display"/>
+															<xs:enumeration value="Writer_Display"/>
+															<xs:enumeration value="Director"/>
+															<xs:enumeration value="Producer"/>
+															<xs:enumeration value="Studio"/>
+															<xs:enumeration value="Category"/>
+															<xs:enumeration value="Season_Premiere"/>
+															<xs:enumeration value="Season_Finale"/>
+															<xs:enumeration value="Genre"/>
+															<xs:enumeration value="Show_Type"/>
+															<xs:enumeration value="Chapter"/>
+															<xs:enumeration value="Box_Office"/>
+															<xs:enumeration value="Propagation_Priority"/>
+															<xs:enumeration value="Billing_ID"/>
+															<xs:enumeration value="Licensing_Window_Start"/>
+															<xs:enumeration value="Licensing_Window_End"/>
+															<xs:enumeration value="Preview_Period"/>
+															<xs:enumeration value="Home_Video_Window"/>
+															<xs:enumeration value="Display_As_New"/>
+															<xs:enumeration value="Display_As_Last_Chance"/>
+															<xs:enumeration value="Maximum_Viewing_Length"/>
+															<xs:enumeration value="Provider_QA_Contact"/>
+															<xs:enumeration value="Contract_Name"/>
+															<xs:enumeration value="Suggested_Price"/>
+															<xs:enumeration value="Distributor_Royalty_Percent"/>
+															<xs:enumeration value="Distributor_Royalty_Minimum"/>
+															<xs:enumeration value="Distributor_Royalty_Flat_Rate"/>
+															<xs:enumeration value="Distributor_Name"/>
+															<xs:enumeration value="Studio_Royalty_Percent"/>
+															<xs:enumeration value="Studio_Royalty_Minimum"/>
+															<xs:enumeration value="Studio_Royalty_Flat_Rate"/>
+															<xs:enumeration value="Studio_Name"/>
+															<xs:enumeration value="Studio_Code"/>
+															<xs:enumeration value="Subscriber_View_Limit"/>
+															<xs:enumeration value="Programmer_Call_Letters"/>
+															<xs:enumeration value="Recording_Artist"/>
+															<xs:enumeration value="Song_Title"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Asset" minOccurs="1" maxOccurs="unbounded"><!--movie/preview/poster/encrypted/barker-->
+								<xs:annotation>
+									<xs:documentation>Barker files can have only 1 Asset. Minimum 3 otherwise. </xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Metadata">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element name="AMS" type="AMS_Attributes" minOccurs="0"/>
+													<xs:element name="App_Data" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="App" use="optional">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="MOD"/>
+																		<xs:enumeration value="SVOD"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Name" use="required">
+																<xs:annotation>
+																	<xs:documentation>following names are in use, rest will be ignored.[Type, Languages, Resolution_Type, Content_FileSize, Image_Aspect_Ratio]</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="Encryption"/>
+																		<xs:enumeration value="Type"/>
+																		<xs:enumeration value="Audio_Type"/>
+																		<xs:enumeration value="Screen_Format"/>
+																		<xs:enumeration value="Resolution"/>
+																		<xs:enumeration value="Frame_Rate"/>
+																		<xs:enumeration value="Codec"/>
+																		<xs:enumeration value="Languages"/>
+																		<xs:enumeration value="Subtitle_Languages"/>
+																		<xs:enumeration value="Dubbed_Languages"/>
+																		<xs:enumeration value="Copy_Protection"/>
+																		<xs:enumeration value="Copy_Protection_Verbose"/>
+																		<xs:enumeration value="Analog_Protection_System"/>
+																		<xs:enumeration value="Encryption_Mode_Indicator"/>
+																		<xs:enumeration value="Constrained_Image_Trigger"/>
+																		<xs:enumeration value="CGMS_A"/>
+																		<xs:enumeration value="Viewing_Can_Be_Resumed"/>
+																		<xs:enumeration value="Bit_Rate"/>
+																		<xs:enumeration value="Content_FileSize"/>
+																		<xs:enumeration value="Content_CheckSum"/>
+																		<xs:enumeration value="trickModesRestricted"/>
+																		<xs:enumeration value="Selectable_Output_Control"/>
+																		<xs:enumeration value="3D_Mode"/>
+																		<xs:enumeration value="Image_Aspect_Ratio"/>
+																		<xs:enumeration value="Rating"/>
+																		<xs:enumeration value="MSORating"/>
+																		<xs:enumeration value="Audience"/>
+																		<xs:enumeration value="Run_Time"/>
+																		<xs:enumeration value="Vendor_Name"/>
+																		<xs:enumeration value="Vendor_Product"/>
+																		<xs:enumeration value="For_Version"/>
+																		<xs:enumeration value="Trick_Mode"/>
+																		<xs:enumeration value="Asset_Encrypted"/>
+																		<xs:enumeration value="Receiver_Type"/>
+																		<xs:enumeration value="Receiver_Version"/>
+																		<xs:enumeration value="Encryption_Type"/>
+																		<xs:enumeration value="Encryption_Algorithm"/>
+																		<xs:enumeration value="Encryption_Date"/>
+																		<xs:enumeration value="Encryption_Time"/>
+																		<xs:enumeration value="Encrypting_System_Info"/>
+																		<xs:enumeration value="Encryption_Key_Block"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Content" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>No movie content present for encrypted content, hence minOccurs="0". </xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="Value" type="NonEmptyString" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

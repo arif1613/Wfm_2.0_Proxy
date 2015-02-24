@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.conax.com/cas/xsd/content-common-types/v1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.conax.com/cas/xsd/content-common-types/v1" version="1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BridgeControlType">
+    <xs:sequence>
+      <xs:element name="ExportTo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="SecurityDomain" type="SecurityDomainType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SecurityDomainType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element minOccurs="0" name="ExportConditions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Property" type="PropertyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PropertyType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

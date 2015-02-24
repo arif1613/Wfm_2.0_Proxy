@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AuthenticateMPPUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateMPPUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateMPPUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMPPUserAccountInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMPPUserAccountInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMPPUserAccountInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMPPUserAccountInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MPPUserInfoXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMPPUserAccountInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMPPUserAccountInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthenticateMPPUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateMPPUser" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateMPPUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateMPPUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMPPUserAccountInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMPPUserAccountInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMPPUserAccountInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMPPUserAccountInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMPPUserAccountInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMPPUserAccountInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMPPUserAccountInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMPPUserAccountInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateMPPUserHttpGetIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateMPPUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPPUserAccountInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPPUserAccountInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMPPUserAccountInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="MPPUserInfoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMPPUserAccountInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateMPPUserHttpPostIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateMPPUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPPUserAccountInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMPPUserAccountInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMPPUserAccountInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="MPPUserInfoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMPPUserAccountInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="MPPUserServiceSoap">
+    <wsdl:operation name="AuthenticateMPPUser">
+      <wsdl:input message="tns:AuthenticateMPPUserSoapIn" />
+      <wsdl:output message="tns:AuthenticateMPPUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <wsdl:input message="tns:GetMPPUserAccountInfoSoapIn" />
+      <wsdl:output message="tns:GetMPPUserAccountInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <wsdl:input message="tns:UpdateMPPUserAccountInfoSoapIn" />
+      <wsdl:output message="tns:UpdateMPPUserAccountInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MPPUserServiceHttpGet">
+    <wsdl:operation name="AuthenticateMPPUser">
+      <wsdl:input message="tns:AuthenticateMPPUserHttpGetIn" />
+      <wsdl:output message="tns:AuthenticateMPPUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <wsdl:input message="tns:GetMPPUserAccountInfoHttpGetIn" />
+      <wsdl:output message="tns:GetMPPUserAccountInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <wsdl:input message="tns:UpdateMPPUserAccountInfoHttpGetIn" />
+      <wsdl:output message="tns:UpdateMPPUserAccountInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MPPUserServiceHttpPost">
+    <wsdl:operation name="AuthenticateMPPUser">
+      <wsdl:input message="tns:AuthenticateMPPUserHttpPostIn" />
+      <wsdl:output message="tns:AuthenticateMPPUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <wsdl:input message="tns:GetMPPUserAccountInfoHttpPostIn" />
+      <wsdl:output message="tns:GetMPPUserAccountInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <wsdl:input message="tns:UpdateMPPUserAccountInfoHttpPostIn" />
+      <wsdl:output message="tns:UpdateMPPUserAccountInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MPPUserServiceSoap" type="tns:MPPUserServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AuthenticateMPPUser">
+      <soap:operation soapAction="http://tempuri.org/AuthenticateMPPUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMPPUserAccountInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateMPPUserAccountInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MPPUserServiceSoap12" type="tns:MPPUserServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AuthenticateMPPUser">
+      <soap12:operation soapAction="http://tempuri.org/AuthenticateMPPUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMPPUserAccountInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMPPUserAccountInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MPPUserServiceHttpGet" type="tns:MPPUserServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="AuthenticateMPPUser">
+      <http:operation location="/AuthenticateMPPUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <http:operation location="/GetMPPUserAccountInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <http:operation location="/UpdateMPPUserAccountInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MPPUserServiceHttpPost" type="tns:MPPUserServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="AuthenticateMPPUser">
+      <http:operation location="/AuthenticateMPPUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPPUserAccountInfo">
+      <http:operation location="/GetMPPUserAccountInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMPPUserAccountInfo">
+      <http:operation location="/UpdateMPPUserAccountInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MPPUserService">
+    <wsdl:port name="MPPUserServiceSoap" binding="tns:MPPUserServiceSoap">
+      <soap:address location="http://localhost/integrationservices/mppuserservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MPPUserServiceSoap12" binding="tns:MPPUserServiceSoap12">
+      <soap12:address location="http://localhost/integrationservices/mppuserservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MPPUserServiceHttpGet" binding="tns:MPPUserServiceHttpGet">
+      <http:address location="http://localhost/integrationservices/mppuserservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MPPUserServiceHttpPost" binding="tns:MPPUserServiceHttpPost">
+      <http:address location="http://localhost/integrationservices/mppuserservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,22 @@
+﻿<EmailTemplates>
+  <EmailTemplate type="SuccessfulVODIngest">
+    <From>no-reply@mpsbroadband.com</From>
+    <Subject><![CDATA[VOD ingested successfully - {#IngestXML}]]></Subject>
+    <Body><![CDATA[Content {#Content.Name} with id {#Content.Id} successfully ingested.]]></Body>
+  </EmailTemplate>
+  <EmailTemplate type="FailedVODIngest">
+    <From>no-reply@mpsbroadband.com</From>
+    <Subject><![CDATA[VOD ingested failed - {#IngestXML}]]></Subject>
+    <Body><![CDATA[{#IngestXML} couldn't be ingested. {#ErrorMessage}]]></Body>
+  </EmailTemplate>
+  <EmailTemplate type="SuccessfulVODPublish">
+    <From>no-reply@mpsbroadband.com</From>
+    <Subject><![CDATA[VOD publishing successfully - {#Content.Name}]]></Subject>
+    <Body><![CDATA[Content {#Content.Name} with id {#Content.Id} successfully published to service {#Service.Name} with id {#Service.Id}.]]></Body>
+  </EmailTemplate>
+  <EmailTemplate type="FailedVODPublish">
+    <From>no-reply@mpsbroadband.com</From>
+    <Subject><![CDATA[VOD publishing failed - {#Content.Name}]]></Subject>
+    <Body><![CDATA[Content {#Content.Name} with id {#Content.Id} couldn't be published to service {#Service.Name} with id {#Service.Id}. {#ErrorMessage}]]></Body>
+  </EmailTemplate>
+</EmailTemplates>

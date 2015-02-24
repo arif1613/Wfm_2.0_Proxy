@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Channel xmlVersion="1.0">
+  <Name>nPVR-CHANNEL</Name>
+  <ChannelId>1230715123</ChannelId>
+  <RadioChannel>false</RadioChannel>
+  <IsAdult>false</IsAdult>
+  <ConaxContegoContentId>106450</ConaxContegoContentId>
+  <DefaultConfiguration>
+    <Title>nPVR-CHANNEL</Title>
+    <Catchup enable="false"/>
+    <BoxCover>mps5.jpg</BoxCover>
+  </DefaultConfiguration>
+  <ConfigurationForServices>
+    <Service serviceObjectId="4895385601">
+	<!-- Mexico -->
+      <UUID></UUID>
+      <Lcn>1230716123</Lcn>
+      <Assets>
+        <Asset device="STB" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+		<Asset device="PC" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+        <Asset device="Mac" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+      </Assets>
+      <NPVR enable="true"/>
+	  <Catchup enable="false"/>
+    </Service>
+  </ConfigurationForServices>
+</Channel>

@@ -1,0 +1,107 @@
+﻿<services type="array">
+  <service>
+    <all-visible type="boolean">false</all-visible>
+    <id type="integer">1</id>
+    <name>TV</name>
+    <plugins-name nil="true"/>
+    <predefined type="boolean">true</predefined>
+    <realtime type="boolean">false</realtime>
+    <searchable type="boolean">true</searchable>
+    <service-layout>default</service-layout>
+    <service-type>TV</service-type>
+    <unfoldable type="boolean">true</unfoldable>
+    <cover>
+      <id type="integer">1</id>
+    </cover>
+    <tag>
+      <id type="integer">1</id>
+    </tag>
+  </service>
+  <service>
+    <all-visible type="boolean">false</all-visible>
+    <id type="integer">2</id>
+    <name>VOD</name>
+    <plugins-name nil="true"/>
+    <predefined type="boolean">true</predefined>
+    <realtime type="boolean">false</realtime>
+    <searchable type="boolean">true</searchable>
+    <service-layout>default</service-layout>
+    <service-type>VOD</service-type>
+    <unfoldable type="boolean">true</unfoldable>
+    <cover>
+      <id type="integer">2</id>
+    </cover>
+    <tag>
+      <id type="integer">2</id>
+    </tag>
+  </service>
+  <service>
+    <all-visible type="boolean">false</all-visible>
+    <id type="integer">3</id>
+    <name>Internet radio</name>
+    <plugins-name nil="true"/>
+    <predefined type="boolean">true</predefined>
+    <realtime type="boolean">false</realtime>
+    <searchable type="boolean">true</searchable>
+    <service-layout>default</service-layout>
+    <service-type>Internet radio</service-type>
+    <unfoldable type="boolean">true</unfoldable>
+    <cover>
+      <id type="integer">3</id>
+    </cover>
+    <tag>
+      <id type="integer">3</id>
+    </tag>
+  </service>
+  <service>
+    <all-visible type="boolean">false</all-visible>
+    <id type="integer">4</id>
+    <name>PVR</name>
+    <plugins-name nil="true"/>
+    <predefined type="boolean">true</predefined>
+    <realtime type="boolean">false</realtime>
+    <searchable type="boolean">true</searchable>
+    <service-layout>default</service-layout>
+    <service-type>PVR</service-type>
+    <unfoldable type="boolean">true</unfoldable>
+    <cover>
+      <id type="integer">4</id>
+    </cover>
+  </service>
+  <service>
+    <all-visible type="boolean">false</all-visible>
+    <id type="integer">5</id>
+    <name>Catchup Channel</name>
+    <plugins-name nil="true"/>
+    <predefined type="boolean">true</predefined>
+    <realtime type="boolean">false</realtime>
+    <searchable type="boolean">true</searchable>
+    <service-layout>default</service-layout>
+    <service-type>Catchup Channel</service-type>
+    <unfoldable type="boolean">true</unfoldable>
+    <cover>
+      <id type="integer">5</id>
+    </cover>
+    <tag>
+      <id type="integer">2</id>
+    </tag>
+  </service>
+  <service>
+    <all-visible type="boolean">false</all-visible>
+    <id type="integer">6</id>
+    <name>NPVR</name>
+    <plugins-name/>
+    <predefined type="boolean">false</predefined>
+    <realtime type="boolean">false</realtime>
+    <searchable type="boolean">true</searchable>
+    <service-layout>default</service-layout>
+    <service-type>NPVR</service-type>
+    <unfoldable type="boolean">true</unfoldable>
+    <cover>
+      <id type="integer">16</id>
+    </cover>
+    <tag>
+      <id type="integer">6</id>
+    </tag>
+  </service>
+</services>

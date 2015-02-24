@@ -1,0 +1,15 @@
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\obj\x86\Debug\Core.csprojResolveAssemblyReference.cache
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\MediaInfo.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.dll.config
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.pdb
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\log4net.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\Microsoft.ServiceBus.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\NodaTime.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\log4net.xml
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\Microsoft.ServiceBus.xml
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\bin\x86\Debug\NodaTime.xml
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\obj\x86\Debug\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.dll
+C:\SVN\Modules\Auxiliary\ConaxWorkflowManager\Core\obj\x86\Debug\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.pdb

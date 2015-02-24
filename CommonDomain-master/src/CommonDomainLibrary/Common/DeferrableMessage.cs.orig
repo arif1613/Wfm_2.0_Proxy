@@ -1,0 +1,43 @@
+﻿using System;
+using NodaTime;
+<<<<<<< HEAD
+using ProtoBuf;
+
+namespace CommonDomainLibrary.Common
+{
+    [ProtoContract]
+    public class DeferrableMessage
+    {
+        [ProtoMember(1)]
+        public IMessage Message { get; private set; }
+
+        [ProtoMember(2)]
+        public Instant Instant { get; private set; }
+
+        private DeferrableMessage()
+        {
+        }
+
+=======
+
+namespace CommonDomainLibrary.Common
+{
+    public class DeferrableMessage
+    {
+        public IMessage Message { get; private set; }
+        public Instant Instant { get; private set; }
+
+>>>>>>> Implemented the new message routing style
+        public DeferrableMessage(IMessage message, Duration duration)
+        {
+            Message = message;
+            Instant = Instant.FromDateTimeUtc(DateTime.UtcNow).Plus(duration);
+        }
+
+        public DeferrableMessage(IMessage message, Instant instant)
+        {
+            Message = message;
+            Instant = instant;
+        }
+    }
+}

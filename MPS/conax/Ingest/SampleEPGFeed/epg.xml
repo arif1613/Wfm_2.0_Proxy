@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tv source-data-url="http://tvprofil.net/xmltv/" source-info-name="Phazer XML servis 4.5" source-info-url="http://tvprofil.net">
+<channel id="242562">
+<display-name>CNN</display-name>
+<url>http://edition.cnn.com/CNNI/</url>
+<icon src="http://phazer.info/img/kanali/cnn.jpg" />
+</channel>
+<programme id="1260001" channel="242562" start="20140306060000 +0100" stop="20140306063000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260002" channel="242562" start="20140306063000 +0100" stop="20140306070000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260003" channel="242562" start="20140306070000 +0100" stop="20140306080000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260004" channel="242562" start="20140306080000 +0100" stop="20140306090000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260005" channel="242562" start="20140306090000 +0100" stop="20140306093000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260006" channel="242562" start="20140306093000 +0100" stop="20140306094500 +0100">
+<title>iReport for CNN</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260007" channel="242562" start="20140306094500 +0100" stop="20140306100000 +0100">
+<title>Art of Movement</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260008" channel="242562" start="20140306100000 +0100" stop="20140306110000 +0100">
+<title>World Business Today, Round-up of the day&apos;s global business news.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260009" channel="242562" start="20140306110000 +0100" stop="20140306113000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260010" channel="242562" start="20140306113000 +0100" stop="20140306120000 +0100">
+<title>Living Golf, Becky Anderson presents the weekly golfing show.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260011" channel="242562" start="20140306120000 +0100" stop="20140306123000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260012" channel="242562" start="20140306123000 +0100" stop="20140306130000 +0100">
+<title>CNN NewsCenter</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260013" channel="242562" start="20140306130000 +0100" stop="20140306140000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260014" channel="242562" start="20140306140000 +0100" stop="20140306150000 +0100">
+<title>News Stream</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260015" channel="242562" start="20140306150000 +0100" stop="20140306160000 +0100">
+<title>World Business Today, Round-up of the day&apos;s global business news.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260016" channel="242562" start="20140306160000 +0100" stop="20140306170000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260017" channel="242562" start="20140306170000 +0100" stop="20140306174500 +0100">
+<title>Global Exchange</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260018" channel="242562" start="20140306174500 +0100" stop="20140306180000 +0100">
+<title>CNN Marketplace Middle East</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260019" channel="242562" start="20140306180000 +0100" stop="20140306183000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260020" channel="242562" start="20140306183000 +0100" stop="20140306190000 +0100">
+<title>Living Golf, Becky Anderson presents the weekly golfing show.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260021" channel="242562" start="20140306190000 +0100" stop="20140306194500 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260022" channel="242562" start="20140306194500 +0100" stop="20140306200000 +0100">
+<title>CNN Marketplace Europe</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260023" channel="242562" start="20140306200000 +0100" stop="20140306203000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260024" channel="242562" start="20140306203000 +0100" stop="20140306210000 +0100">
+<title>CNN NewsCenter</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260025" channel="242562" start="20140306210000 +0100" stop="20140306220000 +0100">
+<title>Connect the World with Becky Anderson</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260026" channel="242562" start="20140306220000 +0100" stop="20140306230000 +0100">
+<title>Quest Means Business</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260027" channel="242562" start="20140306230000 +0100" stop="20140306233000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260028" channel="242562" start="20140306233000 +0100" stop="20140307000000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260029" channel="242562" start="20140307000000 +0100" stop="20140307010000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260030" channel="242562" start="20140307010000 +0100" stop="20140307013000 +0100">
+<title>CNN Newsroom live from Hong Kong</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260031" channel="242562" start="20140307013000 +0100" stop="20140307020000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260032" channel="242562" start="20140307020000 +0100" stop="20140307030000 +0100">
+<title>Anderson Cooper 360, A look at the latest news and headlines of the day.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260033" channel="242562" start="20140307030000 +0100" stop="20140307040000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260034" channel="242562" start="20140307040000 +0100" stop="20140307050000 +0100">
+<title>Anderson Cooper 360, A look at the latest news and headlines of the day.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260035" channel="242562" start="20140307050000 +0100" stop="20140307060000 +0100">
+<title>Quest Means Business</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260036" channel="242562" start="20140307060000 +0100" stop="20140307063000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260037" channel="242562" start="20140307063000 +0100" stop="20140307064500 +0100">
+<title>iReport for CNN</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260038" channel="242562" start="20140307064500 +0100" stop="20140307070000 +0100">
+<title>Art of Movement</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260039" channel="242562" start="20140307070000 +0100" stop="20140307080000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260040" channel="242562" start="20140307080000 +0100" stop="20140307090000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260041" channel="242562" start="20140307090000 +0100" stop="20140307093000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260042" channel="242562" start="20140307093000 +0100" stop="20140307100000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260043" channel="242562" start="20140307100000 +0100" stop="20140307104500 +0100">
+<title>World Business Today, Round-up of the day&apos;s global business news.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260044" channel="242562" start="20140307104500 +0100" stop="20140307110000 +0100">
+<title>CNN Marketplace Middle East</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260045" channel="242562" start="20140307110000 +0100" stop="20140307113000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260046" channel="242562" start="20140307113000 +0100" stop="20140307120000 +0100">
+<title>TBD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260047" channel="242562" start="20140307120000 +0100" stop="20140307123000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260048" channel="242562" start="20140307123000 +0100" stop="20140307130000 +0100">
+<title>CNN NewsCenter</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260049" channel="242562" start="20140307130000 +0100" stop="20140307140000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260050" channel="242562" start="20140307140000 +0100" stop="20140307150000 +0100">
+<title>News Stream</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260051" channel="242562" start="20140307150000 +0100" stop="20140307160000 +0100">
+<title>World Business Today, Round-up of the day&apos;s global business news.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260052" channel="242562" start="20140307160000 +0100" stop="20140307170000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260053" channel="242562" start="20140307170000 +0100" stop="20140307173000 +0100">
+<title>The Brief</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260054" channel="242562" start="20140307173000 +0100" stop="20140307180000 +0100">
+<title>TBD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260055" channel="242562" start="20140307180000 +0100" stop="20140307183000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260056" channel="242562" start="20140307183000 +0100" stop="20140307190000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260057" channel="242562" start="20140307190000 +0100" stop="20140307194500 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260058" channel="242562" start="20140307194500 +0100" stop="20140307200000 +0100">
+<title>CNN Marketplace Africa</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260059" channel="242562" start="20140307200000 +0100" stop="20140307203000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260060" channel="242562" start="20140307203000 +0100" stop="20140307210000 +0100">
+<title>CNN NewsCenter</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260061" channel="242562" start="20140307210000 +0100" stop="20140307220000 +0100">
+<title>Connect the World with Becky Anderson</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260062" channel="242562" start="20140307220000 +0100" stop="20140307230000 +0100">
+<title>Quest Means Business</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260063" channel="242562" start="20140307230000 +0100" stop="20140307233000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260064" channel="242562" start="20140307233000 +0100" stop="20140308000000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260065" channel="242562" start="20140308000000 +0100" stop="20140308010000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260066" channel="242562" start="20140308010000 +0100" stop="20140308013000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260067" channel="242562" start="20140308013000 +0100" stop="20140308020000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260068" channel="242562" start="20140308020000 +0100" stop="20140308030000 +0100">
+<title>Anderson Cooper 360, A look at the latest news and headlines of the day.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260069" channel="242562" start="20140308030000 +0100" stop="20140308040000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260070" channel="242562" start="20140308040000 +0100" stop="20140308041500 +0100">
+<title>CNN Marketplace Europe</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260071" channel="242562" start="20140308041500 +0100" stop="20140308043000 +0100">
+<title>CNN Marketplace Africa</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260072" channel="242562" start="20140308043000 +0100" stop="20140308050000 +0100">
+<title>Unguarded with Rachel Nichols</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260073" channel="242562" start="20140308050000 +0100" stop="20140308060000 +0100">
+<title>Quest Means Business</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260074" channel="242562" start="20140308060000 +0100" stop="20140308063000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260075" channel="242562" start="20140308063000 +0100" stop="20140308070000 +0100">
+<title>Inside the Middle East</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260076" channel="242562" start="20140308070000 +0100" stop="20140308071500 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260077" channel="242562" start="20140308071500 +0100" stop="20140308073000 +0100">
+<title>CNN Marketplace Africa</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260078" channel="242562" start="20140308073000 +0100" stop="20140308080000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260079" channel="242562" start="20140308080000 +0100" stop="20140308081500 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260080" channel="242562" start="20140308081500 +0100" stop="20140308083000 +0100">
+<title>CNN Marketplace Middle East</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260081" channel="242562" start="20140308083000 +0100" stop="20140308084500 +0100">
+<title>Art of Movement</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260082" channel="242562" start="20140308084500 +0100" stop="20140308090000 +0100">
+<title>iReport for CNN</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260083" channel="242562" start="20140308090000 +0100" stop="20140308093000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260084" channel="242562" start="20140308093000 +0100" stop="20140308100000 +0100">
+<title>Living Golf, Becky Anderson presents the weekly golfing show.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260085" channel="242562" start="20140308100000 +0100" stop="20140308103000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260086" channel="242562" start="20140308103000 +0100" stop="20140308110000 +0100">
+<title>TBD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260087" channel="242562" start="20140308110000 +0100" stop="20140308113000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260088" channel="242562" start="20140308113000 +0100" stop="20140308120000 +0100">
+<title>Unguarded with Rachel Nichols</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260089" channel="242562" start="20140308120000 +0100" stop="20140308123000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260090" channel="242562" start="20140308123000 +0100" stop="20140308130000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260091" channel="242562" start="20140308130000 +0100" stop="20140308133000 +0100">
+<title>The Best of Quest</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260092" channel="242562" start="20140308133000 +0100" stop="20140308140000 +0100">
+<title>Business Traveller</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260093" channel="242562" start="20140308140000 +0100" stop="20140308143000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260094" channel="242562" start="20140308143000 +0100" stop="20140308150000 +0100">
+<title>CNNGo, Down South.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260095" channel="242562" start="20140308150000 +0100" stop="20140308153000 +0100">
+<title>TBD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260096" channel="242562" start="20140308153000 +0100" stop="20140308160000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260097" channel="242562" start="20140308160000 +0100" stop="20140308163000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260098" channel="242562" start="20140308163000 +0100" stop="20140308170000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260099" channel="242562" start="20140308170000 +0100" stop="20140308171500 +0100">
+<title>CNN Marketplace Europe</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260100" channel="242562" start="20140308171500 +0100" stop="20140308173000 +0100">
+<title>CNN Marketplace Africa</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260101" channel="242562" start="20140308173000 +0100" stop="20140308174500 +0100">
+<title>Art of Movement</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260102" channel="242562" start="20140308174500 +0100" stop="20140308180000 +0100">
+<title>iReport for CNN</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260103" channel="242562" start="20140308180000 +0100" stop="20140308183000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260104" channel="242562" start="20140308183000 +0100" stop="20140308190000 +0100">
+<title>MainSail</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260105" channel="242562" start="20140308190000 +0100" stop="20140308193000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260106" channel="242562" start="20140308193000 +0100" stop="20140308200000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260107" channel="242562" start="20140308200000 +0100" stop="20140308203000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260108" channel="242562" start="20140308203000 +0100" stop="20140308210000 +0100">
+<title>Inside the Middle East</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260109" channel="242562" start="20140308210000 +0100" stop="20140308213000 +0100">
+<title>The Brief</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260110" channel="242562" start="20140308213000 +0100" stop="20140308220000 +0100">
+<title>Unguarded with Rachel Nichols</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260111" channel="242562" start="20140308220000 +0100" stop="20140308223000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260112" channel="242562" start="20140308223000 +0100" stop="20140308230000 +0100">
+<title>The Best of Quest</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260113" channel="242562" start="20140308230000 +0100" stop="20140308233000 +0100">
+<title>Living Golf, Becky Anderson presents the weekly golfing show.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260114" channel="242562" start="20140308233000 +0100" stop="20140309000000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260115" channel="242562" start="20140309000000 +0100" stop="20140309003000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260116" channel="242562" start="20140309003000 +0100" stop="20140309010000 +0100">
+<title>Unguarded with Rachel Nichols</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260117" channel="242562" start="20140309010000 +0100" stop="20140309013000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260118" channel="242562" start="20140309013000 +0100" stop="20140309020000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260119" channel="242562" start="20140309020000 +0100" stop="20140309021500 +0100">
+<title>CNN Marketplace Europe</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260120" channel="242562" start="20140309021500 +0100" stop="20140309023000 +0100">
+<title>CNN Marketplace Africa</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260121" channel="242562" start="20140309023000 +0100" stop="20140309030000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260122" channel="242562" start="20140309030000 +0100" stop="20140309040000 +0100">
+<title>Fareed Zakaria GPS</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260123" channel="242562" start="20140309040000 +0100" stop="20140309043000 +0100">
+<title>The Brief</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260124" channel="242562" start="20140309043000 +0100" stop="20140309050000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260125" channel="242562" start="20140309050000 +0100" stop="20140309053000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260126" channel="242562" start="20140309053000 +0100" stop="20140309060000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260127" channel="242562" start="20140309060000 +0100" stop="20140309063000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260128" channel="242562" start="20140309063000 +0100" stop="20140309070000 +0100">
+<title>CNNGo, Down South.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260129" channel="242562" start="20140309070000 +0100" stop="20140309071500 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260130" channel="242562" start="20140309071500 +0100" stop="20140309073000 +0100">
+<title>CNN Marketplace Middle East</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260131" channel="242562" start="20140309073000 +0100" stop="20140309080000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260132" channel="242562" start="20140309080000 +0100" stop="20140309083000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260133" channel="242562" start="20140309083000 +0100" stop="20140309090000 +0100">
+<title>MainSail</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260134" channel="242562" start="20140309090000 +0100" stop="20140309093000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260135" channel="242562" start="20140309093000 +0100" stop="20140309100000 +0100">
+<title>The Best of Quest</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260136" channel="242562" start="20140309100000 +0100" stop="20140309103000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260137" channel="242562" start="20140309103000 +0100" stop="20140309110000 +0100">
+<title>TBD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260138" channel="242562" start="20140309110000 +0100" stop="20140309113000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260139" channel="242562" start="20140309113000 +0100" stop="20140309114500 +0100">
+<title>Art of Movement</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260140" channel="242562" start="20140309114500 +0100" stop="20140309120000 +0100">
+<title>iReport for CNN</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260141" channel="242562" start="20140309120000 +0100" stop="20140309130000 +0100">
+<title>Fareed Zakaria GPS</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260142" channel="242562" start="20140309130000 +0100" stop="20140309133000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260143" channel="242562" start="20140309133000 +0100" stop="20140309140000 +0100">
+<title>Inside the Middle East</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260144" channel="242562" start="20140309140000 +0100" stop="20140309150000 +0100">
+<title>State of the Union</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260145" channel="242562" start="20140309150000 +0100" stop="20140309153000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260146" channel="242562" start="20140309153000 +0100" stop="20140309160000 +0100">
+<title>The Best of Quest</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260147" channel="242562" start="20140309160000 +0100" stop="20140309161500 +0100">
+<title>Global Exchange</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260148" channel="242562" start="20140309161500 +0100" stop="20140309163000 +0100">
+<title>CNN Marketplace Africa</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260149" channel="242562" start="20140309163000 +0100" stop="20140309164500 +0100">
+<title>Global Exchange</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260150" channel="242562" start="20140309164500 +0100" stop="20140309170000 +0100">
+<title>CNN Marketplace Middle East</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260151" channel="242562" start="20140309170000 +0100" stop="20140309173000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260152" channel="242562" start="20140309173000 +0100" stop="20140309180000 +0100">
+<title>Living Golf, Becky Anderson presents the weekly golfing show.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260153" channel="242562" start="20140309180000 +0100" stop="20140309183000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260154" channel="242562" start="20140309183000 +0100" stop="20140309190000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260155" channel="242562" start="20140309190000 +0100" stop="20140309193000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260156" channel="242562" start="20140309193000 +0100" stop="20140309200000 +0100">
+<title>CNNGo, Down South.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260157" channel="242562" start="20140309200000 +0100" stop="20140309210000 +0100">
+<title>Fareed Zakaria GPS</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260158" channel="242562" start="20140309210000 +0100" stop="20140309213000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260159" channel="242562" start="20140309213000 +0100" stop="20140309220000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260160" channel="242562" start="20140309220000 +0100" stop="20140309223000 +0100">
+<title>CNN Newsroom live from Hong Kong</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260161" channel="242562" start="20140309223000 +0100" stop="20140309230000 +0100">
+<title>MainSail</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260162" channel="242562" start="20140309230000 +0100" stop="20140310000000 +0100">
+<title>CNN Newsroom live from Hong Kong</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260163" channel="242562" start="20140310000000 +0100" stop="20140310003000 +0100">
+<title>CNN Newsroom live from Hong Kong</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260164" channel="242562" start="20140310003000 +0100" stop="20140310010000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260165" channel="242562" start="20140310010000 +0100" stop="20140310013000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260166" channel="242562" start="20140310013000 +0100" stop="20140310020000 +0100">
+<title>Inside Africa, News and events across Africa.</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260167" channel="242562" start="20140310020000 +0100" stop="20140310023000 +0100">
+<title>Sanjay Gupta MD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260168" channel="242562" start="20140310023000 +0100" stop="20140310030000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260169" channel="242562" start="20140310030000 +0100" stop="20140310040000 +0100">
+<title>Fareed Zakaria GPS</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260170" channel="242562" start="20140310040000 +0100" stop="20140310043000 +0100">
+<title>Business Traveller</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260171" channel="242562" start="20140310043000 +0100" stop="20140310050000 +0100">
+<title>TBD</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260172" channel="242562" start="20140310050000 +0100" stop="20140310053000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260173" channel="242562" start="20140310053000 +0100" stop="20140310060000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260174" channel="242562" start="20140310060000 +0100" stop="20140310070000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260175" channel="242562" start="20140310070000 +0100" stop="20140310080000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260176" channel="242562" start="20140310080000 +0100" stop="20140310083000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260177" channel="242562" start="20140310083000 +0100" stop="20140310090000 +0100">
+<title>News Special, News round-up.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260178" channel="242562" start="20140310090000 +0100" stop="20140310100000 +0100">
+<title>World Business Today, Round-up of the day&apos;s global business news.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260179" channel="242562" start="20140310100000 +0100" stop="20140310103000 +0100">
+<title>CNN Newsroom</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260180" channel="242562" start="20140310103000 +0100" stop="20140310110000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260181" channel="242562" start="20140310110000 +0100" stop="20140310113000 +0100">
+<title>BackStory</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260182" channel="242562" start="20140310113000 +0100" stop="20140310120000 +0100">
+<title>CNN NewsCenter</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260183" channel="242562" start="20140310120000 +0100" stop="20140310130000 +0100">
+<title>Fareed Zakaria GPS</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260184" channel="242562" start="20140310130000 +0100" stop="20140310140000 +0100">
+<title>News Stream</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260185" channel="242562" start="20140310140000 +0100" stop="20140310150000 +0100">
+<title>World Business Today, Round-up of the day&apos;s global business news.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260186" channel="242562" start="20140310150000 +0100" stop="20140310160000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260187" channel="242562" start="20140310160000 +0100" stop="20140310170000 +0100">
+<title>Global Exchange</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260188" channel="242562" start="20140310170000 +0100" stop="20140310173000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260189" channel="242562" start="20140310173000 +0100" stop="20140310180000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260190" channel="242562" start="20140310180000 +0100" stop="20140310190000 +0100">
+<title>International Desk</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260191" channel="242562" start="20140310190000 +0100" stop="20140310193000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260192" channel="242562" start="20140310193000 +0100" stop="20140310200000 +0100">
+<title>CNN NewsCenter</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260193" channel="242562" start="20140310200000 +0100" stop="20140310210000 +0100">
+<title>Connect the World with Becky Anderson</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260194" channel="242562" start="20140310210000 +0100" stop="20140310220000 +0100">
+<title>Quest Means Business</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260195" channel="242562" start="20140310220000 +0100" stop="20140310223000 +0100">
+<title>Amanpour</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260196" channel="242562" start="20140310223000 +0100" stop="20140310230000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260197" channel="242562" start="20140310230000 +0100" stop="20140311000000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260198" channel="242562" start="20140311000000 +0100" stop="20140311003000 +0100">
+<title>CNN Newsroom live from Hong Kong</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260199" channel="242562" start="20140311003000 +0100" stop="20140311010000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260200" channel="242562" start="20140311010000 +0100" stop="20140311020000 +0100">
+<title>Anderson Cooper 360, A look at the latest news and headlines of the day.</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260201" channel="242562" start="20140311020000 +0100" stop="20140311030000 +0100">
+<title>Piers Morgan Live</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260202" channel="242562" start="20140311030000 +0100" stop="20140311040000 +0100">
+<title>AC360 Later</title>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260203" channel="242562" start="20140311040000 +0100" stop="20140311050000 +0100">
+<title>Quest Means Business</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260204" channel="242562" start="20140311050000 +0100" stop="20140311053000 +0100">
+<title>World Sport, Highlights of the latest events around the globe.</title>
+<category>sport</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+<programme id="1260205" channel="242562" start="20140311053000 +0100" stop="20140311060000 +0100">
+<title>African Voices</title>
+<category>vijesti</category>
+<premiere />
+    <recordable>1</recordable>
+    <rating system="MEX">
+      <value>A</value>
+    </rating>
+</programme>
+</tv>

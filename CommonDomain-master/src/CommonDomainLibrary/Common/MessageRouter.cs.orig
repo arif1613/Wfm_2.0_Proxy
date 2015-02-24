@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CommonDomainLibrary.Common
+{
+    public class MessageRouter
+    {
+        private readonly IState _state;
+
+        private MessageRouter(IState state)
+        {
+            if (state == null) throw new ArgumentNullException("state");
+            _state = state;
+        }
+
+        public bool HasCausation(Guid id)
+        {
+            return Messages.ContainsKey(id);
+        }
+
+<<<<<<< HEAD
+        public IEnumerable<dynamic> GetMessages()
+        {
+            return Messages.Values.SelectMany(v => v, (v, c) => c);
+        }
+
+        public IEnumerable<dynamic> GetMessages(Guid causationId)
+        {
+            if (!HasCausation(causationId))
+            {
+                throw new ArgumentException("There is no output for this message id");
+            }
+
+            return Messages[causationId];
+        }
+
+=======
+>>>>>>> Implemented the new message routing style
+        public IEnumerable<IMessage> GetCommands(Guid causationId)
+        {
+            if(!HasCausation(causationId))
+            {
+                throw new ArgumentException("There is no output for this message id");
+            }
+
+            return Messages[causationId].Where(m => !(m is IEvent) && !(m is DeferrableMessage)).Cast<IMessage>();
+        }
+
+        public IEnumerable<DeferrableMessage> GetDeferredCommands(Guid causationId)
+        {
+            if (!Messages.ContainsKey(causationId))
+            {
+                throw new ArgumentException("There is no output for this message id");
+            }
+
+            return new List<DeferrableMessage>(Messages[causationId].Where(m => m is DeferrableMessage).Cast<DeferrableMessage>());
+        }
+
+        public IEnumerable<IEvent> GetEvents(Guid causationId)
+        {
+            if (!Messages.ContainsKey(causationId))
+            {
+                throw new ArgumentException("There is no output for this message id");
+            }
+
+            return new List<IEvent>(Messages[causationId].Where(m => m is IEvent).Cast<IEvent>());
+        }
+
+        public void RaiseMessage(dynamic m)
+        {
+<<<<<<< HEAD
+            IMessage message;
+
+            message = m.GetType() ==  typeof(DeferrableMessage) ? m.Message : m;
+            
+            CreateKeyIfNotExists(message.CausationId);
+
+            Messages[message.CausationId].Add(m);
+
+            try
+            {
+                if (message is IEvent) ((dynamic) _state).Apply((dynamic)message);
+=======
+            CreateKeyIfNotExists(m.CausationId);
+
+            Messages[m.CausationId].Add(m);
+
+            try
+            {
+                if (m is IEvent) ((dynamic) _state).Apply(m);
+>>>>>>> Implemented the new message routing style
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void CreateKeyIfNotExists(Guid causationId)
+        {
+            if (!Messages.ContainsKey(causationId))
+            {
+                Messages.Add(causationId, new List<dynamic>());
+            }
+        }        
+
+<<<<<<< HEAD
+        private Dictionary<Guid, List<dynamic>> Messages
+=======
+        private Dictionary<Guid, IList<dynamic>> Messages
+>>>>>>> Implemented the new message routing style
+        {
+            get { return _state.Messages; }
+        }
+
+        public static MessageRouter For(dynamic state)
+        {
+            return new MessageRouter(state);
+        }        
+    }
+}

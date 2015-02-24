@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE50DDD3-C475-44A5-A93B-2E2E71A1A0F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonDomainLibrary</RootNamespace>
+    <AssemblyName>CommonDomainLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Edit">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\Edit.1.0.52\lib\net45\Edit.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\NodaTime.1.1.1\lib\net35-Client\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\NLog.2.1.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.MediaServices.Client">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\windowsazure.mediaservices.3.0.0.5\lib\net40\Microsoft.WindowsAzure.MediaServices.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.TransientFaultHandling.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4\Microsoft.Practices.TransientFaultHandling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\WindowsAzure.Storage.3.1.0.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\Microsoft.Data.OData.5.6.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\Microsoft.Data.Edm.5.6.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\LiveEvents-master\src\packages\Microsoft.Data.Services.Client.5.6.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\RebuildReadModelView.cs" />
+    <Compile Include="Common\IHandlerResolver.cs" />
+    <Compile Include="Common\UserRoles.cs" />
+    <Compile Include="ConnectionClientService.cs" />
+    <Compile Include="ContractVersion.cs" />
+    <Compile Include="CredentialsEncryptionService.cs" />
+    <Compile Include="Events\AggregateInWrongStateForAction.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IConnectionClientService.cs" />
+    <Compile Include="ICredentialsEncryptionService.cs" />
+    <Compile Include="IErrorEvent.cs" />
+    <Compile Include="ISerializer.cs" />
+    <Compile Include="OrderedDictionary.cs" />
+    <Compile Include="Security\AuthenticationMac.cs" />
+    <Compile Include="Security\CommonIdentity.cs" />
+    <Compile Include="Common\DefaultAggregateUpdater.cs" />
+    <Compile Include="Common\DeferrableMessage.cs" />
+    <Compile Include="Common\IAggregate.cs" />
+    <Compile Include="Common\IAggregateExtensions.cs" />
+    <Compile Include="Common\IAggregateRepository.cs" />
+    <Compile Include="Common\AggregateRepositoryResponse.cs" />
+    <Compile Include="Common\IAggregateUpdater.cs" />
+    <Compile Include="Common\IBus.cs" />
+    <Compile Include="Common\IHandle.cs" />
+    <Compile Include="Common\IMessageAccessor.cs" />
+    <Compile Include="Common\IState.cs" />
+    <Compile Include="Common\MessageRouter.cs" />
+    <Compile Include="DomainError.cs" />
+    <Compile Include="IEvent.cs" />
+    <Compile Include="IMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CryptoProvider.cs" />
+    <Compile Include="Security\ICommonIdentity.cs" />
+    <Compile Include="Security\ICryptoProvider.cs" />
+    <Compile Include="Security\MessageExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

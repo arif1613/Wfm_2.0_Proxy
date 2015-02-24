@@ -1,0 +1,39 @@
+﻿<EPGChannelConfig>
+  <Feeds>
+    <Feed uri="C:\inetpub\wwwroot\MPS\conax\Ingest\SampleEPGFeed\epg.xml" feedTimezone="W. Europe Standard Time"/>
+  </Feeds>
+  <Channels>
+    <Channel mppContentId="621" epgChannelId="31" enableCatchUp="true" enableNPVR="true">
+      <DefaultConfiguration>
+        <Source encodeInTimezone="UTC">
+          <ForDevices>
+            <Device>PC</Device>
+            <Device>MAC</Device>
+            <Device>STB</Device>
+          </ForDevices>
+          <Stream>http://10.4.8.99/Content/SS/Live/Channel(nrk1_Clear2).isml/Manifest</Stream>
+          <NPVRWebRoot>Http://origin01.lab.conax.com/san/archive/nrk2/SS</NPVRWebRoot>
+        </Source>
+        <Source>
+          <ForDevices>
+            <Device>iPhone</Device>
+            <Device>iPad</Device>
+          </ForDevices>
+          <Stream>http://10.4.8.99/Content/hls/Live/Channel(nrk1_Clear2).m3u8</Stream>
+          <NPVRWebRoot>http://storage01.lab.conax.com/content/npvr</NPVRWebRoot>
+        </Source>
+      </DefaultConfiguration>
+      <ConfigurationForServices>
+        <Service serviceObjectId="3343361">
+          <Source encodeInTimezone="UTC">
+            <ForDevices>
+              <Device>iPad</Device>
+            </ForDevices>
+            <Stream>http://10.4.8.99/Content/hls/Live/Channel(nrk1_Clear2).m3u8</Stream>        
+            <NPVRWebRoot>http://storage01.lab.conax.com/content/npvr</NPVRWebRoot>
+          </Source>
+        </Service>
+      </ConfigurationForServices>
+    </Channel>
+  </Channels>
+</EPGChannelConfig>

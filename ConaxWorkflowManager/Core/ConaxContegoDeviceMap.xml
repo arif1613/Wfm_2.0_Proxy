@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DeviceProfiles>
+  <DeviceProfile name="MPS_ALL_DEVICES">
+    <Device type="PC"/>
+    <Device type="MAC"/>
+    <Device type="iPhone"/>
+    <Device type="iPad"/>
+    <Device type="STB"/>
+  </DeviceProfile>
+  <DeviceProfile name="MPS_PC_MAC">
+    <Device type="PC"/>
+    <Device type="MAC"/>
+  </DeviceProfile>
+  <DeviceProfile name="MPS_PC_MAC_IPAD">
+    <Device type="PC"/>
+    <Device type="MAC"/>
+    <Device type="iPad"/>
+  </DeviceProfile>
+  <DeviceProfile name="MPS_PC_IPHONE_IPAD">
+    <Device type="PC"/>
+    <Device type="iPhone"/>
+    <Device type="iPad"/>
+  </DeviceProfile>
+  <DeviceProfile name="MPS_STB">
+    <Device type="STB"/>
+  </DeviceProfile>
+</DeviceProfiles>

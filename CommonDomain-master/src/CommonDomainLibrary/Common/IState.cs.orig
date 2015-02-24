@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+
+namespace CommonDomainLibrary.Common
+{
+    public interface IState
+    {
+        Guid Id { get; }
+<<<<<<< HEAD
+        Dictionary<Guid, List<dynamic>> Messages { get; }        
+=======
+        Dictionary<Guid, IList<dynamic>> Messages { get; }        
+>>>>>>> Implemented the new message routing style
+    }
+}

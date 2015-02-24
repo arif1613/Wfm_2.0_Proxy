@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Opws3Service.SFAnytime.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Opws3Service.SFAnytime.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Opws3Service.SFAnytime.com/Imports">
+      <xsd:import schemaLocation="http://opws3.sfanytime.com/Opws3Service.svc?xsd=xsd0" namespace="http://Opws3Service.SFAnytime.com" />
+      <xsd:import schemaLocation="http://opws3.sfanytime.com/Opws3Service.svc?xsd=xsd1" namespace="http://opws3/RootMediaDetails" />
+      <xsd:import schemaLocation="http://opws3.sfanytime.com/Opws3Service.svc?xsd=xsd2" namespace="http://opws3/RootMediaDetails_1_3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOpws3Service_getMediaList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMediaList" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMediaList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMediaListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getListMediaIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListMediaIds" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getListMediaIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListMediaIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMedia" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMedia_1_3_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMedia_1_3" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMedia_1_3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMedia_1_3Response" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMenu" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMovieListNamesAndIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieListNamesAndIds" />
+  </wsdl:message>
+  <wsdl:message name="IOpws3Service_getMovieListNamesAndIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMovieListNamesAndIdsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOpws3Service">
+    <wsdl:operation name="getMediaList">
+      <wsdl:input wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMediaList" message="tns:IOpws3Service_getMediaList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMediaListResponse" message="tns:IOpws3Service_getMediaList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListMediaIds">
+      <wsdl:input wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getListMediaIds" message="tns:IOpws3Service_getListMediaIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getListMediaIdsResponse" message="tns:IOpws3Service_getListMediaIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMedia">
+      <wsdl:input wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMedia" message="tns:IOpws3Service_getMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMediaResponse" message="tns:IOpws3Service_getMedia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMedia_1_3">
+      <wsdl:input wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMedia_1_3" message="tns:IOpws3Service_getMedia_1_3_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMedia_1_3Response" message="tns:IOpws3Service_getMedia_1_3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMenu">
+      <wsdl:input wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMenu" message="tns:IOpws3Service_getMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMenuResponse" message="tns:IOpws3Service_getMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMovieListNamesAndIds">
+      <wsdl:input wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMovieListNamesAndIds" message="tns:IOpws3Service_getMovieListNamesAndIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://Opws3Service.SFAnytime.com/IOpws3Service/getMovieListNamesAndIdsResponse" message="tns:IOpws3Service_getMovieListNamesAndIds_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

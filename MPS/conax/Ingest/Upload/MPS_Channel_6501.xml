@@ -1,0 +1,21 @@
+<Channel xmlVersion="1.0">
+	<Name>Conax Channel Testing</Name>
+	<!-- Edit ChannelId and LCN so that they are unigue -->
+	<ChannelId>6501</ChannelId>
+	<RadioChannel>false</RadioChannel>
+	<IsAdult>false</IsAdult> 
+	<DefaultConfiguration>
+		<Lcn>6501</Lcn>	
+		<Title>MPS_Channel_6501</Title>		
+		<Assets>
+			<Asset device="STB" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+			<Asset device="PC" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+			<Asset device="MAC" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+			<Asset device="AndroidMobile" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+			<Asset device="AndroidTablet" highDefinition="true">http://10.4.8.99/Content/SS/Live/Channel(nrk1_cablemas).isml/Manifest</Asset>
+		</Assets>
+		<NPVR enable="true"/>
+		<Catchup enable="true"/>
+		<BoxCover>MPS_Channel_6501.png</BoxCover>
+	</DefaultConfiguration>
+</Channel>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.conax.com/cas/xsd/ppvproduct/v1" xmlns:common="http://www.conax.com/cas/xsd/common-types/v1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.conax.com/cas/xsd/ppvproduct/v1" version="1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.4.2.33/ca-server/webservices/ppvproduct?xsd=cx-service-contract-common-types-1.0.xsd" namespace="http://www.conax.com/cas/xsd/common-types/v1" />
+  <xs:element name="CreatePpvProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CreatePpvProductRequest" type="PpvProductUpdateRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePpvProductResponse" type="CreatePpvProductResponseType" />
+  <xs:element name="UpdatePpvProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UpdatePpvProductRequest" type="PpvProductUpdateRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePpvProductResponse" type="UpdatePpvProductResponseType" />
+  <xs:element name="RemovePpvProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RemovePpvProductRequest" type="RemovePpvProductRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePpvProductResponse" type="RemovePpvProductResponseType" />
+  <xs:element name="GetPpvProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GetPpvProductRequest" type="GetPpvProductRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPpvProductResponse" type="GetPpvProductResponseType" />
+  <xs:element name="GetInfo" type="common:VoidType" />
+  <xs:element name="GetInfoResponse" type="common:GetInfoResponseType" />
+  <xs:complexType name="PpvProductUpdateRequestType">
+    <xs:sequence>
+      <xs:element name="PpvProduct" type="PpvProductType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PpvProductType" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+      <xs:element name="Name" type="xs:string" />
+      <xs:element minOccurs="0" name="EmmPlayoutDurationInHours" type="xs:int" />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalizedProductLabels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductLabel" type="ProductLabelType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LocalizedPrices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Price" type="PriceType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExcludedForSmses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="SmsName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventPpvProductType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="PpvProductType">
+        <xs:sequence>
+          <xs:element name="BroadcastPeriod" type="BroadcastPeriodType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RentalPpvProductType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="PpvProductType">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="RentalTimeInMinutes" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EndOfLife" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BroadcastPeriodType">
+    <xs:sequence>
+      <xs:element name="Start" type="xs:dateTime" />
+      <xs:element name="End" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductLabelType">
+    <xs:sequence>
+      <xs:element name="ProductLabel" type="xs:string" />
+      <xs:element name="LanguageCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PriceType">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:double" />
+      <xs:element name="CurrencyCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemovePpvProductRequestType">
+    <xs:sequence>
+      <xs:element name="ProductId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetPpvProductRequestType">
+    <xs:sequence>
+      <xs:element name="ProductId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreatePpvProductResponseType">
+    <xs:sequence>
+      <xs:element name="PpvProductResponse" type="PpvProductResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdatePpvProductResponseType">
+    <xs:sequence>
+      <xs:element name="PpvProductResponse" type="PpvProductResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemovePpvProductResponseType">
+    <xs:sequence>
+      <xs:element name="PpvProductResponse" type="PpvProductResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetPpvProductResponseType">
+    <xs:sequence>
+      <xs:element name="PpvProductResponse" type="PpvProductResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PpvProductResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="common:AbstractResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PpvProduct" type="PpvProductType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

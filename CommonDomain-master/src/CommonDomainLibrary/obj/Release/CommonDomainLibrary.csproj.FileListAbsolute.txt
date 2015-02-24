@@ -1,0 +1,1 @@
+C:\SVN\Modules\Auxiliary\CommonDomain-master\src\CommonDomainLibrary\obj\Release\CommonDomainLibrary.csprojResolveAssemblyReference.cache

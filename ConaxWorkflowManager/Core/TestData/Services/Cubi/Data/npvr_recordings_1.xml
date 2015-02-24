@@ -1,0 +1,22 @@
+﻿<npvr-recordings>
+  <npvr-recording>
+    <id>1</id>
+    <start-at>2012-10-10 10:00:00</start-at>
+    <end-at>2010-10-10 11:00:00</end-at>
+    <epg>
+      <id>1</id>
+      <external-event-id>010</external-event-id>
+    </epg>
+    <npvr-state>to_record</npvr-state>
+  </npvr-recording>
+  <npvr-recording>
+    <id>2</id>
+    <start-at>2012-10-10 10:00:00</start-at>
+    <end-at>2010-10-10 11:00:00</end-at>
+    <epg>
+      <id>1</id>
+      <external-event-id>010</external-event-id>
+    </epg>
+    <npvr-state>to_record</npvr-state>
+  </npvr-recording>
+</npvr-recordings>

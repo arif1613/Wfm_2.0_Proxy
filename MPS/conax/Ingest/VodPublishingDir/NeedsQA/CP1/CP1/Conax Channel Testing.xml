@@ -1,0 +1,29 @@
+<MediaContent>
+  <Identification name="Conax Channel Testing" externalId="4479051c-d1e8-46c3-9b46-325bb4645dfc" />
+  <Metadata>
+    <EventPeriod from="" to="" />
+    <Property type="IngestXMLFileName">C:\MPS\conax\Ingest\Work\Work\upload(channel)\MPS_Channel_6501.xml</Property>
+    <Property type="EnableQA">True</Property>
+    <Property type="URIProfile">FREE_USAGE</Property>
+    <Property type="MetadataMappingConfigurationFileName">MetadataMapping.config</Property>
+    <Property type="ContentType">Channel</Property>
+    <Property type="CubiChannelId">Channel:6501</Property>
+    <Property type="RadioChannel">false</Property>
+    <Property type="IsAdult">false</Property>
+    <Property type="EnableCatchUp:0">True</Property>
+    <Property type="EnableNPVR:0">True</Property>
+    <Property type="LCN:0">6501</Property>
+    <PublishState>needs QA</PublishState>
+    <IngestIdentifier>4479051c-d1e8-46c3-9b46-325bb4645dfc</IngestIdentifier>
+    <LanguageInfo ISO="">
+      <Title>MPS_Channel_6501</Title>
+      <ShortDescription><![CDATA[]]></ShortDescription>
+      <LongDescription><![CDATA[]]></LongDescription>
+      <Image ClientGUIName="box cover" Classification="320x240">Work\upload(channel)\MPS_Channel_6501.png</Image>
+    </LanguageInfo>
+  </Metadata>
+  <MPPContentContext hostId="0003">
+    <ContentRightsOwner>CP1</ContentRightsOwner>
+    <ContentAgreement>CP1</ContentAgreement>
+  </MPPContentContext>
+</MediaContent>

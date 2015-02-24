@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CWMConfig>
+
+  <!-- workflow configuraiotns, defiens which handlers to be included, do not change anything here! -->
+  <WorkFlowConfigurations>
+    <WorkFlowConfiguration name="AddChannelContentFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.FileIngestDummyHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.VerifyDataHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.StoreSourceFileStandardHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterContentInConaxContegoHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.PublishContentInMPPHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="UpdateChannelContentFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.VerifyDataHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UpdateContentInConaxContegoHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterPublishWorkFlowJobHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="AddVODContentFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.MediaInfoContentHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.VerifyDataHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.FileIngestDummyHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.StoreSourceFileStandardHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.StoreSourceFileSeaChangeHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterContentInConaxContegoHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.EnvivioVodEncoderHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.PublishContentInMPPHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="UpdateVODContentFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.VerifyDataHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UpdateContentInConaxContegoHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterPublishWorkFlowJobHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="DeleteVODContentFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.DeleteContentInCubiTVHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.DeleteSourceFileSeaChangeHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.DeleteSourceFileStandardHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.DeleteContentFromFileAreaHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.DeleteContentInConaxContegoHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.DeleteContentInMPPHandler"/>
+    </WorkFlowConfiguration>
+    <!-- Cubi -->
+    <WorkFlowConfiguration name="PublishChannelContentStandardFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UnPublishContentOnFailHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterLiveChannelInCubiTVHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="PublishVODContentStandardFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UnPublishContentOnFailHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterContentInCubiTVHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="UpdatePublishedVODContentStandardFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UpdateContentInCubiTVHandler"/>
+    </WorkFlowConfiguration>
+    <!-- seachagne -->
+    <WorkFlowConfiguration name="PublishVODContentSeaChangeFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetContentFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UnPublishContentOnFailHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UploadFilesToSeaChangeHandler"/>
+    </WorkFlowConfiguration>
+    <!-- Prices -->
+    <WorkFlowConfiguration name="UpdatePriceFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetServicePriceFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.VerifyDataHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UpdatePricesInConaxContegoHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.RegisterUpdatePublishedPriceWorkFlowJobHandler"/>
+    </WorkFlowConfiguration>
+    <WorkFlowConfiguration name="UpdatePublishedServicePriceStandardFlow">
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.GetServicePriceFromMPPHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.VerifyDataHandler"/>
+      <Handler name="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.UpdatePricesInCubiTVHandler"/>
+    </WorkFlowConfiguration>
+  </WorkFlowConfigurations>
+
+  <!-- ingest XML configurations, deifens xsd and parsers to use -->
+  <IngestXMLConfigurations>
+    <IngestXMLConfiguration ingestXMLType="CableLabs_1_0">
+      <ConfigParam key="XSD" value="C:\MPS\Work\Trunk\Conax_4.20.0\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\XSD\CableLabsXT.xsd"/>
+      <ConfigParam key="IngestHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.XML.CableLabsIngestHandler"/>
+      <ConfigParam key="FileIngestHelper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.File.CableLabsFileIngestHelper"/>
+    </IngestXMLConfiguration>
+    <IngestXMLConfiguration ingestXMLType="CableLabs_1_1">
+      <ConfigParam key="XSD" value="C:\MPS\Work\Trunk\Conax_4.20.0\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\XSD\CableLabs1.1.xsd"/>
+      <ConfigParam key="IngestHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.XML.CableLabsIngestHandler"/>
+      <ConfigParam key="FileIngestHelper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.File.CableLabsFileIngestHelper"/>
+    </IngestXMLConfiguration>
+    <IngestXMLConfiguration ingestXMLType="Channel_1_0">
+      <ConfigParam key="XSD" value="C:\MPS\Work\Trunk\Xtend\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\XSD\Channel1.0.xsd"/>
+      <ConfigParam key="IngestHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.XML.ChannelIngestHandler"/>
+      <ConfigParam key="FileIngestHelper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.File.ChannelFileIngestHelper"/>
+    </IngestXMLConfiguration>
+  </IngestXMLConfigurations>
+
+  <!-- Service/Publish point specific configurations, i.e cubi and seachagne settings -->
+  <ServiceConfigurations>
+    <ServiceConfiguration objectId="513697793">
+      <ConfigParam key="CubiServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="CubiServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Cubi.FakeCubiTVMWServiceWrapper"/>
+      <ConfigParam key="VodServiceID" value="2"/>
+      <ConfigParam key="DefaultCoverImage" value="C:\MPS\XtendWorkflowManager\category_default_cover.png"/>
+      <ConfigParam key="RestAPIBaseURL" value="http://10.4.6.30:5000"/>
+      <ConfigParam key="UserHash" value="ylJG1GR2axnWiqBN5lNh"/>
+      <ConfigParam key="DrmName" value="ConaxContegoDrm"/>
+      <ConfigParam key="CDNID" value="1"/>
+      <ConfigParam key="HttpRoot" value="http://origin01.lab.conax.com/san/vod/"/>
+      <ConfigParam key="PublishWorkFlowType" value="PublishVODContent"/>
+      <ConfigParam key="UpdatePublishedWorkFlowType" value="UpdatePublishedVODContent"/>
+      <ConfigParam key="UpdatePublishedServicePriceWorkFlowType" value="UpdatePublishedServicePrice"/>
+      <ConfigParam key="PublishChannelWorkFlowType" value="PublishChannelContent"/>
+    </ServiceConfiguration>
+    <ServiceConfiguration objectId="1010">
+      <ConfigParam key="CubiServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="CubiServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Cubi.FakeCubiTVMWServiceWrapper"/>
+      <ConfigParam key="RestAPIBaseURL" value="http://10.4.6.11"/>
+      <ConfigParam key="UserHash" value="M8Sv9dvmfFKcqhbNGN"/>
+      <ConfigParam key="DrmName" value="ConaxContegoDrm"/>
+      <!--Url to the content storage -->
+      <ConfigParam key="HttpRoot" value="http://lab.vod.columbuscdn.com/vod/"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="PublishWorkFlowType" value="PublishVODContent"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="UpdatePublishedWorkFlowType" value="UpdatePublishedVODContent"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="UpdatePublishedServicePriceWorkFlowType" value="UpdatePublishedServicePrice"/>
+    </ServiceConfiguration>
+    <ServiceConfiguration objectId="3343361">
+      <ConfigParam key="CubiServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="CubiServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Cubi.FakeCubiTVMWServiceWrapper"/>
+      <ConfigParam key="VodServiceID" value="2"/>
+      <ConfigParam key="DefaultCoverImage" value="C:\MPS\XtendWorkflowManager\category_default_cover.png"/>
+      <ConfigParam key="RestAPIBaseURL" value="http://10.4.6.30:5000"/>
+      <ConfigParam key="UserHash" value="ylJG1GR2axnWiqBN5lNh"/>
+      <ConfigParam key="DrmName" value="ConaxContegoDrm"/>
+      <ConfigParam key="CDNID" value="ConaxContegoCDN"/>
+      <ConfigParam key="HttpRoot" value="http://origin01.lab.conax.com/san/vod/"/>
+      <!-- 
+      <ConfigParam key="RestAPIBaseURL" value="http://10.4.6.11"/>
+      <ConfigParam key="UserHash" value="M8Sv9dvmfFKcqhbNGN"/>
+      <ConfigParam key="DrmName" value="ConaxContegoDrm"/>
+      <ConfigParam key="HttpRoot" value="http://origin01.lab.conax.com/san/vod/"/>
+      -->
+      <ConfigParam key="PublishChannelWorkFlowType" value="PublishChannelContent"/>
+      <ConfigParam key="PublishWorkFlowType" value="PublishVODContent"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="UpdatePublishedWorkFlowType" value="UpdatePublishedVODContent"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="UpdatePublishedServicePriceWorkFlowType" value="UpdatePublishedServicePrice"/>
+    </ServiceConfiguration>
+
+    <!--Seachange JM Production-->
+    <!--Service object for Seachange Destination-->
+    <ServiceConfiguration objectId="963982337">
+      <ConfigParam key="CubiServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="CubiServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Cubi.FakeCubiTVMWServiceWrapper"/>
+      <!--Defines CableLabs version for Output xml-->
+      <ConfigParam key="OutputXMLType" value="CableLabs_1_1"/>
+      <!--Determines whether WFM will check that a price is configured. Should be used for SVOD ingests to Seachange as no price is configured in the MPP-->
+      <ConfigParam key="ServiceNeedsPrice" value="false"/>
+      <!--UNC Path for Seachange share-->
+      <ConfigParam key="UNCPath" value="\\172.26.24.18\MPS_DROPBOX"/>
+      <!--Set to true if password should be used-->
+      <!--Use Domain Name-->
+      <ConfigParam key="DomainName" value="WORKGROUP"/>
+      <!--Set to true if password should be used-->
+      <ConfigParam key="UsePassword" value="true"/>
+      <!--Set to true if logging in with another user then WFM-->
+      <ConfigParam key="UseImpersonation" value="true"/>
+      <!--User name credentials for accessing seachange share-->
+      <ConfigParam key="UserName" value="Administrator"/>
+      <!--Password credentials for accessing seachange share-->
+      <ConfigParam key="PassWord" value="itv"/>
+      <!--If threshold is less than defined value retry-->
+      <ConfigParam key="DiskSpaceInGBThreshhold" value="10"/>
+      <!--Number of minutes to sleep before retry-->
+      <ConfigParam key="SleepTimeInMinutes" value="5"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="PublishWorkFlowType" value="PublishVODContentToSeaChange"/>
+    </ServiceConfiguration>
+
+    <!--Seachange TT Production-->
+    <!--Service object for Seachange Destination-->
+    <ServiceConfiguration objectId="964024321">
+      <ConfigParam key="CubiServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="CubiServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Cubi.FakeCubiTVMWServiceWrapper"/>
+      <!--Defines CableLabs version for Output xml-->
+      <ConfigParam key="OutputXMLType" value="CableLabs_1_1"/>
+      <!--Determines whether WFM will check that a price is configured. Should be used for SVOD ingests to Seachange as no price is configured in the MPP-->
+      <ConfigParam key="ServiceNeedsPrice" value="false"/>
+      <!--UNC Path for Seachange share-->
+      <ConfigParam key="UNCPath" value="\\172.26.44.18\MPS_DROPBOX"/>
+      <!--Set to true if password should be used-->
+      <!--Use Domain Name-->
+      <ConfigParam key="DomainName" value="WORKGROUP"/>
+      <!--Set to true if password should be used-->
+      <ConfigParam key="UsePassword" value="true"/>
+      <!--Set to true if logging in with another user then WFM-->
+      <ConfigParam key="UseImpersonation" value="true"/>
+      <!--User name credentials for accessing seachange share-->
+      <ConfigParam key="UserName" value="Administrator"/>
+      <!--Password credentials for accessing seachange share-->
+      <ConfigParam key="PassWord" value="itv"/>
+      <!--If threshold is less than defined value retry-->
+      <ConfigParam key="DiskSpaceInGBThreshhold" value="10"/>
+      <!--Number of minutes to sleep before retry-->
+      <ConfigParam key="SleepTimeInMinutes" value="5"/>
+      <!--Defines which PublishWorkFlowType should be used-->
+      <ConfigParam key="PublishWorkFlowType" value="PublishVODContentToSeaChange"/>
+    </ServiceConfiguration>
+    <ServiceConfiguration objectId="2714793985">
+      <ConfigParam key="CubiServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="CubiServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Cubi.FakeCubiTVMWServiceWrapper"/>
+      
+      <ConfigParam key="RestAPIBaseURL" value="http://10.4.6.11"/>
+      <ConfigParam key="UserHash" value="M8Sv9dvmfFKcqhbNGN"/>
+      <ConfigParam key="DrmName" value="ConaxContegoDrm"/>
+      <ConfigParam key="HttpRoot" value="http://origin01.lab.conax.com/san/vod/"/>
+      <ConfigParam key="PublishChannelWorkFlowType" value="PublishChannelContent"/>
+      <ConfigParam key="PublishWorkFlowType" value="PublishVODContent"/>
+      <ConfigParam key="UpdatePublishedWorkFlowType" value="UpdatePublishedVODContent"/>
+      <ConfigParam key="UpdatePublishedServicePriceWorkFlowType" value="UpdatePublishedServicePrice"/>
+      <ConfigParam key="ServiceNeedsPrice" value="true"/>
+    </ServiceConfiguration>
+  </ServiceConfigurations>
+
+
+  <!--  Custom configurations, for additional custom system/solution/Mapping configurations  -->
+  <CustomConfigurations>
+    <CustomConfiguration name="DeviceAndAssetMapping">
+      <ConfigParam key="PC" value="SmoothStreaming"/>
+      <ConfigParam key="MAC" value="SmoothStreaming"/>
+      <ConfigParam key="STB" value="SmoothStreaming"/>
+      <ConfigParam key="iPhone" value="HTTPLiveStreaming"/>
+      <ConfigParam key="iPad" value="HTTPLiveStreaming"/>
+    </CustomConfiguration>
+    <CustomConfiguration name="CubiTVMaturityRatingMapping">
+      <ConfigParam key="G" value="G"/>
+      <ConfigParam key="NC-17" value="A"/>
+      <ConfigParam key="NR" value="UNRATED"/>
+      <ConfigParam key="PG" value="PG"/>
+      <ConfigParam key="PG-13" value="PG"/>
+      <ConfigParam key="R" value="A"/>
+      <ConfigParam key="X" value="X"/>
+    </CustomConfiguration>
+    <CustomConfiguration name="SFAnytimeProfiles">
+      <ConfigParam key="Priority" value="5,2,0"/>
+      <ConfigParam key="HDProfiles" value="5"/>
+    </CustomConfiguration>
+    <CustomConfiguration name="SFAnytimeToCubiMaturityRatingMapping">
+      <ConfigParam key="0" value="G"/>
+      <ConfigParam key="7" value="PG"/>
+      <ConfigParam key="11" value="PG-13"/>
+      <ConfigParam key="15" value="NC-17"/>
+      <ConfigParam key="18" value="R"/>
+    </CustomConfiguration>
+  </CustomConfigurations>
+
+  <!--  system configurations  -->
+  <SystemConfigurations>
+    <SystemConfiguration name="MPP">
+
+      
+      <ConfigParam key="MPPServiceAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="MPPService" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.MPP.FakeMPPService"/>
+      <!-- 
+      <ConfigParam key="ContentService" value="http://integrationservices.cubiware.conaxdev.mpsmpp.com/ContentService.asmx"/>
+      <ConfigParam key="ServiceService" value="http://integrationservices.cubiware.conaxdev.mpsmpp.com/ServiceService.asmx"/>
+      <ConfigParam key="MPPUserService" value="http://integrationservices.cubiware.conaxdev.mpsmpp.com/mppuserservice.asmx"/>
+      <ConfigParam key="AccountIdForPassiveEvent" value="E38A0E7B3D9FF3E81C43F2E20C8976206CBF0EF74BE35DB87E8549E6DC6F9C5BCCECEF887AD7F28B866705A81061AC1322920696F81979294A3015DEEA0410CF"/>
+      <ConfigParam key="AccountIdForActiveEvent" value="E38A0E7B3D9FF3E81C43F2E20C8976200D8E00B80CE02C5F5149DAA95F516E4A4A3A6A5B947DB5B58068B93E43670DF9015A3824B1E4A4BE4308EB7618388CC4"/>
+-->
+      <!-- 
+      <ConfigParam key="ContentService" value="http://localhost/IS/ContentService.asmx"/>
+      <ConfigParam key="ServiceService" value="http://localhost/IS/ServiceService.asmx"/>
+      <ConfigParam key="AccountId" value="65D3026B7D208DFF93E9F0CDFC95B694A8F83C5472DB98CF8A943A13E39959F1F54E30B09AE835CCE09EE08A410FB77592F1C5553E902929C56AE77F6BFDE6A6"/>
+      <ConfigParam key="UserID" value="4"/>
+-->
+
+      <ConfigParam key="ContentService" value="http://localhost/integrationservices/ContentService.asmx"/>
+      <ConfigParam key="ServiceService" value="http://localhost/integrationservices/serviceservice.asmx"/>
+      <ConfigParam key="MPPUserService" value="http://localhost/integrationservices/mppuserservice.asmx"/>
+      <ConfigParam key="AccountIdForPassiveEvent" value="8FEC5EB01322C27FBA58ECC5CA652B974704EAF071902396DEBF251FEC5063D3D951E4FF25F456BC"/>
+      <ConfigParam key="AccountIdForActiveEvent" value="65D3026B7D208DFF93E9F0CDFC95B694820E310FFAF0A1487534634678FD97AB4C3F9558E73EA25B"/>
+
+<!-- 
+      <ConfigParam key="ContentService" value="http://integrationservices.dev02.conax.mpsmpp.com/ContentService.asmx"/>
+      <ConfigParam key="ServiceService" value="http://integrationservices.dev02.conax.mpsmpp.com/serviceservice.asmx"/>
+      <ConfigParam key="MPPUserService" value="http://integrationservices.dev02.conax.mpsmpp.com/mppuserservice.asmx"/>
+      <ConfigParam key="AccountIdForPassiveEvent" value="881110628B3E5AEF9898FB389235B30F4397EC59AEFA628892ABC148E2EB8E520DD54BF70AD80F40426C5BB9B6E18B3F6BFC217F42E8ED58"/>
+      <ConfigParam key="AccountIdForActiveEvent" value="7770A6840EC6C9B7D7FD7CDB697B3D02F09B81ABAEABC95B6E7F69B4BE894FBE46CA01C2B7AD034B9F1D554BCD5505C91414E559E1AB1347"/>
+-->
+        <!-- default values for content ingest -->
+      <ConfigParam key="HostID" value="0003"/>
+      <ConfigParam key="DefaultCAS" value="CAS World"/>
+
+      <!-- used by Default image -->
+      <ConfigParam key="DefaultImageClientGUIName" value="box cover"/>
+      <!-- used by all ingested images -->
+      <ConfigParam key="DefaultImageClassification" value="320x240"/>
+      
+      <!-- parameter below should be removed later on -->
+      <ConfigParam key="DefaultContentRightsOwner" value="Cubiware"/>
+      <ConfigParam key="DefaultCurrency" value="SEK"/>
+    </SystemConfiguration>
+    <SystemConfiguration name="ConaxContego">
+      <ConfigParam key="OnDemandContentService" value="https://10.4.2.33/ca-server/webservices/ondemandcontent?wsdl"/>
+      <ConfigParam key="PPVProductService" value="https://10.4.2.33/ca-server/webservices/ppvproduct?wsdl"/>
+      <ConfigParam key="UserName" value="mps"/>
+      <ConfigParam key="Password" value="Mpsmps123"/>
+    </SystemConfiguration>
+    <SystemConfiguration name="SFAnytime">
+      <ConfigParam key="Endpoint" value="http://opws3.sfanytime.com/Opws3Service.svc/soap"/>
+      <ConfigParam key="OperatorCode" value="DNA"/>
+      <ConfigParam key="Language" value="FI"/>
+      <ConfigParam key="Country" value="FI"/>
+      <ConfigParam key="FtpAddress" value="ftp://mediaftp.sfanytime.com"/>
+      <ConfigParam key="FtpUsername" value="dna"/>
+      <ConfigParam key="FtpPassword" value="o9DR8!wh"/>
+      <ConfigParam key="Provider" value="DNA"/>
+      <ConfigParam key="DownloadFolder" value="C:\MPS\conax\SFA\download\"/>
+      <ConfigParam key="DecryptFolder" value="C:\MPS\conax\SFA\decrypt\"/>
+      <ConfigParam key="UploadFolder" value="C:\MPS\conax\SFA\tempupload\"/>
+      <!-- should be same as FileIngestUploadDirectory during normal run -->
+      <ConfigParam key="PgpPassword" value="V1d3oOD"/>
+      <ConfigParam key="AccountId" value="CDE9B829D5149016AF07F1032B0674DF4455ECA011631DE261E57CCBBA32D683F7A6D866E05F7045DF165B0C07B8A743FEE9927C0BBC5F08"/>
+      <!--user sfanytimeapi-->
+      <ConfigParam key="TestMedia" value="28,49,109,301,315,431,963,1096,2956,2957"/>
+    </SystemConfiguration>
+    <SystemConfiguration name="EnvivioEncoder">
+      <!-- EPG -->
+      <ConfigParam key="SSCatchUpFolderDateTimeRegExp" value="\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2}"/>
+      <ConfigParam key="SSCatchUpFolderDateTimeFormat" value="yyyy-MM-dd-HH-mm-ss"/>
+
+      <ConfigParam key="Endpoint" value="http://10.4.1.10/balancerSOAP"/>
+      <ConfigParam key="EncoderUploadFolder" value="C:\EncoderUpload"/>
+      <ConfigParam key="EncoderParameterPath" value="C:\EncoderDone"/>
+
+      <ConfigParam key="FileArchiveRootFolder" value="C:\MPS\importserver\conax\HLS\Archive"/>
+      <ConfigParam key="HLSCatchUpFileDateTimeRegExp" value="\d{8}T\d{6}"/>
+      <ConfigParam key="HLSCatchUpFileDateTimeFormat" value="yyyyMMddTHHmmss"/>
+
+      <!-- Regular presets-->
+      <ConfigParam key="PresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HDPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HLSPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HDHLSPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="SSPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HDSSPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <!-- Trailer presets-->
+      <ConfigParam key="TrailerPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HDTrailerPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HLSTrailerPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HDHLSTrailerPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="SSTrailerPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <ConfigParam key="HDSSTrailerPresetID" value="f4e9c9464a6deddb44db2d99559e684b"/>
+      <!-- End presets -->
+      <ConfigParam key="StatusCheckInterval" value="60"/>
+      <ConfigParam key="HLSOutputFolder" value="HLS"/>
+      <ConfigParam key="HLSParameterOutputName" value="outputfilename"/>
+      <ConfigParam key="SmoothStreamOutputFolder" value="SS"/>
+      <ConfigParam key="SmoothStreamParameterOutputName" value="outputfilename_2"/>
+      <ConfigParam key="EncodeAllTypes" value="false"/>
+    </SystemConfiguration>
+    <SystemConfiguration name="ConaxWorkflowManager">
+
+      <ConfigParam key="MyID" value="002" />
+      <ConfigParam key="Log4NetConfig" value="C:\MPS\Work\Trunk\Xtend\Modules\Auxiliary\ConaxWorkflowManager\Core\log4net.config" />
+      <ConfigParam key="DBSource" value="C:\MPS\Work\Trunk\Xtend\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\Database\SQLite\conax.s3db" />
+
+      
+      <ConfigParam key="CleanOldDBDataInDay" value="30"/>
+      <ConfigParam key="CleanUploadsOlderThanDays" value="7"/>
+      <ConfigParam key="VODEncoderHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Handler.EnvivioVODEncoderHandler"/>
+      <ConfigParam key="MPPEventDispatcher" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WorkFlow.Dispatcher.ConaxDispatcher"/>
+      <ConfigParam key="DBWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.Database.SQLite.SQLiteDBWrapper"/>
+      <ConfigParam key="FileIngestHandlerType" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.File.Handler.FileSystemHandler"/>      
+
+
+      <ConfigParam key="FolderSettingsFileName" value="FolderSettings.config"/>
+      <ConfigParam key="FileIngestUploadDirectoryConfig" value="C:\MPS\Work\Trunk\Xtend_harmonic\Modules\Auxiliary\ConaxWorkflowManager\Core\UploadFolderConfig.xml"/>
+      <ConfigParam key="MetadataMappingDirectory" value="C:\MPS\conax\metadataMapping"/>
+
+      <ConfigParam key="FileIngestUploadDirectory" value="C:\MPS\conax\upload"/>
+      <ConfigParam key="FileIngestWorkDirectory" value="C:\MPS\conax\work"/>
+      <ConfigParam key="FileIngestRejectDirectory" value="C:\MPS\conax\reject"/>
+      <ConfigParam key="FileIngestProcessedDirectory" value="C:\MPS\conax\processed"/>
+
+      <ConfigParam key="SourceStorageDirectory" value="C:\MPS\conax\source"/>
+
+      <ConfigParam key="PollCubiCatchUpCreatedInSec" value="180"/>
+      <ConfigParam key="AddExcludedStreamAssetOnXMLIngest" value="false"/>
+            
+      <ConfigParam key="EPGChannelConfigXML" value="C:\MPS\Work\Trunk\Xtend_device2\Modules\Auxiliary\ConaxWorkflowManager\Core\EPGChannelConfig.xml"/>
+      <!-- 
+      <ConfigParam key="EPGChannelConfigXML" value="C:\MPS\Work\HLSPlayListGen\HLSPlayListGenerator\bin\Debug\EPGChannelConfig.xml"/>
+      -->
+      <ConfigParam key="CatchUpFilterConfigXML" value="C:\MPS\Work\Trunk\Xtend_harmonic\Modules\Auxiliary\ConaxWorkflowManager\Core\CatchUpFilterConfig.xml"/>
+      
+      <ConfigParam key="SmoothCatchUpHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Catchup.HarmonicSmoothCatchupHandler"/>
+      <ConfigParam key="HLSCatchUpHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Catchup.SeaWellHLSCatchupHandler"/>
+      <ConfigParam key="CatchUpEncoderOffset" value="2010-01-01"/>
+
+      <ConfigParam key="ConaxContegoDeviceMapXML" value="C:\MPS\Work\Trunk\Xtend_harmonic\Modules\Auxiliary\ConaxWorkflowManager\Core\ConaxContegoDeviceMap.xml"/>
+
+      <!-- EPG -->
+      <!-- 
+      <ConfigParam key="XMLTVArchive" value="C:\MPS\tmp\xmltv" />
+      -->
+      <ConfigParam key="EPGStartTimePendingSec" value="60"/>
+      <ConfigParam key="EPGEndTimePendingSec" value="60"/>
+      <ConfigParam key="NPVRBufferPreGuardInSec" value="60"/>
+      <ConfigParam key="NPVRRecordingPreGuardInSec" value="60"/>
+      <ConfigParam key="NPVRRecordingPostGuardInSec" value="60"/>
+      <ConfigParam key="KeepCatchupAliveInHour" value="1680000"/>
+      <ConfigParam key="NPVRRightsManagementFile" value="C:\MPS\Work\Xtend_harmonic\Modules\Auxiliary\ConaxWorkflowManager\Core\NPVRRightsManagement.xml"/>
+      <ConfigParam key="RequestForContentRecordingsTimeout" value="5"/>
+      <ConfigParam key="RequestForContentRecordingsRetries" value="3"/>
+      
+      <ConfigParam key="XMLTVImportChunkSize" value="1000"/>
+
+      <ConfigParam key="FileAreaRoot" value="file://portal01.lab.conax.com/content/"/>
+      <!-- The real network path to the filearea root-->
+      <ConfigParam key="CustomerID" value="000001"/>
+      <ConfigParam key="SystemTimeZoneList" value="C:\MPS\work\Trunk\Xtend_harmonic\Modules\Auxiliary\ConaxWorkflowManager\SystemTimeZoneList.xml"/>
+
+      <!-- Mail -->
+      <ConfigParam key="SendNotification" value="true" />
+      <ConfigParam key="SMTPHost" value="10.4.7.11" />
+      <ConfigParam key="SMTPPort" value="25" />
+      <ConfigParam key="EmailTemplate" value="C:\MPS\Work\Trunk\Conax_multi2\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\Template\EmailTemplate.xml" />
+
+      <ConfigParam key="VODIngestNotificationRecipients" value="steve.pan@mpsbroadband.com" />
+      <ConfigParam key="VODPublishNotificationRecipients" value="steve.pan@mpsbroadband.com" />
+
+      <ConfigParam key="EncoderProfileMapping" value="C:\MPS\work\Trunk\Conax\Modules\Auxiliary\ConaxWorkflowManager\Core\EncoderProfileMapping.xlsx" />
+
+    </SystemConfiguration>
+    <SystemConfiguration name="Unified">
+      <ConfigParam key="UnifiedServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="UnifiedServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Unified.FakeUnifiedServicesWrapper"/>
+      <!-- 
+      <ConfigParam key="UnifiedPlayerAPI" value="http://storage01.lab.conax.com/content/unified_player.php"/>
+   -->   
+      <ConfigParam key="UnifiedPlayerAPI" value="http://storage01.lab.conax.com/npvr/api/"/>
+      <ConfigParam key="UnifiedPlayerAPIUser" value="test"/>
+      <ConfigParam key="UnifiedPlayerAPIPassword" value="test"/>
+      <!-- 
+      <ConfigParam key="UnifiedPlayerAPI" value="http://storage01.lab.conax.com/content/npvr/api/"/>
+-->                                                 
+    </SystemConfiguration>
+ 
+    <SystemConfiguration name="ElementalEncoder">
+      <ConfigParam key="Endpoint" value="http://elemental01.lab.conax.com/"/>
+      <!-- The url to the rest api to use -->
+      <ConfigParam key="UseAuthentication" value="false"/>
+      <!-- States if authentication should be used -->
+      <ConfigParam key="UserHash" value="asdadasdsadasdasdasczxvcsdfvzcz"/>
+      <!-- If authentication is used the key to be used is set here -->
+      <ConfigParam key="EncoderUploadFolder" value="\\storage01.lab.conax.com\content\ElementalEncoderFolder"/>
+      <!-- Used to set where the files should be copied to from workfolder -->
+      <ConfigParam key="EncoderMappedFilePath" value="/data/mnt/vod/ElementalEncoderFolder"/>
+      <!--The mapped path to where the files that are being encoded is located, should point to same area as EncoderUploadFolder. -->
+      <ConfigParam key="StatusCheckInterval" value="15"/>
+      <!-- States in second how ofter the status of the encoderjob should be checked.-->
+
+      <!-- Output parameters-->
+      <ConfigParam key="iPadPrefix" value="iPad_"/>
+      <!-- If set decides the name on the output file for ipad, if ipad is set, the outputname will be ipad.m3u8-->
+      <ConfigParam key="iPhonePrefix" value="iPhone_"/>
+      <!-- If set decides the name on the output file for iphone, if iphone is set, the outputname will be iphone.m3u8-->
+      <ConfigParam key="PCPrefix" value="PC_"/>
+      <!-- If set decides the name on the output file for smooth, if smooth is set, the outputname will be smooth.xxx-->
+      <ConfigParam key="MacPrefix" value="MAC_"/>
+      <!-- If set decides the name on the output file for smooth, if smooth is set, the outputname will be smooth.xxx-->
+      <ConfigParam key="STBPrefix" value="STB_"/>
+      <!-- If set decides the name on the output file for smooth, if smooth is set, the outputname will be smooth.xxx-->
+
+      <ConfigParam key="EncoderMappedFileAreaRoot" value="/data/mnt/filearea/ElementalEncoderOutFolder/"/>
+      <!-- The mapped name to the FileAreaRoot, should point to the same as FileAreaRoot located under ConaxManager configuration-->
+      
+      <!-- States if the new EncoderVersion should be used. -->
+      <ConfigParam key="UseNewVersion" value="true"/>
+      
+      <!-- catchup -->
+
+      <ConfigParam key="FileArchiveRootFolder" value="C:\MPS\importserver\conax\HLS\Archive"/>
+      <!-- 
+      <ConfigParam key="FileArchiveRootFolder" value="\\192.168.3.210\Steve\GenPlayList"/>
+      -->
+      <ConfigParam key="HLSCatchUpFileDateTimeRegExp" value="\d{8}T\d{6}"/>
+      <ConfigParam key="HLSCatchUpFileDateTimeFormat" value="yyyyMMddTHHmmss"/>
+    </SystemConfiguration>
+    
+    <SystemConfiguration name="CarbonEncoder">
+      <ConfigParam key="Endpoint" value="http://10.4.1.42:8731/Rhozet.JobManager.JMServices"/>
+      <!-- The url to the rest api to use -->
+      <ConfigParam key="EncoderUploadFolder" value="\\storage01.lab.conax.com\content\CarbonEncoderFolder"/>
+      <!-- Used to set where the files should be copied to from workfolder -->
+      <ConfigParam key="StatusCheckInterval" value="15"/>
+      <!-- States in second how ofter the status of the encoderjob should be checked.-->
+      <ConfigParam key="UsingHarmonicOrigin" value="true"/>
+      <!-- States if Harmonic Origin is being used.-->
+    </SystemConfiguration>
+    
+    <SystemConfiguration name="SeaChange">
+      <!-- States if source storage should be used for files, othervise files will be copied from processed once publishing to Seachange-->
+      <ConfigParam key="UseSourceStorage" value="false"/>
+      <!-- If source storage should be used, this specifies where that sourceStorage is located-->
+      <ConfigParam key="SourceStorageDirectory" value="C:\MPS\conax\source"/>
+    </SystemConfiguration>
+
+    <SystemConfiguration name="HarmonicOrigin">      
+      <ConfigParam key="HarmonicServiceWrapperAssembly" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer"/>
+      <ConfigParam key="HarmonicServiceWrapper" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Test.Developer.Core.TestData.Services.Harmonic.FakeHarmonicOriginWrapper"/>
+      
+      <ConfigParam key="Endpoint" value="http://10.4.7.99:8100"/>
+    </SystemConfiguration>
+  </SystemConfigurations>
+
+  
+  <!--  Task configurations  -->
+  <Tasks>
+    <!-- load catchup segement data to DB -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.LoadCatchupDBTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+
+      <ConfigParam key="ChannelsToProcess" value=""/>
+    </Task>
+    <!-- Generate catchup manifest -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.GenerateManifestTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+
+      <ConfigParam key="CatchUpHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Catchup.SeaWellHLSCatchupHandler"/>
+      <ConfigParam key="ChannelsToProcess" value=""/>
+    </Task>
+
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.GenerateNPVRTask">
+      <ConfigParam key="Enabled" value="true"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+    </Task>
+    
+    <!-- HouseMaidTask - clean up workflow managers DB -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.HouseMaidTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+    </Task>
+    <!-- PurgeCatchUpTask - Purge Catchup content in MPP and segment files -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.PurgeCatchUpTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+    </Task>
+    
+    <!-- PurgeNPVRTask - Purge NPVR content in MPP and asset files -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.PurgeNPVRTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+    </Task>
+    
+
+    <!-- EPGIngestTask - Handle EPG ingest, adding content to MPP -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.EPGIngestTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+
+      <ConfigParam key="EPGParser" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.EPG.XMLTVEPGParser"/>
+
+    </Task>
+    <!-- FileWatchTask - Handle file ingest, adding content to MPP -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.FileWatchTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+      <!-- 
+      <ConfigParam key="IngestHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.XML.CableLabsIngestHandler"/>
+      <ConfigParam key="IngestXMLXSD" value="C:\MPS\work\Trunk\Conax\Modules\Auxiliary\ConaxWorkflowManager\Core\Util\XSD\CableLabsXT.xsd"/>
+      -->
+    </Task>
+    <!-- MPPSyncTask - Featches MPP events and stores in the local DB for laster procesing. -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.MPPSyncTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+    </Task>
+    <!-- ProcessEventTask - processing MPP events -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.ProcessEventTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+      <ConfigParam key="EventToProcess" value="ContentCreated"/>
+    </Task>
+    <!-- ProcessEventTask - processing MPP events -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.ProcessEventTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:01"/>
+      <ConfigParam key="EventToProcess" value="ContentPublished,ContentUpdated"/>
+      <!-- 
+      <ConfigParam key="EventToProcess" value="ContentUpdated,MultipleServicePriceUpdated,ContentPublished,PublishedMultipleServicePriceUpdated"/>
+      -->
+    </Task>
+    <!-- PullIngestTask for SFA download -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.PullIngestTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="01:00"/>
+      <ConfigParam key="PullIngestHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.PullIngest.SFAIngestHandler"/>
+    </Task>
+    <!-- PullIngestTask for SFA decryption -->
+    <Task class="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Task.PullIngestTask">
+      <ConfigParam key="Enabled" value="false"/>
+      <ConfigParam key="StartDate" value=""/>
+      <ConfigParam key="StartTime" value=""/>
+      <ConfigParam key="Type" value="Interval"/>
+      <ConfigParam key="Interval" value="00:02"/>
+      <ConfigParam key="PullIngestHandler" value="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Ingest.PullIngest.SFAGPGIngestHandler"/>
+    </Task>
+  </Tasks>
+</CWMConfig>
+

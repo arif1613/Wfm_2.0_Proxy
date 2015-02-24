@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ADI>
+	<Metadata>
+	<!--AMS Provider=CRO, Asset_Name=Content Name-->
+		<AMS Provider="CP1" Asset_Name="MPSPCL10DDMMXX02" /> 
+		
+		<App_Data App="MOD" Name="Metadata_Spec_Version" Value="CableLabsVOD1.0"/> 
+	</Metadata>
+	<Asset>
+		<Metadata>	
+			<!--Content Sort name-->
+			<App_Data App="MOD" Name="Title_Sort_Name" Value="Vod Ingest_ren_sub"/> 
+			<!--Content Title-->
+			<App_Data App="MOD" Name="Title" Value="Vod Ingest_ren_sub"/> 
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Episode_Name" Value="EpisodeName"/>
+			<!--Content Long Description-->
+			<App_Data App="MOD" Name="Summary_Long" Value="Sub Rental Outlet mexico, with trailor"/> 
+			<!--Content Short Description-->
+			<App_Data App="MOD" Name="Summary_Short" Value="Ingest Rental Outlet Sweden and Norway"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Rating" Value="RC"/>
+			<!--Content Runtime-->
+			<App_Data App="MOD" Name="Run_Time" Value="03:19:00"/>
+			<!--Content Production Year-->
+			<App_Data App="MOD" Name="Year" Value="2013"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Country_of_Origin" Value="Norway"/>
+			<!--All "Actors" value are added as a content property named Cast-->
+			<App_Data App="MOD" Name="Actors" Value="Winslet,Kate"/> 
+			<App_Data App="MOD" Name="Actors" Value="DiCaprio,Leonardo"/> 
+			<App_Data App="MOD" Name="Actors" Value="Zane,Billy"/>
+			<App_Data App="MOD" Name="Actors" Value="DeNiro,Bob"/>
+			<App_Data App="MOD" Name="Actors" Value="Pacino,Al"/>
+			<App_Data App="MOD" Name="Actors" Value="Nickolson,Jack"/>
+			<App_Data App="MOD" Name="Actors" Value="Freeman,Morgan"/>
+			<App_Data App="MOD" Name="Actors" Value="Hardy,Tom"/>
+			<App_Data App="MOD" Name="Actors" Value="Bale,Christian"/>
+			<App_Data App="MOD" Name="Actors" Value="Lawrence,Jenny"/>
+			<App_Data App="MOD" Name="Actors" Value="Renner,Jeremy"/>
+			<App_Data App="MOD" Name="Actors" Value="Hathaway,Anne"/>
+			<App_Data App="MOD" Name="Actors" Value="Nolan,Chris"/>
+			<App_Data App="MOD" Name="Actors" Value="Hanks,Tom"/>
+			<App_Data App="MOD" Name="Actors" Value="Crowe,Russel"/>
+			<App_Data App="MOD" Name="Actors" Value="Depp,John"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Director" Value="Scorsese,Martin"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Producer" Value="Simpson,Homer"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Category" Value="Action"/>
+			<!--Added as a content property-->
+			<App_Data App="MOD" Name="Genre" Value="Comedy"/>
+			<!--Content Event Period-->
+			<App_Data App="MOD" Name="Licensing_Window_Start" Value="2002-02-01"/> 
+			<App_Data App="MOD" Name="Licensing_Window_End" Value="2023-05-30"/> 
+		</Metadata>
+		<Asset>
+		<!--Asset information-->
+			<Metadata>
+			<!--Main Video Asset-->
+				<App_Data App="MOD" Name="Type" Value="movie"/>
+			<!--Asset Language-->
+				<App_Data App="MOD" Name="Languages" Value="en"/>
+				<App_Data App="MOD" Name="Resolution_Type" Value="SD"/>
+				<App_Data App="MOD" Name="Content_FileSize" Value="3907840625"/>
+			</Metadata>
+			<!--Asset file name-->
+			<Content Value="Sample.mpg"/> 
+		</Asset>
+		
+		<Asset>
+		<!--Image Asset-->
+			<Metadata>
+				<App_Data App="MOD" Name="Type" Value="box cover"/> 
+				<App_Data App="MOD" Name="Image_Aspect_Ratio" Value="320x240"/>
+			</Metadata>
+			<Content Value="Sample.jpg"/>
+		</Asset>
+	</Asset>
+</ADI>

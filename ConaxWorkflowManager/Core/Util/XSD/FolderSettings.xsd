@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Steve Pan (MPS Broadband AB) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="RentalPrice_Type">
+		<xs:attribute name="amount" type="xs:decimal" use="required"/>
+		<xs:attribute name="currency" type="xs:string" use="required"/>
+		<xs:attribute name="periodLengthInhrs" type="xs:integer" use="required"/>
+	</xs:complexType>
+	<xs:element name="FolderConfiguration">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="IngestSettings">
+					<xs:complexType>
+						<xs:attribute name="enableQA" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="URIProfile" type="xs:string"/>
+				<xs:element name="PricingRule">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="FS_ONLY"/>
+							<xs:enumeration value="ADI_ONLY"/>
+							<xs:enumeration value="ADI_Default_FS"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Devices">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Device" maxOccurs="7">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="STB"/>
+										<xs:enumeration value="PC"/>
+										<xs:enumeration value="MAC"/>
+										<xs:enumeration value="iPad"/>
+										<xs:enumeration value="iPhone"/>
+										<xs:enumeration value="AndroidPhone"/>
+										<xs:enumeration value="AndroidTablet"/>
+                    <xs:enumeration value="Android"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ContentRightsOwner" type="xs:string"/>
+				<xs:element name="ContentAgreement" type="xs:string"/>
+				<xs:element name="DefaultImageFileName" type="xs:string" minOccurs="0"/>
+				<xs:element name="DefaultRatingType" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="MovieRating"/>
+							<xs:enumeration value="TVRating"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="MetadataMappingConfigurationFileName" type="xs:string"/>
+				<xs:element name="MetadataDefaultValues" minOccurs="0">
+					<xs:complexType>
+						<xs:choice maxOccurs="3">
+							<xs:element name="MovieRating" type="xs:string"/>
+							<xs:element name="TVRating" type="xs:string"/>
+							<xs:element name="Genre" type="xs:string"/>
+							<xs:element name="Category" type="xs:string"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DefaultConfigurationForAllServices" minOccurs="0">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="Prices">
+								<xs:complexType>
+									<xs:choice maxOccurs="2">
+										<xs:element name="RentalPrice" type="RentalPrice_Type" minOccurs="0"/>
+										<xs:element name="Categories" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Category" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="RentalPrice" type="RentalPrice_Type"/>
+															</xs:sequence>
+															<xs:attribute name="name" type="xs:string" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ConfigurationForServices" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Service" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Prices">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element name="SubscriptionPrice" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="id" type="xs:integer" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="RentalPrice" type="RentalPrice_Type" minOccurs="0"/>
+													<xs:element name="Categories" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Category" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="SubscriptionPrice" minOccurs="0" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:attribute name="id" type="xs:integer" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="RentalPrice" type="RentalPrice_Type" minOccurs="0"/>
+																		</xs:choice>
+																		<xs:attribute name="name" type="xs:string" use="required"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="objectId" type="xs:integer" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

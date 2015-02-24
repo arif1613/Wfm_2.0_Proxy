@@ -1,0 +1,71 @@
+<MediaContent>
+  <Identification name="Conax Test 1" externalId="40857942-7542-4018-9527-67249b9f19bf" />
+  <Metadata>
+    <EventPeriod from="2002-02-01 00:00:00" to="2013-12-28 00:00:00" />
+    <ProductionYear>2012</ProductionYear>
+    <RunningTime>03:14:00</RunningTime>
+    <Property type="IngestXMLFileName">C:\MPS\conax\Ingest\Work\upload2\conax.xml</Property>
+    <Property type="EnableQA">True</Property>
+    <Property type="IngestSource">CableLabs</Property>
+    <Property type="URIProfile">FREE_USAGE</Property>
+    <Property type="MetadataMappingConfigurationFileName">MetadataMapping.config</Property>
+    <Property type="EpisodeName">Conax Test 1</Property>
+    <Property type="Country">Sweden</Property>
+    <Property type="Cast">Conax Test 1</Property>
+    <Property type="Director">Conax Test 1</Property>
+    <Property type="Producer">Conax Test 1</Property>
+    <Property type="Category">Action</Property>
+    <Property type="Genre">Comedy</Property>
+    <Property type="ContentType">VOD</Property>
+    <Property type="MovieRating">PG</Property>
+    <PublishState>needs QA</PublishState>
+    <IngestIdentifier>40857942-7542-4018-9527-67249b9f19bf</IngestIdentifier>
+    <LanguageInfo ISO="ENG">
+      <Title>Conax Test 1</Title>
+      <SortName>Conax Test 1</SortName>
+      <ShortDescription><![CDATA[Conax Test 1]]></ShortDescription>
+      <LongDescription><![CDATA[Conax Test 1]]></LongDescription>
+      <Image ClientGUIName="box cover" Classification="320x240">upload2\conax.jpg</Image>
+    </LanguageInfo>
+  </Metadata>
+  <Assets>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="false">
+      <Property type="AssetFormatType">SmoothStreaming</Property>
+      <Property type="DeviceType">PC</Property>
+      <Property type="DeviceType">MAC</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="false">
+      <Property type="AssetFormatType">SmoothStreaming</Property>
+      <Property type="DeviceType">STB</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="false">
+      <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      <Property type="DeviceType">iPhone</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="false">
+      <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      <Property type="DeviceType">iPad</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax_preview.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="true">
+      <Property type="AssetFormatType">SmoothStreaming</Property>
+      <Property type="DeviceType">PC</Property>
+      <Property type="DeviceType">MAC</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax_preview.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="true">
+      <Property type="AssetFormatType">SmoothStreaming</Property>
+      <Property type="DeviceType">STB</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax_preview.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="true">
+      <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      <Property type="DeviceType">iPhone</Property>
+    </VideoAsset>
+    <VideoAsset name="C:\MPS\conax\Ingest\ElementalEncoderOutFolder\upload2\conax_preview.ts" bitrate="0" deliveryMethod="Stream" streamPublishingPoint="" codec="" filesize="0" trailer="true">
+      <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      <Property type="DeviceType">iPad</Property>
+    </VideoAsset>
+  </Assets>
+  <MPPContentContext hostId="0003">
+    <ContentRightsOwner>HBO</ContentRightsOwner>
+    <ContentAgreement>HBO All Regions</ContentAgreement>
+  </MPPContentContext>
+</MediaContent>

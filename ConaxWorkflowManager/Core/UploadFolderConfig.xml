@@ -1,0 +1,8 @@
+﻿<UploadFolderConfig>
+  <ContentRightsOwner name="HBO">
+    <UploadFolders>
+      <UploadFolder>C:\MPS\conax\Ingest\Upload\upload(channel)</UploadFolder>
+      <UploadFolder>C:\MPS\conax\Ingest\Upload\upload2</UploadFolder>
+    </UploadFolders>
+  </ContentRightsOwner>
+</UploadFolderConfig>

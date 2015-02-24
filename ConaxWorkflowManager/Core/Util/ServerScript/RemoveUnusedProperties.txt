@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using MPS.MPP.Auxiliary.Core.MPS.Util.Collections;
+using Ring8.MpsBroadband.ContentRights;
+using Ring8.MpsBroadband.Util;
+using Ring8.MpsBroadband.Util.Logging;
+using Starcounter;
+
+namespace MPS.MPP.StationServer.Core.PatchPlugin
+{
+    public class DeleteUnusedNPVRArchiveTimesProperties
+    {
+        public bool Run()
+        {
+            // MPPHelper.AddMPPLog(Severity.Info,);
+            TextLog.LogSource.Notice("Removing unused properties");
+            ulong noOfProperties = 0;
+            ulong deleted = 0;
+            foreach (Property.Kind pk in SQLHelper.Select<Property.Kind>("Name", "NPVRArchiveTimes"))
+            {
+                foreach (Property property in SQLHelper.Select<Property>("InstantiatedFromIndexed", pk))
+                {
+                    noOfProperties++;
+
+                    // ContentPropertyRole role = ;
+                    if (SQLHelper.SelectOne<ContentPropertyRole>("Property", property) == null)
+                    {
+                        deleted++;
+                        property.Delete();
+                    }
+                }
+            }
+            ulong emptyRoles = 0;
+            foreach (ContentPropertyRole role in SQLHelper.SelectAll<ContentPropertyRole>())
+            {
+                if (role.Content == null)
+                {
+                    emptyRoles++;
+                    role.Delete();
+                }
+            }
+
+            TextLog.LogSource.Notice("Removed " + deleted + " unused NPVRArchiveTimes properties. Found a total of " + noOfProperties +
+                                     "properties and deleted " + emptyRoles + " empty content property roles");
+            return true;
+        }
+    }
+}

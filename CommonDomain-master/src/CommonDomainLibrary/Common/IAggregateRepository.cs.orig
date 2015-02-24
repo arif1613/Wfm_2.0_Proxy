@@ -1,0 +1,23 @@
+﻿using System;
+using System.Threading.Tasks;
+
+namespace CommonDomainLibrary.Common
+{
+	public interface IAggregateRepository
+	{
+	    Task<AggregateRepositoryResponse> GetById<T>(Guid aggregateId)
+	        where T : class, IAggregate, IMessageAccessor;
+
+	    Task Save<T>(Guid causationId, T aggregate, string version)
+            where T : class, IAggregate, IMessageAccessor;
+	}
+<<<<<<< HEAD
+=======
+
+    public interface IBus  // TODO FIX ME
+    {
+        void Publish(object message);
+        void Defer(object message, Instant instant);
+    }
+>>>>>>> Implemented the new message routing style
+}

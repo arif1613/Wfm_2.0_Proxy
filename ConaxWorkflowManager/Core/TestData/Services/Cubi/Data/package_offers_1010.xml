@@ -1,0 +1,52 @@
+﻿<package-offer>
+  <created-at type="datetime">2013-08-01T09:29:06Z</created-at>
+  <id type="integer">1010</id>
+  <name>Live_Sub_Barbados</name>
+  <price type="decimal">0.0</price>
+  <status>available</status>
+  <updated-at type="datetime">2013-08-01T09:29:06Z</updated-at>
+  <currency>USD</currency>
+  <cover>
+    <id type="integer">862</id>
+    <image-file-name>Live_Both_Regions_Test_nPVR_channel_new_1.1.jpg</image-file-name>
+    <image-file-size type="integer">64744</image-file-size>
+    <image-content-type>image/jpeg</image-content-type>
+  </cover>
+  <channels type="array">
+    <channel>
+      <id type="integer">1507</id>
+    </channel>
+    <channel>
+      <id type="integer">1520</id>
+    </channel>
+    <channel>
+      <id type="integer">1543</id>
+    </channel>
+    <channel>
+      <id type="integer">1544</id>
+    </channel>
+    <channel>
+      <id type="integer">1552</id>
+    </channel>
+    <channel>
+      <id type="integer">1564</id>
+    </channel>
+    <channel>
+      <id type="integer">1572</id>
+    </channel>
+    <channel>
+      <id type="integer">1606</id>
+    </channel>
+    <channel>
+      <id type="integer">1614</id>
+    </channel>
+    <channel>
+      <id type="integer">1616</id>
+    </channel>
+    <channel>
+      <id type="integer">1645</id>
+    </channel>
+  </channels>
+  <vods type="array"/>
+  <lineups type="array"/>
+</package-offer>

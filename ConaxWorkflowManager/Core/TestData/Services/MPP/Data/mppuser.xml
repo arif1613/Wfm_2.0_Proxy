@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MPPUserInfo userName="importserverapi" firstName="ImportServer" lastName="api" isAdministrator="true" id="9">
+  <AllowedContentRightsOwners>
+    <ContentRightsOwner objectId="3332097" name="MPS Broadband"/>
+    <ContentRightsOwner objectId="1232238593" name="FlyProduction"/>
+    <ContentRightsOwner objectId="1442855937" name="SvenskaHockeyligan"/>
+    <ContentRightsOwner objectId="1268297729" name="demo_artemis"/>
+    <ContentRightsOwner objectId="1268613121" name="demo_apollo"/>
+    <ContentRightsOwner objectId="1268662273" name="demo_athena"/>
+    <ContentRightsOwner objectId="1268894721" name="TeliaSoneraInternationalCarrier"/>
+    <ContentRightsOwner objectId="130831361" name="MPS_Broadband_Demo_Portal"/>
+    <ContentRightsOwner objectId="1833360385" name="Bonver"/>
+    <ContentRightsOwner objectId="1836972033" name="ahecta"/>
+    <ContentRightsOwner objectId="1840747521" name="Caucasus"/>
+    <ContentRightsOwner objectId="1840800769" name="SvenskHockeyTV"/>
+    <ContentRightsOwner objectId="1841359873" name="Marknadsplatsen"/>
+    <ContentRightsOwner objectId="2221928449" name="Philips_Demo"/>
+    <ContentRightsOwner objectId="2221945857" name="Philips_Stable"/>
+    <ContentRightsOwner objectId="2576839681" name="Philips_Film2Home"/>
+    <ContentRightsOwner objectId="2701845505" name="Steve 2"/>
+  </AllowedContentRightsOwners>
+  <AllowedServiceProviders>
+    <ServiceProvider objectId="2221930497" name="Philips_Demo"/>
+    <ServiceProvider objectId="2221947905" name="Philips_Stable"/>
+    <ServiceProvider objectId="3334145" name="MPS Broadband"/>
+    <ServiceProvider objectId="1232234497" name="FlyProduction"/>
+    <ServiceProvider objectId="1442857985" name="SvenskaHockeyligan"/>
+    <ServiceProvider objectId="1445478401" name="HL_BIF"/>
+    <ServiceProvider objectId="1445492737" name="HL_DIF"/>
+    <ServiceProvider objectId="1445506049" name="HL_FBK"/>
+    <ServiceProvider objectId="1445517313" name="HL_FHC"/>
+    <ServiceProvider objectId="1445528577" name="HL_HV71"/>
+    <ServiceProvider objectId="1445539841" name="HL_LHC"/>
+    <ServiceProvider objectId="1445551105" name="HL_LHF"/>
+    <ServiceProvider objectId="1445573633" name="HL_MODO"/>
+    <ServiceProvider objectId="1445584897" name="HL_RBK"/>
+    <ServiceProvider objectId="1445596161" name="HL_SAIK"/>
+    <ServiceProvider objectId="1445607425" name="HL_SSK"/>
+    <ServiceProvider objectId="1445618689" name="HL_TIK"/>
+    <ServiceProvider objectId="1268299777" name="demo_artemis"/>
+    <ServiceProvider objectId="1268615169" name="demo_apollo"/>
+    <ServiceProvider objectId="1268664321" name="demo_athena"/>
+    <ServiceProvider objectId="1268896769" name="TeliaSoneraInternationalCarrier"/>
+    <ServiceProvider objectId="130833409" name="MPS_Broadband_Demo_Portal"/>
+    <ServiceProvider objectId="1833362433" name="Bonver"/>
+    <ServiceProvider objectId="1836969985" name="ahecta"/>
+    <ServiceProvider objectId="1840749569" name="Caucasus"/>
+    <ServiceProvider objectId="1840802817" name="SvenskHockeyTV"/>
+    <ServiceProvider objectId="1841361921" name="Marknadsplatsen"/>
+    <ServiceProvider objectId="2576837633" name="Philips_Film2Home"/>
+    <ServiceProvider objectId="2701847553" name="Steve 2"/>
+  </AllowedServiceProviders>
+  <AllowedOperators>
+    <Operator objectId="2221932545" name="Philips_Demo"/>
+    <Operator objectId="2221949953" name="Philips_Stable"/>
+    <Operator objectId="3336193" name="MPS Broadband"/>
+    <Operator objectId="1232236545" name="FlyProduction"/>
+    <Operator objectId="1442860033" name="SvenskaHockeyligan"/>
+    <Operator objectId="1268301825" name="demo_artemis"/>
+    <Operator objectId="1268617217" name="demo_apollo"/>
+    <Operator objectId="1268666369" name="demo_athena"/>
+    <Operator objectId="1268898817" name="TeliaSoneraInternationalCarrier"/>
+    <Operator objectId="130835457" name="MPS_Broadband_Demo_Portal"/>
+    <Operator objectId="1833364481" name="Bonver"/>
+    <Operator objectId="1836974081" name="ahecta"/>
+    <Operator objectId="1840751617" name="Caucasus"/>
+    <Operator objectId="1840804865" name="SvenskHockeyTV"/>
+    <Operator objectId="1841363969" name="Marknadsplatsen"/>
+    <Operator objectId="2576841729" name="Philips_Film2Home"/>
+  </AllowedOperators>
+  <AllowedServiceAgreements>
+    <ServiceAgreement objectId="2701760513" name="Steve ag"/>
+    <ServiceAgreement objectId="3941377" name="MPS Broadband_PortalAgreement"/>
+    <ServiceAgreement objectId="130866177" name="MPS Broadband Demo Portal Agreement"/>
+    <ServiceAgreement objectId="1837220865" name="Ahecta_ServiceAgreement"/>
+    <ServiceAgreement objectId="1840821249" name="SvenskhocketTV_Agreement"/>
+    <ServiceAgreement objectId="1841510401" name="Marknadsplatsen_Agreement"/>
+  </AllowedServiceAgreements>
+</MPPUserInfo>

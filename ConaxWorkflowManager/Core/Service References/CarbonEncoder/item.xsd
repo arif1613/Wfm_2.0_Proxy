@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Rhozet.JobManager" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Rhozet.JobManager" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="JobManagerStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active" />
+      <xs:enumeration value="DatabaseError" />
+      <xs:enumeration value="BindingError" />
+      <xs:enumeration value="DatabaseVersionError" />
+      <xs:enumeration value="NetworkConnectionError" />
+      <xs:enumeration value="DatabaseReplicationError" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobManagerStatus" nillable="true" type="tns:JobManagerStatus" />
+  <xs:simpleType name="DatabaseReplicationStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="DbReportedFailure" />
+      <xs:enumeration value="InaccessibleMachineFailure" />
+      <xs:enumeration value="NotSetup" />
+      <xs:enumeration value="DbReportedUnknown" />
+      <xs:enumeration value="InaccessiblePublisherUnknown" />
+      <xs:enumeration value="InternalErrorUnknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DatabaseReplicationStatus" nillable="true" type="tns:DatabaseReplicationStatus" />
+</xs:schema>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ContentMetadata>
+  <ExportContext hostId="0003" created="2013-08-18 23:41:03"/>
+  <MediaContent>
+    <Identification name="Channel 365" created="2013-07-28 17:20:12" updated="2013-08-09 15:57:36" externalId=""/>
+    <Metadata>
+      <EventPeriod from="0001-01-01 00:00:00" to="0001-01-01 00:00:00"/>
+      <PublishInfo from="0001-01-01 00:00:00" to="0001-01-01 00:00:00" deliveryMethod="Stream" region="World" publishState="Published"/>
+      <PublishInfo from="0001-01-01 00:00:00" to="0001-01-01 00:00:00" deliveryMethod="Stream" region="Åland" publishState="Published"/>
+      <RunningTime>00:00:00</RunningTime>
+      <TemporaryUnavailable>false</TemporaryUnavailable>
+      <Property type="ConaxContegoContentID">202020</Property>
+      <Property type="ServiceExtContentID">3343361:1020</Property>
+      <Property type="IngestXMLFileName">hbo\live\Channel_365.xml</Property>
+      <Property type="EnableQA">False</Property>
+      <Property type="URIProfile">FREE_USAGE</Property>
+      <Property type="MetadataMappingConfigurationFileName">MetadataMapping.config</Property>
+      <Property type="ContentType">Channel</Property>
+      <Property type="CubiChannelId">365</Property>
+      <Property type="UUID">onid=1:tsid=1:sid=101</Property>
+      <Property type="RadioChannel">true</Property>
+      <Property type="CubiCatchUpId">513697793:1002</Property>
+      <Property type="CubiNPVRId">513697793:1003</Property>
+      <Property type="EnableCatchUp:513697793">True</Property>
+      <Property type="EnableNPVR:513697793">True</Property>
+      <Property type="EnableCatchUp:3343361">False</Property>
+      <Property type="EnableNPVR:3343361">False</Property>
+      <Property type="LCN:3343361">315</Property>
+      <Property type="EnableCatchUp:2714793985">True</Property>
+      <Property type="EnableNPVR:2714793985">True</Property>
+      <Property type="LCN:2714793985">111</Property>
+      <Property type="ParentalRating">PG</Property>
+      <Property type="Genre">Comedy</Property>
+      <Property type="Category">Action</Property>
+      <Property type="ServiceExtContentID">513697793:1001</Property>
+      <Property type="IngestIdentifier">ac1bc758-95ee-4c4f-a3dc-5edb74b270bb</Property>
+      <LanguageInfo ISO="ENG">
+        <Title>Canale Jungle</Title>
+        <ShortDescription><![CDATA[]]></ShortDescription>
+        <LongDescription><![CDATA[]]></LongDescription>
+        <Image ClientGUIName="box cover" Classification="320x240" IsActive=""><![CDATA[hbo\live\Argentina_Box_Cover2.jpg]]></Image>
+      </LanguageInfo>
+      <LanguageInfo ISO="o02">
+        <Title>Channel 365</Title>
+        <ShortDescription><![CDATA[]]></ShortDescription>
+        <LongDescription><![CDATA[]]></LongDescription>
+        <Image ClientGUIName="box cover" Classification="320x240" IsActive=""><![CDATA[hbo\live\Curacau_Box_Cover2.jpg]]></Image>
+      </LanguageInfo>
+    </Metadata>
+    <Assets>
+      <VideoAsset objectId="2715088897" name="dvb://freq=315000:custom0=0:symbol=5761:mod=QAM256:band=6:sid=101:tsid=1:onid=1" bitrate="0" languageISO="ENG" GUID="219de6f4-cd6d-4cfd-97b7-cf630e2fa92d" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="StreamType">DVB</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715097089" name="http://an.live.columbuscdn.com/live/testhd2/ss/stb/stb.isml/Manifest" bitrate="0" languageISO="ENG" GUID="f7b735ab-10b1-4cda-9bd4-c85e9c6baa96" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="StreamType">IP</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715105281" name="dvb://freq=315000:custom0=0:symbol=5761:mod=QAM256:band=6:sid=101:tsid=1:onid=1" bitrate="0" languageISO="ENG" GUID="23d1cba7-8b18-4b41-91af-9e1b4add19ba" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">PC</Property>
+        <Property type="StreamType">DVB</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715113473" name="http://an.live.columbuscdn.com/live/testhd2/hls/ipad/ipad.m3u8" bitrate="0" languageISO="ENG" GUID="51b3a7ec-458a-4195-b2d8-0dc56c843c55" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">iPhone</Property>
+        <Property type="StreamType">IP</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715121665" name="dvb://freq=315000:custom0=0:symbol=5761:mod=QAM256:band=6:sid=101:tsid=1:onid=1" bitrate="0" languageISO="o02" GUID="02ca9318-c7a6-4317-9038-916c87912406" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">PC</Property>
+        <Property type="StreamType">DVB</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715129857" name="http://an.live.columbuscdn.com/live/testhd2/ss/stb/stb.isml/Manifest" bitrate="0" languageISO="o02" GUID="c7249601-f73a-492f-b496-e640f9431c2b" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="StreamType">IP</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715138049" name="http://an.live.columbuscdn.com/live/testhd2/hls/ipad/ipad.m3u8" bitrate="0" languageISO="o02" GUID="cc750826-9b22-4076-be3b-423dd31a90bb" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">iPhone</Property>
+        <Property type="StreamType">IP</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715146241" name="http://an.live.columbuscdn.com/live/testhd2/ss/pc/pc.isml/Manifest" bitrate="0" languageISO="o02" GUID="2dc472ce-fa8f-4920-8bca-70c7cfa2be08" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">PC</Property>
+        <Property type="StreamType">IP</Property>
+        <Property type="HighDefinition">True</Property>
+      </VideoAsset>
+    </Assets>
+    <MPPContentContext hostId="0003" contentId="621" objectId="2715086849" encryptedName="bdf75ad741014c5dadee0b8e5eb010b5" GUID="0cb7a3db-8de9-4d77-9559-9593001ea6f0">
+      <ContentRightsOwner objectID="3332097">MPS Broadband</ContentRightsOwner>
+      <ContentAgreement objectID="2714819585">Live Multi2</ContentAgreement>
+    </MPPContentContext>
+  </MediaContent>
+</ContentMetadata>

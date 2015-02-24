@@ -1,0 +1,2731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i0="http://Rhozet.com/Rhozet.Services.IWfcJmServices" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JMServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="JmTcpEndpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://Rhozet.com/Rhozet.Services.IWfcJmServices" location="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="JmHttpEndpoint" type="i0:IWfcJmServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerDefinitionList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreServerDefinition">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreServerDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveServerDefinition">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveServerDefinition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextAvailableJobPriority">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetNextAvailableJobPriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobPriority">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobPriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobs">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeAllJobs">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PurgeAllJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PauseJobs">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PauseJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJobs">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/ResumeJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchFolderById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFolderById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigPageLean">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPageLean" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreWatchConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWatchConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWatchConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWatchConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowTemplateById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplateById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowXMLById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowXMLById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowIdList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowIdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowTemplatePage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplatePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreWorkflowTemplate">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWorkflowTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWorkflowTemplate">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWorkflowTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchFoldersAssociatedWithWorkflow">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFoldersAssociatedWithWorkflow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTaskByMachine">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskByMachine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobManagerMachineTime">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobManagerMachineTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineGroupById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineGroupList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemMachineGroupList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetSystemMachineGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreMachineGroup">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreMachineGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMachineGroup">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveMachineGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerDefinitionById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCountByTaskType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountByTaskType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskActiveCountEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskActiveCountEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTaskCount">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPageBySchedule">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageBySchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPageByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGuidPageByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskGuidPageByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJob">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueComplexJob">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueComplexJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobAssets">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobAssets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowJob">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowJobEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJobEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowTemplateJob">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowTemplateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTemplateExJobByWorkflow">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateTemplateExJobByWorkflow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWorkflowGuid">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflowGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflowGuid">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWorkflow">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflowGuidAndType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuidAndType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWatchFolderGuid">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWatchFolderGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflow">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobXMLByWorkflowGuid">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXMLByWorkflowGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobXML">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JobUpdate">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/JobUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDashboard">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobDashboard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReplicationDashboard">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetReplicationDashboard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveJobsPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveJobsPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageByServiceId">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByServiceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageBySchedule">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageBySchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageByTaskStatusAndType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByTaskStatusAndType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithTaskAndStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTaskAndStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobsWithStatusByTaskStatusAndType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatusByTaskStatusAndType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobsWithStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithTask">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJob">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateModuleListByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModuleListByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulePage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulePageBySubType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePageBySubType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateModulePageByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModulePageByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctModuleSubTypes">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctModuleSubTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveModuleScheme">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModuleScheme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreModuleScheme">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModuleScheme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleScheme">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleScheme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleSchemeList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleSchemePage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableFetcher">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/EnableFetcher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsFetcherEnabledEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsFetcherEnabledEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFetcherEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcherEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFetcher">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFetcherStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateFetcherStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMachineStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateMachineStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFetcher">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveFetcher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreFetcherConfig">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreFetcherConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTask">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskWithComplexity">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskWithComplexity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaskStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateTaskStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListByJobId">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByJobId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasksUpdatedSinceByJobId">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTasksUpdatedSinceByJobId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCountEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCount">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConnectionString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJMGroup">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJMGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBindingPort">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetBindingPort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreLogs">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLog">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogByReferenceId">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogByReferenceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreTaskPropertyEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertyEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreTaskPropertiesEx">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertiesEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExByReferenceId">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByReferenceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExByRefNamSeq">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByRefNamSeq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePreset">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemovePreset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StorePreset">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StorePreset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreXMLPreset">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreXMLPreset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreset">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPreset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetXmlById">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetXmlById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresets">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetIdList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetIdList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetListByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetListByCategory">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPage">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPageByType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPageByCategory">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPresetNameAvailable">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsPresetNameAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctPresetTypes">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctPresetTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveModule">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreModule">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleList">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleListBySubType">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleListBySubType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalBindingIp">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetLocalBindingIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConnectionString">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetConnectionString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLocalBindingIp">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetLocalBindingIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnectionString">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/TestConnectionString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobManagerStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetJobManagerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyConfigurationChanges">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/ApplyConfigurationChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseReplicationStatus">
+      <soap:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetDatabaseReplicationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="JmTcpEndpoint" type="i0:IWfcJmServices">
+    <wsp:PolicyReference URI="#JmTcpEndpoint_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetServerDefinitionList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreServerDefinition">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreServerDefinition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveServerDefinition">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveServerDefinition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextAvailableJobPriority">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetNextAvailableJobPriority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobPriority">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobPriority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobs">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeAllJobs">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PurgeAllJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PauseJobs">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/PauseJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResumeJobs">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/ResumeJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchFolderById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFolderById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchConfigPageLean">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchConfigPageLean" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreWatchConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWatchConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWatchConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWatchConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowTemplateById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplateById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowXMLById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowXMLById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowIdList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowIdList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowTemplatePage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWorkflowTemplatePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreWorkflowTemplate">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreWorkflowTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveWorkflowTemplate">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveWorkflowTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchFoldersAssociatedWithWorkflow">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetWatchFoldersAssociatedWithWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfigPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTaskByMachine">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskByMachine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobManagerMachineTime">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobManagerMachineTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineGroupById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineGroupList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetMachineGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemMachineGroupList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetSystemMachineGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreMachineGroup">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreMachineGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMachineGroup">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveMachineGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerDefinitionById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetServerDefinitionById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCountByTaskType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountByTaskType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskActiveCountEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskActiveCountEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveTaskCount">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveTaskCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPageBySchedule">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageBySchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPageByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPageByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGuidPageByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskGuidPageByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJob">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueComplexJob">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueComplexJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobAssets">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobAssets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowJob">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowJobEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowJobEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueWorkflowTemplateJob">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueWorkflowTemplateJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTemplateExJobByWorkflow">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateTemplateExJobByWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWorkflowGuid">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflowGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflowGuid">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWorkflow">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflowGuidAndType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflowGuidAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobByWatchFolderGuid">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobByWatchFolderGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateJobByWorkflow">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GenerateJobByWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobXMLByWorkflowGuid">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXMLByWorkflowGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueJobXML">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/QueueJobXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateJobStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JobUpdate">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/JobUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDashboard">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobDashboard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReplicationDashboard">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetReplicationDashboard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveJobsPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetActiveJobsPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageByServiceId">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByServiceId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageBySchedule">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageBySchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageByTaskStatusAndType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageByTaskStatusAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithTaskAndStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTaskAndStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobsWithStatusByTaskStatusAndType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatusByTaskStatusAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJobsWithStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJobsWithStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobPageWithTask">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobPageWithTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJobCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJob">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateModuleListByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModuleListByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulePage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulePageBySubType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModulePageBySubType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateModulePageByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTemplateModulePageByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctModuleSubTypes">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctModuleSubTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveModuleScheme">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModuleScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreModuleScheme">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModuleScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleScheme">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleSchemeList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleSchemePage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleSchemePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableFetcher">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/EnableFetcher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsFetcherEnabledEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsFetcherEnabledEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFetcherEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcherEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFetcher">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RegisterFetcher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFetcherStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateFetcherStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMachineStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateMachineStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFetcher">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveFetcher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFetcherConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetFetcherConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreFetcherConfig">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreFetcherConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTask">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskWithComplexity">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskWithComplexity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchTaskById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/FetchTaskById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaskStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/UpdateTaskStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskListByJobId">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskListByJobId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasksUpdatedSinceByJobId">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTasksUpdatedSinceByJobId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCountEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCountEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskCount">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectionString">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetConnectionString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJMGroup">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetJMGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBindingPort">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetBindingPort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreLogs">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreLogs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLog">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogByReferenceId">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogByReferenceId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLogList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetErrorLogList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreTaskPropertyEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertyEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreTaskPropertiesEx">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreTaskPropertiesEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExByReferenceId">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByReferenceId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExByRefNamSeq">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExByRefNamSeq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskPropertyExPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetTaskPropertyExPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePreset">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemovePreset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StorePreset">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StorePreset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreXMLPreset">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreXMLPreset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreset">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPreset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetXmlById">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetXmlById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresets">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetIdList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetIdList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetListByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetListByCategory">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetListByCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPage">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPageByType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresetPageByCategory">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetPresetPageByCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPresetNameAvailable">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/IsPresetNameAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistinctPresetTypes">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetDistinctPresetTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveModule">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/RemoveModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreModule">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/StoreModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleList">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModuleListBySubType">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IJmLib/IJmLib/GetModuleListBySubType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalBindingIp">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetLocalBindingIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConnectionString">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetConnectionString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLocalBindingIp">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/SetLocalBindingIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnectionString">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/TestConnectionString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobManagerStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetJobManagerStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyConfigurationChanges">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/ApplyConfigurationChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseReplicationStatus">
+      <soap12:operation soapAction="http://Rhozet.com/Rhozet.Services.IWfcJmServices/IWfcJmServices/GetDatabaseReplicationStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JMServices">
+    <wsdl:port name="JmHttpEndpoint" binding="tns:JmHttpEndpoint">
+      <soap:address location="http://10.4.1.42:8731/Rhozet.JobManager.JMServices/SOAP" />
+    </wsdl:port>
+    <wsdl:port name="JmTcpEndpoint" binding="tns:JmTcpEndpoint">
+      <soap12:address location="net.tcp://10.4.1.42:8741/Rhozet.JobManager.JMServices/TCP" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.4.1.42:8741/Rhozet.JobManager.JMServices/TCP</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

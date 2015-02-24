@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.conax.com/cas/xsd/ondemand-content/v1" xmlns:cc="http://www.conax.com/cas/xsd/content-common-types/v1" xmlns:common="http://www.conax.com/cas/xsd/common-types/v1" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.conax.com/cas/xsd/ondemand-content/v1" version="0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.4.2.33/ca-server/webservices/ondemandcontent?xsd=cx-service-contract-common-types-1.0.xsd" namespace="http://www.conax.com/cas/xsd/common-types/v1" />
+  <xs:import schemaLocation="https://10.4.2.33/ca-server/webservices/ondemandcontent?xsd=cx-service-contract-content-common-types-1.1.xsd" namespace="http://www.conax.com/cas/xsd/content-common-types/v1" />
+  <xs:element name="CreateOnDemandContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CreateOnDemandContentRequest" type="OnDemandContentUpdateRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOnDemandContentResponse" type="CreateOnDemandContentResponseType" />
+  <xs:element name="GetOnDemandContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GetOnDemandContentRequest" type="OnDemandContentIdRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnDemandContentResponse" type="GetOnDemandContentResponseType" />
+  <xs:element name="GetDvbAccessCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GetDvbAccessCriteriaRequest" type="OnDemandContentIdRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDvbAccessCriteriaResponse" type="GetDvbAccessCriteriaResponseType" />
+  <xs:element name="UpdateOnDemandContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UpdateOnDemandContentRequest" type="OnDemandContentUpdateRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOnDemandContentResponse" type="UpdateOnDemandContentResponseType" />
+  <xs:element name="RemoveOnDemandContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RemoveOnDemandContentRequest" type="RemoveOnDemandContentRequestType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveOnDemandContentResponse" type="RemoveOnDemandContentResponseType" />
+  <xs:element name="GetInfo" type="common:VoidType" />
+  <xs:element name="GetInfoResponse" type="common:GetInfoResponseType" />
+  <xs:complexType name="OnDemandContentUpdateRequestType">
+    <xs:sequence>
+      <xs:element name="OnDemandContent" type="OnDemandContentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateOnDemandContentResponseType">
+    <xs:sequence>
+      <xs:element name="OnDemandContentUpdateResponse" type="OnDemandContentResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OnDemandContentIdRequestType">
+    <xs:sequence>
+      <xs:element name="ContentId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetOnDemandContentResponseType">
+    <xs:sequence>
+      <xs:element name="OnDemandContentUpdateResponse" type="OnDemandContentResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetDvbAccessCriteriaResponseType">
+    <xs:sequence>
+      <xs:element name="GetDvbAccessCriteriaResponse" type="DvbAccessCriteriaResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DvbAccessCriteriaResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="common:AbstractResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DvbAccessCriteria" type="DvbAccessCriteriaType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DvbAccessCriteriaType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" name="RegTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateOnDemandContentResponseType">
+    <xs:sequence>
+      <xs:element name="OnDemandContentUpdateResponse" type="OnDemandContentResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveOnDemandContentRequestType">
+    <xs:sequence>
+      <xs:element name="ContentId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RemoveOnDemandContentResponseType">
+    <xs:sequence>
+      <xs:element name="OnDemandContentResponse" type="OnDemandContentResponseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OnDemandContentType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentId" type="xs:string" />
+      <xs:element name="Name" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" name="OfferedBy">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductId" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FreeAccess" type="xs:string" />
+      <xs:element name="MaturityRating" type="xs:string" />
+      <xs:element minOccurs="0" name="URIProfile" type="xs:string" />
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="BroadcastParams" type="BroadcastParameterType" />
+      </xs:sequence>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="OttParams" type="OttParameterType" />
+      </xs:sequence>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BroadcastParameterType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BridgeControl" type="cc:BridgeControlType" />
+      <xs:element name="PairingEnforcement" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OttParameterType">
+    <xs:sequence>
+      <xs:element name="OttDeviceProfile" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OnDemandContentResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="common:AbstractResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OnDemandContent" type="OnDemandContentType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

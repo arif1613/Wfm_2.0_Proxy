@@ -1,0 +1,3810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetServiceInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceSearchParameters" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriberContextXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="labelTextName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descriptionTextName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logoImageName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceViewForService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriberContextXML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceViewForServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceViewForServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPricesForServicesWithId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeNonRecurringPurchasePrices" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPricesForServicesWithIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPricesForServicesWithIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceViewForEncryptedServiceid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedServiceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operatorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="referrer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceViewForEncryptedServiceidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceViewForEncryptedServiceidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceViewForId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceViewObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriberContextXML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceViewForIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceViewForIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesForServiceProvider">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceProviderObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceViewData" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceAgreements" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesForServiceProviderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServicesForServiceProviderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesForServiceProvider2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceProviderObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceViewData" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceAgreements" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentAgreements" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesForServiceProvider2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServicesForServiceProvider2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesIncludedInContentAgreement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentAgreementName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServicesIncludedInContentAgreementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServicesIncludedInContentAgreementResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServiceViewElement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="elementObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="elementMetadata" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServiceViewElementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateServiceViewElementResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServiceView">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceViewObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="swMetadata" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServiceViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateServiceViewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceMetadataXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceForId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceViewData" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceForIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceForIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceForId2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceViewData" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentAgreement" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceForId2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceForId2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceForObjectId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeContentInfo" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeServiceViewData" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceForObjectIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceForObjectIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurchaseInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="purchaseInfoParametersXML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurchaseInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPurchaseInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurchaseStatInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PurchaseStatInfoXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPurchaseStatInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPurchaseStatInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentUsageStatInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentUsageStatInfoParametersXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentUsageStatInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContentUsageStatInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionForIp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionForIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionForIpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLanguages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLanguagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllLanguagesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddRegionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateRegionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRegion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRegionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRegionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllRegions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllRegionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllRegionsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSingleContentServicePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicePriceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSingleContentServicePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSingleContentServicePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSingleContentServicePrice2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicePriceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSingleContentServicePrice2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSingleContentServicePrice2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcludeContentFromServicePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicePriceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcludeContentFromServicePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeContentFromServicePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateServicePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="multipleServicePriceXML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceId" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateServicePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateServicePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServicePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="servicePriceId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="multipleServicePriceXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServicePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateServicePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteServicePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="servicePriceId" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteServicePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteServicePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryInfoWithAllContentAndChannels">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryInfoWithAllContentAndChannelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryInfoWithAllContentAndChannelsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceCategoryInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="recurseREsult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeLeafData" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="showHiddenCategories" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceCategoryInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceCategoryInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="recurseREsult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeLeafData" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="showHiddenCategories" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentForServiceAgreement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="rootCategoryObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="returnType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxReturn" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="regionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStartIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStopIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentForServiceAgreementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContentForServiceAgreementResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentAndServiceForCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="rootCategoryObjectId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxReturn" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStartIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStopIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContentAndServiceForCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContentAndServiceForCategoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchContentForServiceAgreement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchWhat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchWhere" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriberContextXML" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStartIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="returnStopIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchContentForServiceAgreementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchContentForServiceAgreementResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultipleServicePrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="priceObjectID" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultipleServicePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultipleServicePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultipleServicePriceByPriceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="priceID" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultipleServicePriceByPriceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultipleServicePriceByPriceIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceAgreementInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serviceAgreementId" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceAgreementInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceAgreementInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceNameExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serviceName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceNameExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceNameExistsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsFromSink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastEventObjectID" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIdToIgnore" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsFromSinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsFromSinkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsOfType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastFetchedID" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="useServerLatestID" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsOfTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsOfTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePurchaseValidityTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="purchaseId" type="s:unsignedLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="newFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="newTo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePurchaseValidityTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePurchaseValidityTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServiceInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceViewForService" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceViewForServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPricesForServicesWithIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPricesForServicesWithId" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPricesForServicesWithIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPricesForServicesWithIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForEncryptedServiceidSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceViewForEncryptedServiceid" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForEncryptedServiceidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceViewForEncryptedServiceidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceViewForId" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceViewForIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProviderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServicesForServiceProvider" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProviderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServicesForServiceProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProvider2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetServicesForServiceProvider2" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProvider2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetServicesForServiceProvider2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesIncludedInContentAgreementSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServicesIncludedInContentAgreement" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesIncludedInContentAgreementSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServicesIncludedInContentAgreementResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewElementSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateServiceViewElement" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewElementSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServiceViewElementResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateServiceView" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServiceViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateService" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceForId" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceForIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForId2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceForId2" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForId2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceForId2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForObjectIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceForObjectId" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForObjectIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceForObjectIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurchaseInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurchaseInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseStatInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurchaseStatInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseStatInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurchaseStatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContentUsageStatInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContentUsageStatInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetContentUsageStatInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContentUsageStatInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionForIpSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionForIp" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionForIpSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionForIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLanguagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllLanguages" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLanguagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllLanguagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRegion" />
+  </wsdl:message>
+  <wsdl:message name="AddRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRegion" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegion" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRegionSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRegion" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRegionSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllRegions" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSingleContentServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSingleContentServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePrice2SoapIn">
+    <wsdl:part name="parameters" element="tns:SetSingleContentServicePrice2" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePrice2SoapOut">
+    <wsdl:part name="parameters" element="tns:SetSingleContentServicePrice2Response" />
+  </wsdl:message>
+  <wsdl:message name="ExcludeContentFromServicePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:ExcludeContentFromServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="ExcludeContentFromServicePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:ExcludeContentFromServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateServicePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="CreateServicePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServicePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServicePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteServicePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="DeleteServicePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryInfoWithAllContentAndChannelsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryInfoWithAllContentAndChannels" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryInfoWithAllContentAndChannelsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryInfoWithAllContentAndChannelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceCategoryInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceCategoryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContentForServiceAgreementSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContentForServiceAgreement" />
+  </wsdl:message>
+  <wsdl:message name="GetContentForServiceAgreementSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContentForServiceAgreementResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContentAndServiceForCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetContentAndServiceForCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetContentAndServiceForCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetContentAndServiceForCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchContentForServiceAgreementSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchContentForServiceAgreement" />
+  </wsdl:message>
+  <wsdl:message name="SearchContentForServiceAgreementSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchContentForServiceAgreementResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultipleServicePrice" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultipleServicePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceByPriceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultipleServicePriceByPriceID" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceByPriceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultipleServicePriceByPriceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAgreementInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceAgreementInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAgreementInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceAgreementInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceNameExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceNameExists" />
+  </wsdl:message>
+  <wsdl:message name="ServiceNameExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceNameExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsFromSinkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsFromSink" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsFromSinkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsFromSinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsOfTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsOfType" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsOfTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePurchaseValidityTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePurchaseValidityTime" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePurchaseValidityTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePurchaseValidityTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceSearchParameters" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="labelTextName" type="s:string" />
+    <wsdl:part name="descriptionTextName" type="s:string" />
+    <wsdl:part name="logoImageName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForServiceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceName" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForServiceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPricesForServicesWithIdHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="includeNonRecurringPurchasePrices" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPricesForServicesWithIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForEncryptedServiceidHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="encryptedServiceId" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+    <wsdl:part name="clientType" type="s:string" />
+    <wsdl:part name="operatorName" type="s:string" />
+    <wsdl:part name="referrer" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForEncryptedServiceidHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForIdHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceViewObjectId" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProviderHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceProviderObjectId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+    <wsdl:part name="includeServiceAgreements" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProviderHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProvider2HttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceProviderObjectId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+    <wsdl:part name="includeServiceAgreements" type="s:string" />
+    <wsdl:part name="includeContentAgreements" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProvider2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesIncludedInContentAgreementHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="contentAgreementName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesIncludedInContentAgreementHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewElementHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="elementObjectId" type="s:string" />
+    <wsdl:part name="elementMetadata" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewElementHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceViewObjectId" type="s:string" />
+    <wsdl:part name="swMetadata" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="serviceMetadataXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForIdHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForId2HttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+    <wsdl:part name="includeContentAgreement" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForId2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForObjectIdHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceObjectId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForObjectIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="purchaseInfoParametersXML" type="s:string" />
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseStatInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="PurchaseStatInfoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseStatInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentUsageStatInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="contentUsageStatInfoParametersXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentUsageStatInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionForIpHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="ip" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionForIpHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLanguagesHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLanguagesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRegionHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRegionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegionHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRegionHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRegionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePriceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceName" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="contentId" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePrice2HttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="contentId" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePrice2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExcludeContentFromServicePriceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="contentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExcludeContentFromServicePriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateServicePriceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="multipleServicePriceXML" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateServicePriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServicePriceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="multipleServicePriceXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServicePriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteServicePriceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteServicePriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryInfoWithAllContentAndChannelsHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryInfoWithAllContentAndChannelsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="parentCategoryId" type="s:string" />
+    <wsdl:part name="recurseREsult" type="s:string" />
+    <wsdl:part name="includeLeafData" type="s:string" />
+    <wsdl:part name="showHiddenCategories" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="parentCategoryId" type="s:string" />
+    <wsdl:part name="recurseREsult" type="s:string" />
+    <wsdl:part name="includeLeafData" type="s:string" />
+    <wsdl:part name="showHiddenCategories" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentForServiceAgreementHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="rootCategoryObjectId" type="s:string" />
+    <wsdl:part name="returnType" type="s:string" />
+    <wsdl:part name="maxReturn" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+    <wsdl:part name="returnStartIndex" type="s:string" />
+    <wsdl:part name="returnStopIndex" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentForServiceAgreementHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentAndServiceForCategoryHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="rootCategoryObjectId" type="s:string" />
+    <wsdl:part name="maxReturn" type="s:string" />
+    <wsdl:part name="returnStartIndex" type="s:string" />
+    <wsdl:part name="returnStopIndex" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentAndServiceForCategoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchContentForServiceAgreementHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="searchWhat" type="s:string" />
+    <wsdl:part name="searchWhere" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="returnStartIndex" type="s:string" />
+    <wsdl:part name="returnStopIndex" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchContentForServiceAgreementHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="priceObjectID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceByPriceIDHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="priceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceByPriceIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAgreementInfoHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAgreementInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceNameExistsHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceNameExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsFromSinkHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="lastEventObjectID" type="s:string" />
+    <wsdl:part name="userIdToIgnore" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsFromSinkHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsOfTypeHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="eventType" type="s:string" />
+    <wsdl:part name="lastFetchedID" type="s:string" />
+    <wsdl:part name="useServerLatestID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsOfTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePurchaseValidityTimeHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="purchaseId" type="s:string" />
+    <wsdl:part name="newFrom" type="s:string" />
+    <wsdl:part name="newTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePurchaseValidityTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceSearchParameters" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="labelTextName" type="s:string" />
+    <wsdl:part name="descriptionTextName" type="s:string" />
+    <wsdl:part name="logoImageName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForServiceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceName" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForServiceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPricesForServicesWithIdHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="includeNonRecurringPurchasePrices" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPricesForServicesWithIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForEncryptedServiceidHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="encryptedServiceId" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+    <wsdl:part name="clientType" type="s:string" />
+    <wsdl:part name="operatorName" type="s:string" />
+    <wsdl:part name="referrer" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForEncryptedServiceidHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForIdHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceViewObjectId" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceViewForIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProviderHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceProviderObjectId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+    <wsdl:part name="includeServiceAgreements" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProviderHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProvider2HttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceProviderObjectId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+    <wsdl:part name="includeServiceAgreements" type="s:string" />
+    <wsdl:part name="includeContentAgreements" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesForServiceProvider2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesIncludedInContentAgreementHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="contentAgreementName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServicesIncludedInContentAgreementHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewElementHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="elementObjectId" type="s:string" />
+    <wsdl:part name="elementMetadata" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewElementHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceViewObjectId" type="s:string" />
+    <wsdl:part name="swMetadata" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceViewHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="serviceMetadataXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServiceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForIdHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForId2HttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+    <wsdl:part name="includeContentAgreement" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForId2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForObjectIdHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceObjectId" type="s:string" />
+    <wsdl:part name="includeContentInfo" type="s:string" />
+    <wsdl:part name="includeServiceViewData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceForObjectIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="purchaseInfoParametersXML" type="s:string" />
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseStatInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="PurchaseStatInfoXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPurchaseStatInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentUsageStatInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="contentUsageStatInfoParametersXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentUsageStatInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionForIpHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="ip" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionForIpHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLanguagesHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLanguagesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRegionHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRegionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegionHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRegionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRegionHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRegionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllRegionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePriceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceName" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="contentId" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePrice2HttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="contentId" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetSingleContentServicePrice2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExcludeContentFromServicePriceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="contentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExcludeContentFromServicePriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateServicePriceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="multipleServicePriceXML" type="s:string" />
+    <wsdl:part name="serviceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateServicePriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServicePriceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+    <wsdl:part name="multipleServicePriceXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServicePriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteServicePriceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="servicePriceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteServicePriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryInfoWithAllContentAndChannelsHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryInfoWithAllContentAndChannelsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="parentCategoryId" type="s:string" />
+    <wsdl:part name="recurseREsult" type="s:string" />
+    <wsdl:part name="includeLeafData" type="s:string" />
+    <wsdl:part name="showHiddenCategories" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="parentCategoryId" type="s:string" />
+    <wsdl:part name="recurseREsult" type="s:string" />
+    <wsdl:part name="includeLeafData" type="s:string" />
+    <wsdl:part name="showHiddenCategories" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentForServiceAgreementHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="rootCategoryObjectId" type="s:string" />
+    <wsdl:part name="returnType" type="s:string" />
+    <wsdl:part name="maxReturn" type="s:string" />
+    <wsdl:part name="regionName" type="s:string" />
+    <wsdl:part name="returnStartIndex" type="s:string" />
+    <wsdl:part name="returnStopIndex" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentForServiceAgreementHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentAndServiceForCategoryHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="rootCategoryObjectId" type="s:string" />
+    <wsdl:part name="maxReturn" type="s:string" />
+    <wsdl:part name="returnStartIndex" type="s:string" />
+    <wsdl:part name="returnStopIndex" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetContentAndServiceForCategoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchContentForServiceAgreementHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+    <wsdl:part name="searchWhat" type="s:string" />
+    <wsdl:part name="searchWhere" type="s:string" />
+    <wsdl:part name="subscriberContextXML" type="s:string" />
+    <wsdl:part name="returnStartIndex" type="s:string" />
+    <wsdl:part name="returnStopIndex" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchContentForServiceAgreementHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="priceObjectID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceByPriceIDHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="priceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMultipleServicePriceByPriceIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAgreementInfoHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceAgreementId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAgreementInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceNameExistsHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="serviceName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceNameExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsFromSinkHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="lastEventObjectID" type="s:string" />
+    <wsdl:part name="userIdToIgnore" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsFromSinkHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsOfTypeHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="eventType" type="s:string" />
+    <wsdl:part name="lastFetchedID" type="s:string" />
+    <wsdl:part name="useServerLatestID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsOfTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePurchaseValidityTimeHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="purchaseId" type="s:string" />
+    <wsdl:part name="newFrom" type="s:string" />
+    <wsdl:part name="newTo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePurchaseValidityTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceServiceSoap">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input message="tns:GetServiceInfoSoapIn" />
+      <wsdl:output message="tns:GetServiceInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <wsdl:input message="tns:GetServiceViewForServiceSoapIn" />
+      <wsdl:output message="tns:GetServiceViewForServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <wsdl:input message="tns:GetAllPricesForServicesWithIdSoapIn" />
+      <wsdl:output message="tns:GetAllPricesForServicesWithIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <wsdl:input message="tns:GetServiceViewForEncryptedServiceidSoapIn" />
+      <wsdl:output message="tns:GetServiceViewForEncryptedServiceidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <wsdl:input message="tns:GetServiceViewForIdSoapIn" />
+      <wsdl:output message="tns:GetServiceViewForIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <wsdl:input message="tns:GetServicesForServiceProviderSoapIn" />
+      <wsdl:output message="tns:GetServicesForServiceProviderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <wsdl:input message="tns:GetServicesForServiceProvider2SoapIn" />
+      <wsdl:output message="tns:GetServicesForServiceProvider2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <wsdl:input message="tns:GetServicesIncludedInContentAgreementSoapIn" />
+      <wsdl:output message="tns:GetServicesIncludedInContentAgreementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <wsdl:input message="tns:UpdateServiceViewElementSoapIn" />
+      <wsdl:output message="tns:UpdateServiceViewElementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <wsdl:input message="tns:UpdateServiceViewSoapIn" />
+      <wsdl:output message="tns:UpdateServiceViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <wsdl:input message="tns:UpdateServiceSoapIn" />
+      <wsdl:output message="tns:UpdateServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <wsdl:input message="tns:GetServiceForIdSoapIn" />
+      <wsdl:output message="tns:GetServiceForIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <wsdl:input message="tns:GetServiceForId2SoapIn" />
+      <wsdl:output message="tns:GetServiceForId2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <wsdl:input message="tns:GetServiceForObjectIdSoapIn" />
+      <wsdl:output message="tns:GetServiceForObjectIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <wsdl:input message="tns:GetPurchaseInfoSoapIn" />
+      <wsdl:output message="tns:GetPurchaseInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <wsdl:input message="tns:GetPurchaseStatInfoSoapIn" />
+      <wsdl:output message="tns:GetPurchaseStatInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <wsdl:input message="tns:GetContentUsageStatInfoSoapIn" />
+      <wsdl:output message="tns:GetContentUsageStatInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <wsdl:input message="tns:GetRegionForIpSoapIn" />
+      <wsdl:output message="tns:GetRegionForIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <wsdl:input message="tns:GetAllLanguagesSoapIn" />
+      <wsdl:output message="tns:GetAllLanguagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <wsdl:input message="tns:AddRegionSoapIn" />
+      <wsdl:output message="tns:AddRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <wsdl:input message="tns:UpdateRegionSoapIn" />
+      <wsdl:output message="tns:UpdateRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:input message="tns:GetRegionSoapIn" />
+      <wsdl:output message="tns:GetRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <wsdl:input message="tns:DeleteRegionSoapIn" />
+      <wsdl:output message="tns:DeleteRegionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <wsdl:input message="tns:GetAllRegionsSoapIn" />
+      <wsdl:output message="tns:GetAllRegionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <wsdl:input message="tns:SetSingleContentServicePriceSoapIn" />
+      <wsdl:output message="tns:SetSingleContentServicePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <wsdl:input message="tns:SetSingleContentServicePrice2SoapIn" />
+      <wsdl:output message="tns:SetSingleContentServicePrice2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <wsdl:input message="tns:ExcludeContentFromServicePriceSoapIn" />
+      <wsdl:output message="tns:ExcludeContentFromServicePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <wsdl:input message="tns:CreateServicePriceSoapIn" />
+      <wsdl:output message="tns:CreateServicePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <wsdl:input message="tns:UpdateServicePriceSoapIn" />
+      <wsdl:output message="tns:UpdateServicePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <wsdl:input message="tns:DeleteServicePriceSoapIn" />
+      <wsdl:output message="tns:DeleteServicePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <wsdl:input message="tns:GetCategoryInfoWithAllContentAndChannelsSoapIn" />
+      <wsdl:output message="tns:GetCategoryInfoWithAllContentAndChannelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <wsdl:input message="tns:GetServiceCategoryInfoSoapIn" />
+      <wsdl:output message="tns:GetServiceCategoryInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <wsdl:input message="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigSoapIn" />
+      <wsdl:output message="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <wsdl:input message="tns:GetContentForServiceAgreementSoapIn" />
+      <wsdl:output message="tns:GetContentForServiceAgreementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <wsdl:input message="tns:GetContentAndServiceForCategorySoapIn" />
+      <wsdl:output message="tns:GetContentAndServiceForCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <wsdl:input message="tns:SearchContentForServiceAgreementSoapIn" />
+      <wsdl:output message="tns:SearchContentForServiceAgreementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <wsdl:input message="tns:GetMultipleServicePriceSoapIn" />
+      <wsdl:output message="tns:GetMultipleServicePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <wsdl:input message="tns:GetMultipleServicePriceByPriceIDSoapIn" />
+      <wsdl:output message="tns:GetMultipleServicePriceByPriceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <wsdl:input message="tns:GetServiceAgreementInfoSoapIn" />
+      <wsdl:output message="tns:GetServiceAgreementInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <wsdl:input message="tns:ServiceNameExistsSoapIn" />
+      <wsdl:output message="tns:ServiceNameExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <wsdl:input message="tns:GetEventsFromSinkSoapIn" />
+      <wsdl:output message="tns:GetEventsFromSinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <wsdl:input message="tns:GetEventsOfTypeSoapIn" />
+      <wsdl:output message="tns:GetEventsOfTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <wsdl:input message="tns:UpdatePurchaseValidityTimeSoapIn" />
+      <wsdl:output message="tns:UpdatePurchaseValidityTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceServiceHttpGet">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input message="tns:GetServiceInfoHttpGetIn" />
+      <wsdl:output message="tns:GetServiceInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <wsdl:input message="tns:GetServiceViewForServiceHttpGetIn" />
+      <wsdl:output message="tns:GetServiceViewForServiceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <wsdl:input message="tns:GetAllPricesForServicesWithIdHttpGetIn" />
+      <wsdl:output message="tns:GetAllPricesForServicesWithIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <wsdl:input message="tns:GetServiceViewForEncryptedServiceidHttpGetIn" />
+      <wsdl:output message="tns:GetServiceViewForEncryptedServiceidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <wsdl:input message="tns:GetServiceViewForIdHttpGetIn" />
+      <wsdl:output message="tns:GetServiceViewForIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <wsdl:input message="tns:GetServicesForServiceProviderHttpGetIn" />
+      <wsdl:output message="tns:GetServicesForServiceProviderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <wsdl:input message="tns:GetServicesForServiceProvider2HttpGetIn" />
+      <wsdl:output message="tns:GetServicesForServiceProvider2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <wsdl:input message="tns:GetServicesIncludedInContentAgreementHttpGetIn" />
+      <wsdl:output message="tns:GetServicesIncludedInContentAgreementHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <wsdl:input message="tns:UpdateServiceViewElementHttpGetIn" />
+      <wsdl:output message="tns:UpdateServiceViewElementHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <wsdl:input message="tns:UpdateServiceViewHttpGetIn" />
+      <wsdl:output message="tns:UpdateServiceViewHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <wsdl:input message="tns:UpdateServiceHttpGetIn" />
+      <wsdl:output message="tns:UpdateServiceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <wsdl:input message="tns:GetServiceForIdHttpGetIn" />
+      <wsdl:output message="tns:GetServiceForIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <wsdl:input message="tns:GetServiceForId2HttpGetIn" />
+      <wsdl:output message="tns:GetServiceForId2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <wsdl:input message="tns:GetServiceForObjectIdHttpGetIn" />
+      <wsdl:output message="tns:GetServiceForObjectIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <wsdl:input message="tns:GetPurchaseInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPurchaseInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <wsdl:input message="tns:GetPurchaseStatInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPurchaseStatInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <wsdl:input message="tns:GetContentUsageStatInfoHttpGetIn" />
+      <wsdl:output message="tns:GetContentUsageStatInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <wsdl:input message="tns:GetRegionForIpHttpGetIn" />
+      <wsdl:output message="tns:GetRegionForIpHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <wsdl:input message="tns:GetAllLanguagesHttpGetIn" />
+      <wsdl:output message="tns:GetAllLanguagesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <wsdl:input message="tns:AddRegionHttpGetIn" />
+      <wsdl:output message="tns:AddRegionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <wsdl:input message="tns:UpdateRegionHttpGetIn" />
+      <wsdl:output message="tns:UpdateRegionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:input message="tns:GetRegionHttpGetIn" />
+      <wsdl:output message="tns:GetRegionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <wsdl:input message="tns:DeleteRegionHttpGetIn" />
+      <wsdl:output message="tns:DeleteRegionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <wsdl:input message="tns:GetAllRegionsHttpGetIn" />
+      <wsdl:output message="tns:GetAllRegionsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <wsdl:input message="tns:SetSingleContentServicePriceHttpGetIn" />
+      <wsdl:output message="tns:SetSingleContentServicePriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <wsdl:input message="tns:SetSingleContentServicePrice2HttpGetIn" />
+      <wsdl:output message="tns:SetSingleContentServicePrice2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <wsdl:input message="tns:ExcludeContentFromServicePriceHttpGetIn" />
+      <wsdl:output message="tns:ExcludeContentFromServicePriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <wsdl:input message="tns:CreateServicePriceHttpGetIn" />
+      <wsdl:output message="tns:CreateServicePriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <wsdl:input message="tns:UpdateServicePriceHttpGetIn" />
+      <wsdl:output message="tns:UpdateServicePriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <wsdl:input message="tns:DeleteServicePriceHttpGetIn" />
+      <wsdl:output message="tns:DeleteServicePriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <wsdl:input message="tns:GetCategoryInfoWithAllContentAndChannelsHttpGetIn" />
+      <wsdl:output message="tns:GetCategoryInfoWithAllContentAndChannelsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <wsdl:input message="tns:GetServiceCategoryInfoHttpGetIn" />
+      <wsdl:output message="tns:GetServiceCategoryInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <wsdl:input message="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpGetIn" />
+      <wsdl:output message="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <wsdl:input message="tns:GetContentForServiceAgreementHttpGetIn" />
+      <wsdl:output message="tns:GetContentForServiceAgreementHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <wsdl:input message="tns:GetContentAndServiceForCategoryHttpGetIn" />
+      <wsdl:output message="tns:GetContentAndServiceForCategoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <wsdl:input message="tns:SearchContentForServiceAgreementHttpGetIn" />
+      <wsdl:output message="tns:SearchContentForServiceAgreementHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <wsdl:input message="tns:GetMultipleServicePriceHttpGetIn" />
+      <wsdl:output message="tns:GetMultipleServicePriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <wsdl:input message="tns:GetMultipleServicePriceByPriceIDHttpGetIn" />
+      <wsdl:output message="tns:GetMultipleServicePriceByPriceIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <wsdl:input message="tns:GetServiceAgreementInfoHttpGetIn" />
+      <wsdl:output message="tns:GetServiceAgreementInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <wsdl:input message="tns:ServiceNameExistsHttpGetIn" />
+      <wsdl:output message="tns:ServiceNameExistsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <wsdl:input message="tns:GetEventsFromSinkHttpGetIn" />
+      <wsdl:output message="tns:GetEventsFromSinkHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <wsdl:input message="tns:GetEventsOfTypeHttpGetIn" />
+      <wsdl:output message="tns:GetEventsOfTypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <wsdl:input message="tns:UpdatePurchaseValidityTimeHttpGetIn" />
+      <wsdl:output message="tns:UpdatePurchaseValidityTimeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceServiceHttpPost">
+    <wsdl:operation name="GetServiceInfo">
+      <wsdl:input message="tns:GetServiceInfoHttpPostIn" />
+      <wsdl:output message="tns:GetServiceInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <wsdl:input message="tns:GetServiceViewForServiceHttpPostIn" />
+      <wsdl:output message="tns:GetServiceViewForServiceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <wsdl:input message="tns:GetAllPricesForServicesWithIdHttpPostIn" />
+      <wsdl:output message="tns:GetAllPricesForServicesWithIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <wsdl:input message="tns:GetServiceViewForEncryptedServiceidHttpPostIn" />
+      <wsdl:output message="tns:GetServiceViewForEncryptedServiceidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <wsdl:input message="tns:GetServiceViewForIdHttpPostIn" />
+      <wsdl:output message="tns:GetServiceViewForIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <wsdl:input message="tns:GetServicesForServiceProviderHttpPostIn" />
+      <wsdl:output message="tns:GetServicesForServiceProviderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <wsdl:input message="tns:GetServicesForServiceProvider2HttpPostIn" />
+      <wsdl:output message="tns:GetServicesForServiceProvider2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <wsdl:input message="tns:GetServicesIncludedInContentAgreementHttpPostIn" />
+      <wsdl:output message="tns:GetServicesIncludedInContentAgreementHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <wsdl:input message="tns:UpdateServiceViewElementHttpPostIn" />
+      <wsdl:output message="tns:UpdateServiceViewElementHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <wsdl:input message="tns:UpdateServiceViewHttpPostIn" />
+      <wsdl:output message="tns:UpdateServiceViewHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <wsdl:input message="tns:UpdateServiceHttpPostIn" />
+      <wsdl:output message="tns:UpdateServiceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <wsdl:input message="tns:GetServiceForIdHttpPostIn" />
+      <wsdl:output message="tns:GetServiceForIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <wsdl:input message="tns:GetServiceForId2HttpPostIn" />
+      <wsdl:output message="tns:GetServiceForId2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <wsdl:input message="tns:GetServiceForObjectIdHttpPostIn" />
+      <wsdl:output message="tns:GetServiceForObjectIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <wsdl:input message="tns:GetPurchaseInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPurchaseInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <wsdl:input message="tns:GetPurchaseStatInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPurchaseStatInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <wsdl:input message="tns:GetContentUsageStatInfoHttpPostIn" />
+      <wsdl:output message="tns:GetContentUsageStatInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <wsdl:input message="tns:GetRegionForIpHttpPostIn" />
+      <wsdl:output message="tns:GetRegionForIpHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <wsdl:input message="tns:GetAllLanguagesHttpPostIn" />
+      <wsdl:output message="tns:GetAllLanguagesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <wsdl:input message="tns:AddRegionHttpPostIn" />
+      <wsdl:output message="tns:AddRegionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <wsdl:input message="tns:UpdateRegionHttpPostIn" />
+      <wsdl:output message="tns:UpdateRegionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:input message="tns:GetRegionHttpPostIn" />
+      <wsdl:output message="tns:GetRegionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <wsdl:input message="tns:DeleteRegionHttpPostIn" />
+      <wsdl:output message="tns:DeleteRegionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <wsdl:input message="tns:GetAllRegionsHttpPostIn" />
+      <wsdl:output message="tns:GetAllRegionsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <wsdl:input message="tns:SetSingleContentServicePriceHttpPostIn" />
+      <wsdl:output message="tns:SetSingleContentServicePriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <wsdl:input message="tns:SetSingleContentServicePrice2HttpPostIn" />
+      <wsdl:output message="tns:SetSingleContentServicePrice2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <wsdl:input message="tns:ExcludeContentFromServicePriceHttpPostIn" />
+      <wsdl:output message="tns:ExcludeContentFromServicePriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <wsdl:input message="tns:CreateServicePriceHttpPostIn" />
+      <wsdl:output message="tns:CreateServicePriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <wsdl:input message="tns:UpdateServicePriceHttpPostIn" />
+      <wsdl:output message="tns:UpdateServicePriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <wsdl:input message="tns:DeleteServicePriceHttpPostIn" />
+      <wsdl:output message="tns:DeleteServicePriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <wsdl:input message="tns:GetCategoryInfoWithAllContentAndChannelsHttpPostIn" />
+      <wsdl:output message="tns:GetCategoryInfoWithAllContentAndChannelsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <wsdl:input message="tns:GetServiceCategoryInfoHttpPostIn" />
+      <wsdl:output message="tns:GetServiceCategoryInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <wsdl:input message="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpPostIn" />
+      <wsdl:output message="tns:GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfigHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <wsdl:input message="tns:GetContentForServiceAgreementHttpPostIn" />
+      <wsdl:output message="tns:GetContentForServiceAgreementHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <wsdl:input message="tns:GetContentAndServiceForCategoryHttpPostIn" />
+      <wsdl:output message="tns:GetContentAndServiceForCategoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <wsdl:input message="tns:SearchContentForServiceAgreementHttpPostIn" />
+      <wsdl:output message="tns:SearchContentForServiceAgreementHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <wsdl:input message="tns:GetMultipleServicePriceHttpPostIn" />
+      <wsdl:output message="tns:GetMultipleServicePriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <wsdl:input message="tns:GetMultipleServicePriceByPriceIDHttpPostIn" />
+      <wsdl:output message="tns:GetMultipleServicePriceByPriceIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <wsdl:input message="tns:GetServiceAgreementInfoHttpPostIn" />
+      <wsdl:output message="tns:GetServiceAgreementInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <wsdl:input message="tns:ServiceNameExistsHttpPostIn" />
+      <wsdl:output message="tns:ServiceNameExistsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <wsdl:input message="tns:GetEventsFromSinkHttpPostIn" />
+      <wsdl:output message="tns:GetEventsFromSinkHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <wsdl:input message="tns:GetEventsOfTypeHttpPostIn" />
+      <wsdl:output message="tns:GetEventsOfTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <wsdl:input message="tns:UpdatePurchaseValidityTimeHttpPostIn" />
+      <wsdl:output message="tns:UpdatePurchaseValidityTimeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceServiceSoap" type="tns:ServiceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceInfo">
+      <soap:operation soapAction="http://tempuri.org/GetServiceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <soap:operation soapAction="http://tempuri.org/GetServiceViewForService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <soap:operation soapAction="http://tempuri.org/GetAllPricesForServicesWithId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <soap:operation soapAction="http://tempuri.org/GetServiceViewForEncryptedServiceid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <soap:operation soapAction="http://tempuri.org/GetServiceViewForId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <soap:operation soapAction="http://tempuri.org/GetServicesForServiceProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <soap:operation soapAction="http://tempuri.org/GetServicesForServiceProvider2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <soap:operation soapAction="http://tempuri.org/GetServicesIncludedInContentAgreement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <soap:operation soapAction="http://tempuri.org/UpdateServiceViewElement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <soap:operation soapAction="http://tempuri.org/UpdateServiceView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <soap:operation soapAction="http://tempuri.org/UpdateService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <soap:operation soapAction="http://tempuri.org/GetServiceForId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <soap:operation soapAction="http://tempuri.org/GetServiceForId2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <soap:operation soapAction="http://tempuri.org/GetServiceForObjectId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPurchaseInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPurchaseStatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <soap:operation soapAction="http://tempuri.org/GetContentUsageStatInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <soap:operation soapAction="http://tempuri.org/GetRegionForIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <soap:operation soapAction="http://tempuri.org/GetAllLanguages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <soap:operation soapAction="http://tempuri.org/AddRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <soap:operation soapAction="http://tempuri.org/UpdateRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap:operation soapAction="http://tempuri.org/GetRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <soap:operation soapAction="http://tempuri.org/DeleteRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <soap:operation soapAction="http://tempuri.org/GetAllRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <soap:operation soapAction="http://tempuri.org/SetSingleContentServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <soap:operation soapAction="http://tempuri.org/SetSingleContentServicePrice2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <soap:operation soapAction="http://tempuri.org/ExcludeContentFromServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <soap:operation soapAction="http://tempuri.org/CreateServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <soap:operation soapAction="http://tempuri.org/UpdateServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <soap:operation soapAction="http://tempuri.org/DeleteServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <soap:operation soapAction="http://tempuri.org/GetCategoryInfoWithAllContentAndChannels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <soap:operation soapAction="http://tempuri.org/GetServiceCategoryInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <soap:operation soapAction="http://tempuri.org/GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <soap:operation soapAction="http://tempuri.org/GetContentForServiceAgreement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <soap:operation soapAction="http://tempuri.org/GetContentAndServiceForCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <soap:operation soapAction="http://tempuri.org/SearchContentForServiceAgreement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <soap:operation soapAction="http://tempuri.org/GetMultipleServicePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <soap:operation soapAction="http://tempuri.org/GetMultipleServicePriceByPriceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <soap:operation soapAction="http://tempuri.org/GetServiceAgreementInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <soap:operation soapAction="http://tempuri.org/ServiceNameExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <soap:operation soapAction="http://tempuri.org/GetEventsFromSink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <soap:operation soapAction="http://tempuri.org/GetEventsOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <soap:operation soapAction="http://tempuri.org/UpdatePurchaseValidityTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceServiceSoap12" type="tns:ServiceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceViewForService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <soap12:operation soapAction="http://tempuri.org/GetAllPricesForServicesWithId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceViewForEncryptedServiceid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceViewForId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <soap12:operation soapAction="http://tempuri.org/GetServicesForServiceProvider" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <soap12:operation soapAction="http://tempuri.org/GetServicesForServiceProvider2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <soap12:operation soapAction="http://tempuri.org/GetServicesIncludedInContentAgreement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <soap12:operation soapAction="http://tempuri.org/UpdateServiceViewElement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <soap12:operation soapAction="http://tempuri.org/UpdateServiceView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <soap12:operation soapAction="http://tempuri.org/UpdateService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceForId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceForId2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceForObjectId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPurchaseInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPurchaseStatInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetContentUsageStatInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <soap12:operation soapAction="http://tempuri.org/GetRegionForIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <soap12:operation soapAction="http://tempuri.org/GetAllLanguages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <soap12:operation soapAction="http://tempuri.org/AddRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap12:operation soapAction="http://tempuri.org/GetRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <soap12:operation soapAction="http://tempuri.org/DeleteRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <soap12:operation soapAction="http://tempuri.org/GetAllRegions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <soap12:operation soapAction="http://tempuri.org/SetSingleContentServicePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <soap12:operation soapAction="http://tempuri.org/SetSingleContentServicePrice2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <soap12:operation soapAction="http://tempuri.org/ExcludeContentFromServicePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <soap12:operation soapAction="http://tempuri.org/CreateServicePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <soap12:operation soapAction="http://tempuri.org/UpdateServicePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <soap12:operation soapAction="http://tempuri.org/DeleteServicePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <soap12:operation soapAction="http://tempuri.org/GetCategoryInfoWithAllContentAndChannels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceCategoryInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <soap12:operation soapAction="http://tempuri.org/GetContentForServiceAgreement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <soap12:operation soapAction="http://tempuri.org/GetContentAndServiceForCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <soap12:operation soapAction="http://tempuri.org/SearchContentForServiceAgreement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <soap12:operation soapAction="http://tempuri.org/GetMultipleServicePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <soap12:operation soapAction="http://tempuri.org/GetMultipleServicePriceByPriceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceAgreementInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <soap12:operation soapAction="http://tempuri.org/ServiceNameExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsFromSink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsOfType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePurchaseValidityTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceServiceHttpGet" type="tns:ServiceServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetServiceInfo">
+      <http:operation location="/GetServiceInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <http:operation location="/GetServiceViewForService" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <http:operation location="/GetAllPricesForServicesWithId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <http:operation location="/GetServiceViewForEncryptedServiceid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <http:operation location="/GetServiceViewForId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <http:operation location="/GetServicesForServiceProvider" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <http:operation location="/GetServicesForServiceProvider2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <http:operation location="/GetServicesIncludedInContentAgreement" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <http:operation location="/UpdateServiceViewElement" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <http:operation location="/UpdateServiceView" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <http:operation location="/UpdateService" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <http:operation location="/GetServiceForId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <http:operation location="/GetServiceForId2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <http:operation location="/GetServiceForObjectId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <http:operation location="/GetPurchaseInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <http:operation location="/GetPurchaseStatInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <http:operation location="/GetContentUsageStatInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <http:operation location="/GetRegionForIp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <http:operation location="/GetAllLanguages" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <http:operation location="/AddRegion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <http:operation location="/UpdateRegion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <http:operation location="/GetRegion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <http:operation location="/DeleteRegion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <http:operation location="/GetAllRegions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <http:operation location="/SetSingleContentServicePrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <http:operation location="/SetSingleContentServicePrice2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <http:operation location="/ExcludeContentFromServicePrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <http:operation location="/CreateServicePrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <http:operation location="/UpdateServicePrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <http:operation location="/DeleteServicePrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <http:operation location="/GetCategoryInfoWithAllContentAndChannels" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <http:operation location="/GetServiceCategoryInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <http:operation location="/GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <http:operation location="/GetContentForServiceAgreement" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <http:operation location="/GetContentAndServiceForCategory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <http:operation location="/SearchContentForServiceAgreement" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <http:operation location="/GetMultipleServicePrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <http:operation location="/GetMultipleServicePriceByPriceID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <http:operation location="/GetServiceAgreementInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <http:operation location="/ServiceNameExists" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <http:operation location="/GetEventsFromSink" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <http:operation location="/GetEventsOfType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <http:operation location="/UpdatePurchaseValidityTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceServiceHttpPost" type="tns:ServiceServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetServiceInfo">
+      <http:operation location="/GetServiceInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForService">
+      <http:operation location="/GetServiceViewForService" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPricesForServicesWithId">
+      <http:operation location="/GetAllPricesForServicesWithId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForEncryptedServiceid">
+      <http:operation location="/GetServiceViewForEncryptedServiceid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceViewForId">
+      <http:operation location="/GetServiceViewForId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider">
+      <http:operation location="/GetServicesForServiceProvider" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesForServiceProvider2">
+      <http:operation location="/GetServicesForServiceProvider2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServicesIncludedInContentAgreement">
+      <http:operation location="/GetServicesIncludedInContentAgreement" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceViewElement">
+      <http:operation location="/UpdateServiceViewElement" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceView">
+      <http:operation location="/UpdateServiceView" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateService">
+      <http:operation location="/UpdateService" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId">
+      <http:operation location="/GetServiceForId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForId2">
+      <http:operation location="/GetServiceForId2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceForObjectId">
+      <http:operation location="/GetServiceForObjectId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInfo">
+      <http:operation location="/GetPurchaseInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseStatInfo">
+      <http:operation location="/GetPurchaseStatInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentUsageStatInfo">
+      <http:operation location="/GetContentUsageStatInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionForIp">
+      <http:operation location="/GetRegionForIp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLanguages">
+      <http:operation location="/GetAllLanguages" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <http:operation location="/AddRegion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <http:operation location="/UpdateRegion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <http:operation location="/GetRegion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <http:operation location="/DeleteRegion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <http:operation location="/GetAllRegions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice">
+      <http:operation location="/SetSingleContentServicePrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSingleContentServicePrice2">
+      <http:operation location="/SetSingleContentServicePrice2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeContentFromServicePrice">
+      <http:operation location="/ExcludeContentFromServicePrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServicePrice">
+      <http:operation location="/CreateServicePrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServicePrice">
+      <http:operation location="/UpdateServicePrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteServicePrice">
+      <http:operation location="/DeleteServicePrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryInfoWithAllContentAndChannels">
+      <http:operation location="/GetCategoryInfoWithAllContentAndChannels" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfo">
+      <http:operation location="/GetServiceCategoryInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig">
+      <http:operation location="/GetServiceCategoryInfoIgnoringShowEmptyCategoriesConfig" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentForServiceAgreement">
+      <http:operation location="/GetContentForServiceAgreement" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentAndServiceForCategory">
+      <http:operation location="/GetContentAndServiceForCategory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchContentForServiceAgreement">
+      <http:operation location="/SearchContentForServiceAgreement" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePrice">
+      <http:operation location="/GetMultipleServicePrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultipleServicePriceByPriceID">
+      <http:operation location="/GetMultipleServicePriceByPriceID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceAgreementInfo">
+      <http:operation location="/GetServiceAgreementInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceNameExists">
+      <http:operation location="/ServiceNameExists" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsFromSink">
+      <http:operation location="/GetEventsFromSink" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsOfType">
+      <http:operation location="/GetEventsOfType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseValidityTime">
+      <http:operation location="/UpdatePurchaseValidityTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceService">
+    <wsdl:port name="ServiceServiceSoap" binding="tns:ServiceServiceSoap">
+      <soap:address location="http://localhost/IS/serviceservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceServiceSoap12" binding="tns:ServiceServiceSoap12">
+      <soap12:address location="http://localhost/IS/serviceservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceServiceHttpGet" binding="tns:ServiceServiceHttpGet">
+      <http:address location="http://localhost/IS/serviceservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceServiceHttpPost" binding="tns:ServiceServiceHttpPost">
+      <http:address location="http://localhost/IS/serviceservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

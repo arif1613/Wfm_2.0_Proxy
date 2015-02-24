@@ -1,0 +1,4 @@
+When a vod is created with more than one asset and is in published state, user can only see the published urls by clicking the respective asset name.
+But it is showing the urls for all the assets associated with the vod. 
+
+Solution can be, when user click one asset, Mpp5 will search the respertive asset properties by asset ID and display to the user

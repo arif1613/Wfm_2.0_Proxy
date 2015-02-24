@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://www.w3.org/2001/XMLSchema" xmlns="http://www.conax.com/cas/wsdl/ppvproduct/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ppvpm="http://www.conax.com/cas/xsd/ppvproduct/v1" targetNamespace="http://www.conax.com/cas/wsdl/ppvproduct/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:ns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="https://10.4.2.33/ca-server/webservices/ppvproduct?xsd=cx-service-contract-ppv-product-1.1.RC2.xsd" namespace="http://www.conax.com/cas/xsd/ppvproduct/v1" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPpvProductResponse">
+    <wsdl:part name="parameters" element="ppvpm:GetPpvProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePpvProductResponse">
+    <wsdl:part name="parameters" element="ppvpm:CreatePpvProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPpvProductMessage">
+    <wsdl:part name="parameters" element="ppvpm:GetPpvProduct" />
+  </wsdl:message>
+  <wsdl:message name="CreatePpvProductMessage">
+    <wsdl:part name="parameters" element="ppvpm:CreatePpvProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoMessage">
+    <wsdl:part name="parameters" element="ppvpm:GetInfo" />
+  </wsdl:message>
+  <wsdl:message name="RemovePpvProductMessage">
+    <wsdl:part name="parameters" element="ppvpm:RemovePpvProduct" />
+  </wsdl:message>
+  <wsdl:message name="RemovePpvProductResponse">
+    <wsdl:part name="parameters" element="ppvpm:RemovePpvProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoResponse">
+    <wsdl:part name="parameters" element="ppvpm:GetInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePpvProductResponse">
+    <wsdl:part name="parameters" element="ppvpm:UpdatePpvProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePpvProductMessage">
+    <wsdl:part name="parameters" element="ppvpm:UpdatePpvProduct" />
+  </wsdl:message>
+  <wsdl:portType name="PpvProductServiceEndpoint">
+    <wsdl:operation name="CreatePpvProduct">
+      <wsdl:input message="CreatePpvProductMessage" />
+      <wsdl:output message="CreatePpvProductResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePpvProduct">
+      <wsdl:input message="UpdatePpvProductMessage" />
+      <wsdl:output message="UpdatePpvProductResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePpvProduct">
+      <wsdl:input message="RemovePpvProductMessage" />
+      <wsdl:output message="RemovePpvProductResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPpvProduct">
+      <wsdl:input message="GetPpvProductMessage" />
+      <wsdl:output message="GetPpvProductResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <wsdl:input message="GetInfoMessage" />
+      <wsdl:output message="GetInfoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PpvProductServiceSoapBinding" type="PpvProductServiceEndpoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreatePpvProduct">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePpvProduct">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePpvProduct">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPpvProduct">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PpvProductWebService">
+    <wsdl:port name="PpvProductServiceEndpointPort" binding="PpvProductServiceSoapBinding">
+      <soap:address location="https://10.4.2.33/ca-server/webservices/ppvproduct" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

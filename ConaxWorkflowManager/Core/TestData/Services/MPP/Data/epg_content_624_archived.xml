@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ContentMetadata>
+  <ExportContext hostId="0003" created="2013-08-23 09:47:26"/>
+  <MediaContent>
+    <Identification name="Steve epg" created="2013-08-23 09:43:32" updated="2013-08-23 09:43:32" externalId="010621-100-201308180050"/>
+    <Metadata>
+      <EventPeriod from="2013-08-18 00:50:00" to="2013-08-18 01:00:00"/>
+      <PublishInfo from="0001-01-01 00:00:00" to="0001-01-01 00:00:00" deliveryMethod="Stream" region="World" publishState="Published"/>
+      <PublishInfo from="0001-01-01 00:00:00" to="0001-01-01 00:00:00" deliveryMethod="Stream" region="Åland" publishState="Published"/>
+      <RunningTime>00:00:00</RunningTime>
+      <TemporaryUnavailable>false</TemporaryUnavailable>
+      <Property type="Channel">nrk1.nrk.no</Property>
+      <Property type="EpgId">nrk1.nrk.no</Property>
+      <Property type="ConaxContegoContentID">202020</Property>
+      <Property type="CubiChannelId">365</Property>
+      <Property type="EpgIsSynked">False</Property>
+      <Property type="EnableCatchUp">True</Property>
+      <Property type="EnableNPVR">True</Property>
+      <Property type="FeedTimezone">W. Europe Standard Time</Property>
+      <Property type="EPGIEpisodeInformation">dd_progid:EP00000001.00001</Property>
+      <Property type="MPAAParentalRating">G</Property>
+      <Property type="VCHIPParentalRating">TV-17</Property>
+      <Property type="ChannelId">621</Property>
+      <Property type="EpgProgrammeId">100</Property>
+      <Property type="EpgMetadataHash">1267050136</Property>
+      <Property type="ContentType">CatchupTV</Property>
+      <Property type="NPVRRecordingsstState">Ongoing</Property>
+      <Property type="NPVRAllRecordingsUpdatedWithURL">False</Property>
+      <Property type="EPGHasRecordingInService:3343361">true</Property>
+      <Property type="EPGHasRecordingInService:2714793985">False</Property>
+      <Property type="NPVRAssetArchiveState:ENG:STB">Archived</Property>
+      <Property type="NPVRAssetArchiveState:ENG:iPhone">Archived</Property>
+      <Property type="NPVRAssetArchiveState:o02:STB">Archived</Property>
+      <Property type="NPVRAssetArchiveState:o02:iPhone">Archived</Property>
+      <Property type="NPVRAssetArchiveState:o02:PC">Archived</Property>
+      <LanguageInfo ISO="ENG">
+        <Title>Steve epg</Title>
+        <ShortDescription><![CDATA[steves test epg.]]></ShortDescription>
+        <LongDescription><![CDATA[steves test epg.]]></LongDescription>
+      </LanguageInfo>
+    </Metadata>
+    <Assets>
+      <VideoAsset objectId="2715613185" name="http://10.4.8.99/Content/SS/Catchup/Channel(name=nrk1_Clear2,startTime=13767869400000000,endTime=13767876600000000).isml/Manifest" bitrate="0" languageISO="ENG" GUID="56820ecc-c454-47a8-a87b-ab5ab393ed1d" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="AssetType">Catchup</Property>
+        <Property type="AssetFormatType">SmoothStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715621377" name="NoStream" bitrate="0" languageISO="ENG" GUID="f00a6fcb-ea28-41ae-a4a1-1e2eeb783f3a" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">iPhone</Property>
+        <Property type="AssetType">Catchup</Property>
+        <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715629569" name="http://10.4.8.99/Content/SS/Catchup/Channel(name=nrk1_Clear2,startTime=13767869400000000,endTime=13767876600000000).isml/Manifest" bitrate="0" languageISO="o02" GUID="6ca939a1-2986-4f49-b18f-11ed9c3520f1" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="AssetType">Catchup</Property>
+        <Property type="AssetFormatType">SmoothStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715637761" name="NoStream" bitrate="0" languageISO="o02" GUID="2dc78e10-fdeb-45dc-b2f4-8c3c4a5740e4" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">iPhone</Property>
+        <Property type="AssetType">Catchup</Property>
+        <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715645953" name="http://10.4.8.99/Content/SS/Catchup/Channel(name=nrk1_Clear2,startTime=13767869400000000,endTime=13767876600000000).isml/Manifest" bitrate="0" languageISO="o02" GUID="6db14cd0-272b-4fdd-b66f-b36bb3bc10a9" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">PC</Property>
+        <Property type="AssetType">Catchup</Property>
+        <Property type="AssetFormatType">SmoothStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715654145" name="010621-100-201308180050_aHR0cDovLzEwLjQuOC45OS9Db250ZW50L1NTL0xpdmUvQ2hhbm5lbChucmsxX0NsZWFyMikuaXNtbC9NYW5pZmVzdA==" bitrate="0" languageISO="ENG" GUID="78196c13-1768-4ab4-b0f3-2ab4539d4a86" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="AssetType">NPVR</Property>
+        <Property type="AssetFormatType">SmoothStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715662337" name="010621-100-201308180050_aHR0cDovLzEwLjQuOC45OS9Db250ZW50L2hscy9MaXZlL0NoYW5uZWwobnJrMV9DbGVhcjIpLm0zdTg=" bitrate="0" languageISO="ENG" GUID="34b0682f-6214-41a2-b8bc-93d40e0b8082" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">iPhone</Property>
+        <Property type="AssetType">NPVR</Property>
+        <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715670529" name="010621-100-201308180050_aHR0cDovLzEwLjQuOC45OS9Db250ZW50L1NTL0xpdmUvQ2hhbm5lbChucmsxX0NsZWFyMikuaXNtbC9NYW5pZmVzdA==" bitrate="0" languageISO="o02" GUID="e69a1eef-d4f7-4056-84b7-a4e68fb5fff2" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">STB</Property>
+        <Property type="AssetType">NPVR</Property>
+        <Property type="AssetFormatType">SmoothStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715678721" name="010621-100-201308180050_aHR0cDovLzEwLjQuOC45OS9Db250ZW50L2hscy9MaXZlL0NoYW5uZWwobnJrMV9DbGVhcjIpLm0zdTg=" bitrate="0" languageISO="o02" GUID="67278bb3-9312-4e4b-8ec7-12c9f7d1bd8b" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">iPhone</Property>
+        <Property type="AssetType">NPVR</Property>
+        <Property type="AssetFormatType">HTTPLiveStreaming</Property>
+      </VideoAsset>
+      <VideoAsset objectId="2715686913" name="010621-100-201308180050_aHR0cDovLzEwLjQuOC45OS9Db250ZW50L1NTL0xpdmUvQ2hhbm5lbChucmsxX0NsZWFyMikuaXNtbC9NYW5pZmVzdA==" bitrate="0" languageISO="o02" GUID="71c74d68-000a-4bb9-958a-371acb0515d5" deliveryMethod="Stream" hasBurntInSubtitle="false" codec="" videoAssetPlayType="NotSpecified">
+        <MPPAssetContext contentAssetServerName="CAS World" hostId="0003"/>
+        <Property type="DeviceType">PC</Property>
+        <Property type="AssetType">NPVR</Property>
+        <Property type="AssetFormatType">SmoothStreaming</Property>
+      </VideoAsset>
+    </Assets>
+    <MPPContentContext hostId="0003" contentId="624" objectId="2715611137" encryptedName="8cf88a52c4574ea296ac34d93b165164" GUID="0209debd-f2dc-42bb-8d8a-6096634711bd">
+      <ContentRightsOwner objectID="3332097">MPS Broadband</ContentRightsOwner>
+      <ContentAgreement objectID="2714819585">Live Multi2</ContentAgreement>
+    </MPPContentContext>
+  </MediaContent>
+</ContentMetadata>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Filters>
+  <Filter name="MPS" catchupenabled="true" availablehours="72">
+    <Device type="PC"/>
+    <Device type="MAC"/>
+    <Device type="STB"/>
+  </Filter>
+  <Filter name="onlySTB" catchupenabled="true" availablehours="48">
+    <Device type="STB"/>
+  </Filter>
+</Filters>

@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A972176-EAFA-405B-B244-31F0E8F3DF7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPS.MPP.Auxiliary.ConaxWorkflowManager.Core</RootNamespace>
+    <AssemblyName>MPS.MPP.Auxiliary.ConaxWorkflowManager.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\WFMProxy\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WFMProxy\packages\WindowsAzure.ServiceBus.2.4.8.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\WFMProxy\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WFMProxy\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NodaTime">
+      <HintPath>..\..\WFMProxy\packages\NodaTime.2.0.0-alpha20140808\lib\net35-Client\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO">
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Bcl.1.1.9\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Net.Http.2.2.28\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Bcl.1.1.9\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\..\WFMProxy\packages\Microsoft.Bcl.1.1.9\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catchup\Archive\IArchiveOrder.cs" />
+    <Compile Include="Catchup\Archive\SmoothThenHLSArchiveOrder.cs" />
+    <Compile Include="Catchup\HarmonicSmoothCatchupHandler.cs" />
+    <Compile Include="Catchup\NullHLSCatchupHandler.cs" />
+    <Compile Include="Catchup\PlayListArchiveHLSCatchupHandler.cs" />
+    <Compile Include="Catchup\CodeShopSmoothCatchupHandler.cs" />
+    <Compile Include="Catchup\ElementalHLSCatchupHandler.cs" />
+    <Compile Include="Catchup\EnvivioHLSCatchupHandler.cs" />
+    <Compile Include="Catchup\BaseEncoderCatchupHandler.cs" />
+    <Compile Include="Catchup\IISSmoothCatchupHandler.cs" />
+    <Compile Include="Catchup\SeaWellHLSCatchupHandler.cs" />
+    <Compile Include="Communication\CarbonVodEncoderWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\ConaxContegoServicesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\CubiTVMiddlewareManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\CubiTVMiddlewareServiceWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\CubiTVMW\ICubiTVMWServiceWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\CubiTVMW\IMiddleWareRestApiCaller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\ElementalVODServicesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Envivio4BalancerServicesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\HarmonicOriginWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\HarmonicOriginWrapperManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Harmonic\IHarmonicOriginWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\MPPIntegrationServiceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\MPPIntegrationServicesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\MPP\IMPPService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\MPP\MPPIntegrationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Policy\SSLValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Policy\TrustAllCertificatePolicy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\SeaChangeServicesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\SFAnytimeServiceWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\TitanVODEncoderWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\UnifiedServicesWrapper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Communication\UnifiedServicesWrapperManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Communication\Unified\IUnifiedServicesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="Controllers\ReadMediaInfo.cs" />
+    <Compile Include="CustomConfig.cs" />
+    <Compile Include="FakeDatas\MppServiceDatas.cs" />
+    <Compile Include="IngestXMLConfig.cs" />
+    <Compile Include="Ingest\EPG\ContentLocker.cs" />
+    <Compile Include="Ingest\EPG\DNAEPGParser.cs" />
+    <Compile Include="Ingest\EPG\EPGParserHelper.cs" />
+    <Compile Include="Ingest\EPG\IEPGParser.cs" />
+    <Compile Include="Ingest\EPG\NPVRHelper.cs" />
+    <Compile Include="Ingest\EPG\XMLTVEPGParser.cs" />
+    <Compile Include="Ingest\Pricing\ADIOnlyADIPricingRule.cs" />
+    <Compile Include="Ingest\Pricing\ADIOverrideADIPricingRule.cs" />
+    <Compile Include="Ingest\Pricing\ADIPricingRuleFactory.cs" />
+    <Compile Include="Ingest\Pricing\BaseADIPricingRule.cs" />
+    <Compile Include="Ingest\Pricing\FSOnlyADIPricingRule.cs" />
+    <Compile Include="Ingest\Pricing\IADIPricingRule.cs" />
+    <Compile Include="Ingest\PullIngest\IPullIngestHandler.cs" />
+    <Compile Include="Ingest\PullIngest\SFAIngestHandler.cs" />
+    <Compile Include="Ingest\PullIngest\SFAGPGIngestHandler.cs" />
+    <Compile Include="Ingest\XML\BaseStorageIngestHandler.cs" />
+    <Compile Include="Ingest\XML\CableLabsIngestHandler.cs" />
+    <Compile Include="Ingest\XML\ChannelIngestHandler.cs" />
+    <Compile Include="Models\MediaInfos.cs" />
+    <Compile Include="Mpp5Integration\CreateMpp5Content.cs" />
+    <Compile Include="Mpp5Integration\GenerateSignature.cs" />
+    <Compile Include="Mpp5Integration\Models\AddVodAssetModel.cs" />
+    <Compile Include="Mpp5Integration\Models\EncodeModel.cs" />
+    <Compile Include="Mpp5Integration\Models\ICommand.cs" />
+    <Compile Include="Mpp5Integration\Models\IMessage.cs" />
+    <Compile Include="Mpp5Integration\Models\IViewDocument.cs" />
+    <Compile Include="Mpp5Integration\Models\HttpMethodType.cs" />
+    <Compile Include="Mpp5Integration\Models\LiveEventModel.cs" />
+    <Compile Include="Mpp5Integration\Models\Mpp5IdentityModel.cs" />
+    <Compile Include="Mpp5Integration\Models\VodModel.cs" />
+    <Compile Include="Mpp5Integration\XmlOperation\MppProfileXmlTranslatorVOD.cs" />
+    <Compile Include="Service References\CarbonEncoder\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceConfig.cs" />
+    <Compile Include="Task\EncoderTask\CheckAssetsInWorkFolder.cs" />
+    <Compile Include="Task\FileMoveProcess.cs" />
+    <Compile Include="Task\FileOperations\FileCopier.cs" />
+    <Compile Include="Task\FileOperations\FileMover.cs" />
+    <Compile Include="Task\FolderCleanUpTask\RejectFolderCleanUp.cs" />
+    <Compile Include="Task\MsgHandlers\ChannelFileMovingmsg.cs" />
+    <Compile Include="Task\MsgHandlers\CreateContegoVODmsg.cs" />
+    <Compile Include="Task\MsgHandlers\EncodeFilemsg.cs" />
+    <Compile Include="Task\EPGIngestTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task\GenerateNPVRTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task\CreateContegoVodContent.cs" />
+    <Compile Include="Task\MsgHandlers\FindCompleteXMLmsg.cs" />
+    <Compile Include="Task\MsgHandlers\MessageSender.cs" />
+    <Compile Include="Task\MPPSyncTask.cs" />
+    <Compile Include="Task\MsgHandlers\MoveToRejectFoldermsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task\MsgHandlers\MoveToWorkFoldermsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task\MsgHandlers\UploadFolderWatchTask\UploadedFileWatchTask.cs" />
+    <Compile Include="Task\NewBaseTask.cs" />
+    <Compile Include="Task\ValidateMediaInfo.cs" />
+    <Compile Include="Task\XmlOperations\CheckXmlFile.cs" />
+    <Compile Include="Util\Encoder\Carbon\CarbonEncoderHelper.cs" />
+    <Compile Include="Util\Encoder\Carbon\JobState.cs" />
+    <Compile Include="Util\Encoder\Carbon\JobStates.cs" />
+    <Compile Include="Util\CatchupHelper.cs" />
+    <Compile Include="Util\Data\DataParseHelper.cs" />
+    <Compile Include="Util\Encoder\Elemental\ElementalEncoderHelper.cs" />
+    <Compile Include="Util\Encoder\Titan\TitanEncoderHelper.cs" />
+    <Compile Include="Util\Encoder\Unified\UnifiedHelper.cs" />
+    <Compile Include="Util\Enums\ADIPricingRuleType.cs" />
+    <Compile Include="Util\Enums\AssetType.cs" />
+    <Compile Include="Util\Enums\AtemeJobStatus.cs" />
+    <Compile Include="Util\Enums\CableLabs1_1ContentProperties .cs" />
+    <Compile Include="Util\Enums\CatchupContentProperties .cs" />
+    <Compile Include="Util\Enums\ColumbusContentProperties.cs" />
+    <Compile Include="Util\Enums\CubiContentProperties .cs" />
+    <Compile Include="Util\Enums\DeviceType.cs" />
+    <Compile Include="Util\Enums\IngestXMLType.cs" />
+    <Compile Include="Util\Enums\LastAttemptState.cs" />
+    <Compile Include="Util\Enums\MovieRatingFormats.cs" />
+    <Compile Include="Util\Enums\NPVRAssetArchiveState.cs" />
+    <Compile Include="Util\Enums\NPVRRecordingsstState.cs" />
+    <Compile Include="Util\Enums\NPVRRecordStateInCubiware.cs" />
+    <Compile Include="Util\Enums\StreamType.cs" />
+    <Compile Include="Util\Enums\SystemContentProperties.cs" />
+    <Compile Include="Util\Enums\TitanJobStatus.cs" />
+    <Compile Include="Util\Enums\TVRatingFormats.cs" />
+    <Compile Include="Util\Enums\VODnLiveContentProperties.cs" />
+    <Compile Include="Util\Enums\WorkFlowJobState.cs" />
+    <Compile Include="Util\Encoder\Envivio\EnvivioEncoderHelper.cs" />
+    <Compile Include="Util\Enums\WorkTypes.cs" />
+    <Compile Include="Util\File\BaseIngestFileIngestHelper.cs" />
+    <Compile Include="Util\File\CatchUp\ElementalFileHandler.cs" />
+    <Compile Include="Util\Enums\XmlValidationErrors.cs" />
+    <Compile Include="Util\File\ChannelFileIngestHelper.cs" />
+    <Compile Include="Util\File\Handler\ProgressStateFileHandler.cs" />
+    <Compile Include="Util\File\ImpersonateUser.cs" />
+    <Compile Include="Util\File\XmlFeedComparer.cs" />
+    <Compile Include="Util\JSon\JSonHelper.cs" />
+    <Compile Include="Util\MediaInfo\MediaFileInfo.cs" />
+    <Compile Include="Util\MediaInfo\MediaInfoDLL.cs" />
+    <Compile Include="Util\MediaInfo\MediaInfoHelper.cs" />
+    <Compile Include="Service References\Envivio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SFAnytime\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="Util\Conax\ConaxBusinessDomain.cs" />
+    <Compile Include="Util\Conax\IngestModelValidationResult.cs" />
+    <Compile Include="Util\Database\DBManager.cs" />
+    <Compile Include="Util\Database\IDBWrapper.cs" />
+    <Compile Include="Util\Database\SQLite\SQLiteDatabase.cs" />
+    <Compile Include="Util\Database\SQLite\SQLiteDBWrapper.cs" />
+    <Compile Include="SystemConfig.cs" />
+    <Compile Include="Util\Conax\ConaxIntegrationHelper.cs" />
+    <Compile Include="Util\Encoder\EncoderHelper.cs" />
+    <Compile Include="Util\Enums\AssetFormatType.cs" />
+    <Compile Include="Util\Enums\ContentType.cs" />
+    <Compile Include="Util\Enums\DeliveryMethod.cs" />
+    <Compile Include="Util\Enums\ElementalJobStatus.cs" />
+    <Compile Include="Util\Enums\EmailTemplateType.cs" />
+    <Compile Include="Util\Enums\LicensePeriodUnit.cs" />
+    <Compile Include="Util\Enums\ManifestState.cs" />
+    <Compile Include="Util\Enums\MPPEventProcessState.cs" />
+    <Compile Include="Util\Enums\PublishState.cs" />
+    <Compile Include="Util\Enums\RequestResultState.cs" />
+    <Compile Include="Util\Enums\ResolutionType.cs" />
+    <Compile Include="Util\Enums\WorkFlowProcessState.cs" />
+    <Compile Include="Util\Enums\WorkFlowType.cs" />
+    <Compile Include="Util\File\CableLabsFileIngestHelper.cs" />
+    <Compile Include="Util\File\CatchUp\EnvivioCatchUpFileHandler.cs" />
+    <Compile Include="Util\File\CatchUp\ICatchUpFileHandler.cs" />
+    <Compile Include="Util\File\EncoderFileSystemHandler.cs" />
+    <Compile Include="Util\File\FileInformation.cs" />
+    <Compile Include="Util\File\FileStatus.cs" />
+    <Compile Include="Util\File\Handler\FileSystemHandler.cs" />
+    <Compile Include="Util\File\Handler\IFileHandler.cs" />
+    <Compile Include="Util\File\IEncoderFileHandler.cs" />
+    <Compile Include="Ingest\IngestItem.cs" />
+    <Compile Include="Ingest\IngestType.cs" />
+    <Compile Include="Util\File\BaseFileIngestHelper.cs" />
+    <Compile Include="Ingest\PullIngest\SFA\PGPDecryptor.cs" />
+    <Compile Include="Ingest\PullIngest\SFA\SFAFileHelper.cs" />
+    <Compile Include="Ingest\PullIngest\SFA\SFAFtpHelper.cs" />
+    <Compile Include="Ingest\PullIngest\SFA\SFAMediaTranslator.cs" />
+    <Compile Include="Util\MetadataMappingHelper.cs" />
+    <Compile Include="Util\Network\Impersonation.cs" />
+    <Compile Include="Util\Network\UNCPathHelper.cs" />
+    <Compile Include="Util\Network\Validator.cs" />
+    <Content Include="ConaxWorkflowManagerConfig1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SystemTimeZoneList.xml" />
+    <Content Include="Util\ServerScript\RemoveUnusedProperties.txt" />
+    <Compile Include="Util\NPVRAssetLoger.cs" />
+    <Compile Include="Util\ValueObjects\AssetData.cs" />
+    <Compile Include="Util\ValueObjects\AssetDataExtractor.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\AvailableDateTime.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\CubiEPG.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\EPGChannel.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\EpgContentInfo.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\HLSChunk.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\NPVRRecording.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\SSChunk.cs" />
+    <Compile Include="Util\ValueObjects\Catchup\SSManifest.cs" />
+    <Compile Include="Util\ValueObjects\ContentAgreement.cs" />
+    <Compile Include="Util\ValueObjects\ContentRightsOwner.cs" />
+    <Compile Include="Util\ValueObjects\EmailTemplate.cs" />
+    <Compile Include="Util\ValueObjects\Encoder\EncoderWorkFlow.cs" />
+    <Compile Include="Util\ValueObjects\Encoder\ProfileValues.cs" />
+    <Compile Include="Util\ValueObjects\Encoder\IncludedWorkFlow.cs" />
+    <Compile Include="Util\ValueObjects\HarmonicOrigin\OriginState.cs" />
+    <Compile Include="Util\ValueObjects\HarmonicOrigin\OriginVODAsset.cs" />
+    <Compile Include="Util\ValueObjects\Image.cs" />
+    <Compile Include="Util\ValueObjects\Ingest\IngestConfig.cs" />
+    <Compile Include="Util\ValueObjects\Ingest\PriceMatchParameter.cs" />
+    <Compile Include="Util\ValueObjects\LanguageInfo.cs" />
+    <Compile Include="Util\ValueObjects\MPPStationServerEvent.cs" />
+    <Compile Include="Util\ValueObjects\MPPUser.cs" />
+    <Compile Include="Util\ValueObjects\MultipleContentService.cs" />
+    <Compile Include="Util\ValueObjects\MultipleServicePrice.cs" />
+    <Compile Include="Util\ValueObjects\Property.cs" />
+    <Compile Include="Util\ValueObjects\PublishInfo.cs" />
+    <Compile Include="Ingest\PullIngest\SFA\SFAMedia.cs" />
+    <Compile Include="Util\ValueObjects\ResolutionObject.cs" />
+    <Compile Include="Util\ValueObjects\ServiceViewMatchRule.cs" />
+    <Compile Include="Util\ValueObjects\System\PublishEvent.cs" />
+    <Compile Include="Util\ValueObjects\System\WorkFlowJob.cs" />
+    <Compile Include="Util\ValueObjects\UpdatePropertiesForContentParameter.cs" />
+    <Compile Include="Util\XmlFunctionality\ExternalXMLHelper.cs" />
+    <Compile Include="Util\XmlFunctionality\Plugins\CableLabsXmlTranslator.cs" />
+    <Compile Include="Util\XmlFunctionality\Plugins\ChannelXmlTranslator.cs" />
+    <Compile Include="Util\XmlFunctionality\Plugins\CubiTVTranslator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\XmlFunctionality\RestApi\ReplyParser.cs" />
+    <Compile Include="Util\XmlFunctionality\Translation\XmlUtil.cs" />
+    <Compile Include="Util\XmlFunctionality\Validation\ColumbusXmlValidator.cs" />
+    <Compile Include="Util\XmlFunctionality\Validation\IExternalXmlValidator.cs" />
+    <Compile Include="Util\XmlFunctionality\Validation\XmlError.cs" />
+    <Compile Include="Task\validateXml.cs" />
+    <Compile Include="ValidIngestTask\JobXmlConfig\CreateEncoderJobXml.cs" />
+    <Compile Include="ValidIngestTask\MsgHandlers\CheckWorkFolderMsg.cs" />
+    <Compile Include="ValidIngestTask\JobXmlConfig\GetAssetOutputName.cs" />
+    <Compile Include="ValidIngestTask\MsgHandlers\CreateEpgMsg.cs" />
+    <Compile Include="ValidIngestTask\MsgHandlers\PublishChannelToMPPMsg.cs" />
+    <Compile Include="ValidIngestTask\MsgHandlers\PublishVodToMPPMsg.cs" />
+    <Compile Include="ValidIngestTask\PublishTask\CreateMppPublishingProfile.cs" />
+    <Compile Include="Web References\ConaxContegoOnDemandContentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ConaxContegoPPVProductService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ContentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MPPUserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WFMCache.cs" />
+    <Compile Include="WFMConfig\SystemConfiguration\ConaxWorkflowManagerConfig.cs" />
+    <Compile Include="WFMConfig\SystemConfiguration\ElementalEncoderConfig.cs" />
+    <Compile Include="WFMConfig\SystemConfiguration\Mpp5Configuration.cs" />
+    <Compile Include="WFMConfig\SystemConfiguration\MPPConfig.cs" />
+    <Compile Include="WorkFlowConfig.cs" />
+    <Compile Include="WorkFlow\AddCatchUpContentFlow.cs" />
+    <Compile Include="WorkFlow\AddChannelContentFlow.cs" />
+    <Compile Include="WorkFlow\AddLiveContentFlow.cs" />
+    <Compile Include="WorkFlow\AddVODContentFlow.cs" />
+    <Compile Include="WorkFlow\BaseFlow.cs" />
+    <Compile Include="WorkFlow\DeleteLiveContentFlow.cs" />
+    <Compile Include="WorkFlow\DeleteVODContentFlow.cs" />
+    <Compile Include="WorkFlow\Dispatcher\ConaxDispatcher.cs" />
+    <Compile Include="WorkFlow\Dispatcher\BaseMPPEventDispatcher.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Runner.cs" />
+    <Compile Include="Scheduler.cs" />
+    <Compile Include="ScheduleType.cs" />
+    <Compile Include="Task\BaseTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task\MsgHandlers\FileWatchTaskmsg.cs" />
+    <Compile Include="TaskConfig.cs" />
+    <Compile Include="Util\Enums\EventType.cs" />
+    <Compile Include="Util\Database\EventHandling.cs" />
+    <Compile Include="Util\ValueObjects\Asset.cs" />
+    <Compile Include="Util\ValueObjects\ContentData.cs" />
+    <Compile Include="Util\ValueObjects\MaturityRating.cs" />
+    <Compile Include="Util\Enums\XmlStructure.cs" />
+    <Compile Include="Util\XmlFunctionality\Plugins\MppXmlTranslator.cs" />
+    <Compile Include="Ingest\MPPIngestFlow.cs" />
+    <Compile Include="WorkFlow\Handler\AddColumbusPropertiesHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\CarbonVodEncoderHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\CarbonVodEncoderJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteContentFromFileAreaHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteContentFromHarmonicOriginHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteContentInConaxContegoHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteContentInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteContentInMPPHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeletePricesInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteSourceFileSeaChangeHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\DeleteSourceFileStandardHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\ElementalJobHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\ElementalVodEncoderHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\EncoderJobHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\EnvivioJobHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\EnvivioVODEncoderHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\FileIngestDummyHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\GetContentFromMPPHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\GetServicePriceFromMPPHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\MediaInfoContentHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\PublishContentInMPPHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RegisterCatchUpContentInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RegisterContentInConaxContegoHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RegisterContentInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RegisterLiveChannelInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RegisterPublishWorkFlowJobHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RegisterUpdatePublishedPriceWorkFlowJobHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RequestParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\RequestResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\ResponsibilityHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\StoreSourceFileSeaChangeHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\StoreSourceFileStandardHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\TitanJobHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\TitanVodEncoderHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\UnPublishContentOnFailHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\UpdateContentInConaxContegoHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\UpdateContentInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\UpdatePricesInConaxContegoHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\UpdatePricesInCubiTVHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\UploadFilesToSeaChangeHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\Handler\VerifyDataHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\PublishChannelContentStandardFlow.cs" />
+    <Compile Include="WorkFlow\PublishLiveContentStandardFlow.cs" />
+    <Compile Include="WorkFlow\PublishVODContentSeaChangeFlow.cs" />
+    <Compile Include="WorkFlow\PublishVODContentStandardFlow.cs" />
+    <Compile Include="WorkFlow\UpdateChannelContentFlow.cs" />
+    <Compile Include="WorkFlow\UpdateLiveContentFlow.cs" />
+    <Compile Include="WorkFlow\UpdateVODContentFlow.cs" />
+    <Compile Include="WorkFlow\UpdatePriceFlow.cs" />
+    <Compile Include="WorkFlow\UpdatePublishedServicePriceStandardFlow.cs" />
+    <Compile Include="WorkFlow\UpdatePublishedVODContentStandardFlow.cs" />
+    <Compile Include="WorkFlow\WorkFlowParameters.cs" />
+    <Compile Include="WorkFlow\WorkFlowProcess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CarbonEncoder\" />
+    <WCFMetadataStorage Include="Service References\Envivio\" />
+    <WCFMetadataStorage Include="Service References\SFAnytime\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EncoderProfileMapping.xlsx" />
+    <None Include="FolderSettings.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JobWorkFlow.xlsx" />
+    <None Include="packages.config" />
+    <None Include="preset_managment_mpp.xlsx" />
+    <None Include="Service References\CarbonEncoder\item.wsdl" />
+    <None Include="Service References\CarbonEncoder\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\item6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CarbonEncoder\JMServices.wsdl" />
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Asset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.ClientConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Dashboard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.DatabaseReplicationStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.ErrorLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Fetcher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Job.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.JobManagerGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.JobManagerStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.MachineGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Module.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.ModuleScheme.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.ModuleSubType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Preset.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.PresetGuidWithUpdateDateTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.PresetType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.ReplicationDashboard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Report.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.ServerDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.Task.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.TaskPropertyEx.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.WatchConfigObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.WorkflowIDWithLastUpdateDateTime.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CarbonEncoder\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.CarbonEncoder.WorkflowTemplateObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Envivio\Envivio_4Balancer_Service.wsdl" />
+    <None Include="Service References\Envivio\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Envivio.jobstatesummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Envivio\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Envivio.jobstatusinfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Envivio\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Envivio.resource.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SFAnytime\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.SFAnytime.CategoryMenuXmlStructure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SFAnytime\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.SFAnytime.MediaList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SFAnytime\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.SFAnytime.MovieList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SFAnytime\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.SFAnytime.RootMediaDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SFAnytime\MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.SFAnytime.RootMediaDetails_1_3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SFAnytime\Opws3Service.wsdl" />
+    <None Include="Service References\SFAnytime\Opws3Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SFAnytime\Opws3Service1.wsdl" />
+    <None Include="Service References\SFAnytime\Opws3Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SFAnytime\Opws3Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Util\Database\SQLite\catchup.s3db" />
+    <None Include="Util\Database\SQLite\conax.s3db" />
+    <None Include="log4net.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Util\Database\SQLite\empty.s3db" />
+    <None Include="Util\Database\SQLite\empty_catchup.s3db" />
+    <None Include="Util\XSD\CableLabs1.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Util\XSD\CableLabsXT.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Util\XSD\Channel1.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Util\XSD\Columbus_CableLabs1.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Util\XSD\FolderSettings.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\DvbAccessCriteriaResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\InfoResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\ondemandcontent.wsdl" />
+    <None Include="Web References\ConaxContegoOnDemandContentService\ondemandcontent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\ondemandcontent0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\ondemandcontent1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\OnDemandContentResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConaxContegoOnDemandContentService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ConaxContegoPPVProductService\InfoResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConaxContegoPPVProductService\ppvproduct.wsdl" />
+    <None Include="Web References\ConaxContegoPPVProductService\ppvproduct.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConaxContegoPPVProductService\ppvproduct0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ConaxContegoPPVProductService\PpvProductResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConaxContegoPPVProductService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ContentService\ContentService.wsdl" />
+    <None Include="Web References\ContentService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MPPUserService\mppuserservice.wsdl" />
+    <None Include="Web References\MPPUserService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceService\serviceservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CatchUpFilterConfig.xml" />
+    <Content Include="ConaxContegoDeviceMap.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConaxWorkflowManagerConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="NPVRRightsManagement.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="EPGChannelConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MediaInfo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MetadataMapping.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\CarbonEncoder\configuration91.svcinfo" />
+    <None Include="Service References\CarbonEncoder\configuration.svcinfo" />
+    <None Include="Service References\CarbonEncoder\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UploadFolderConfig.xml" />
+    <Content Include="Util\Binary\mp4split.exe" />
+    <Content Include="Util\Binary\unified_player.exe" />
+    <Content Include="Util\Template\EmailTemplate.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XtendWorkflowManagerConfig_NewDeploymentVODIngestElemental.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web References\MPPUserService\mppuserservice.disco" />
+    <None Include="Web References\ServiceService\serviceservice.disco" />
+    <None Include="Web References\ContentService\ContentService.disco" />
+    <None Include="Service References\SFAnytime\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SFAnytime\configuration.svcinfo" />
+    <None Include="Service References\SFAnytime\configuration91.svcinfo" />
+    <None Include="Service References\SFAnytime\Opws3Service.disco" />
+    <None Include="Service References\Envivio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Envivio\configuration.svcinfo" />
+    <None Include="Service References\Envivio\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/integrationservices/mppuserservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MPPUserService\</RelPath>
+      <UpdateFromURL>http://localhost/integrationservices/mppuserservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_MPPUserService_MPPUserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/IS/serviceservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceService\</RelPath>
+      <UpdateFromURL>http://localhost/IS/serviceservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ServiceService_ServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/IS/ContentService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ContentService\</RelPath>
+      <UpdateFromURL>http://localhost/IS/ContentService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ContentService_ContentService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://10.4.2.33/ca-server/webservices/ondemandcontent%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ConaxContegoOnDemandContentService\</RelPath>
+      <UpdateFromURL>https://10.4.2.33/ca-server/webservices/ondemandcontent%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ConaxContegoOnDemandContentService_OnDemandContentWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://10.4.2.33/ca-server/webservices/ppvproduct%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ConaxContegoPPVProductService\</RelPath>
+      <UpdateFromURL>https://10.4.2.33/ca-server/webservices/ppvproduct%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ConaxContegoPPVProductService_PpvProductWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Task\FolderCleanUpTask\MsgHandlers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\WFMProxy\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\WFMProxy\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\WFMProxy\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\WFMProxy\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

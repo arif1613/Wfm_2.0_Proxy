@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a9a9a7ad-d888-4e37-968f-107dacc40027" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://opws3.sfanytime.com/Opws3Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Opws3Service.disco" MetadataType="Disco" ID="464c191e-d4a6-467b-8b89-3a0b086601e1" SourceId="1" SourceUrl="http://opws3.sfanytime.com/Opws3Service.svc?disco" />
+    <MetadataFile FileName="Opws3Service.xsd" MetadataType="Schema" ID="a8120aea-b47c-4556-b4d2-bb6e7c7ef6c8" SourceId="1" SourceUrl="http://opws3.sfanytime.com/Opws3Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Opws3Service1.xsd" MetadataType="Schema" ID="66e499c1-8364-4ea5-8a29-536f51c2524f" SourceId="1" SourceUrl="http://opws3.sfanytime.com/Opws3Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Opws3Service2.xsd" MetadataType="Schema" ID="f22e41d4-f46c-4e3e-ba2b-f6f9f9a0fdc0" SourceId="1" SourceUrl="http://opws3.sfanytime.com/Opws3Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Opws3Service.wsdl" MetadataType="Wsdl" ID="497c766c-f43c-4100-b141-ed7f418499c6" SourceId="1" SourceUrl="http://opws3.sfanytime.com/Opws3Service.svc?wsdl" />
+    <MetadataFile FileName="Opws3Service1.wsdl" MetadataType="Wsdl" ID="1836fa3d-5bc9-4ced-9071-a6e3b8d0338e" SourceId="1" SourceUrl="http://opws3.sfanytime.com/Opws3Service.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ConaxContegoOnDemandContentService_OnDemandContentWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://10.4.2.33/ca-server/webservices/ondemandcontent</Value>
+    </Setting>
+    <Setting Name="MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ConaxContegoPPVProductService_PpvProductWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://10.4.2.33/ca-server/webservices/ppvproduct</Value>
+    </Setting>
+    <Setting Name="MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ContentService_ContentService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/IS/ContentService.asmx</Value>
+    </Setting>
+    <Setting Name="MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_ServiceService_ServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/integrationservices/serviceservice.asmx</Value>
+    </Setting>
+    <Setting Name="MPS_MPP_Auxiliary_ConaxWorkflowManager_Core_MPPUserService_MPPUserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/integrationservices/mppuserservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

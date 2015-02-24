@@ -1,0 +1,373 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading;
+using Microsoft.ServiceBus.Messaging;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Mpp5Integration.Models;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.Enums;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.ValueObjects;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Util.ValueObjects.Ingest;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.ValidIngestTask.MsgHandlers;
+using MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.WFMConfig.SystemConfiguration;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using NodaTime;
+
+namespace MPS.MPP.Auxiliary.ConaxWorkflowManager.Core.Mpp5Integration
+{
+    class CreateMpp5Content
+    {
+        private static BrokeredMessage _brokeredMessage;
+        private static DateTime _dt;
+        private static Mpp5Configuration _Mpp5Config;
+        private static Mpp5IdentityModel _mpp5IdentityModel { get; set; }
+        private static ContentData _contentData { get; set; }
+        private static VodModel _vodModel { get; set; }
+        private static LiveEventModel _liveEventModel { get; set; }
+        private static bool vodCreationStatus { get; set; }
+        private static IngestConfig _ingestConfig { get; set; }
+
+        public CreateMpp5Content(IngestConfig ingestConfig, ContentData cd, BrokeredMessage br)
+        {
+            _Mpp5Config = (Mpp5Configuration)
+                Config.GetConfig()
+                    .SystemConfigs.SingleOrDefault(c => c.SystemName == SystemConfigNames.MPP5);
+            _mpp5IdentityModel = new Mpp5IdentityModel()
+            {
+                ClientID = _Mpp5Config.ClientID,
+                HolderId = _Mpp5Config.HolderID,
+                Password = _Mpp5Config.Password,
+                PrivateKey = _Mpp5Config.PrivateKey,
+                UserName = _Mpp5Config.UserName
+            };
+            _ingestConfig = ingestConfig;
+            _brokeredMessage = br;
+            _contentData = cd;
+
+            IngestXMLType ingestXmlType = CommonUtil.GetIngestXMLType(_brokeredMessage.Properties["FileName"].ToString());
+            var ingestXmlConfig = Config.GetConfig().IngestXMLConfigs.SingleOrDefault(i => i.IngestXMLType.Equals(ingestXmlType.ToString("G"),
+                                        StringComparison.OrdinalIgnoreCase));
+
+            if (ingestXmlConfig.IngestXMLType == "Channel_1_0")
+                {
+                    createMppChannelContent();
+                }
+                else
+                {
+                    createMppVodContent();
+                }
+
+        }
+
+        private void createMppChannelContent()
+        {
+            var createLiveEventContent = new LiveEventModel();
+            createLiveEventContent.Id = Guid.NewGuid().ToString();
+            createLiveEventContent.HolderId = new Guid(_mpp5IdentityModel.HolderId);
+            createLiveEventContent.WamsAccountId = new Guid("15a1bbaf00b64f2fe1a03a150c30f6ef");
+            createLiveEventContent.ImagePath = new Uri(_ingestConfig.DefaultImageFileName);
+            createLiveEventContent.Deleted = false;
+            createLiveEventContent.Name = _contentData.LanguageInfos.FirstOrDefault().Title;
+
+            DateTime dtFrom = Convert.ToDateTime(_contentData.EventPeriodFrom);
+            createLiveEventContent.StartTime = Instant.FromDateTimeUtc(dtFrom);
+            DateTime dtTo = Convert.ToDateTime(_contentData.EventPeriodTo);
+            createLiveEventContent.StartTime = Instant.FromDateTimeUtc(dtTo);
+
+            DateTime dtProvision = Convert.ToDateTime(_contentData.EventPeriodFrom);
+            DateTime dtProvisionNew = new DateTime(dtProvision.Minute - 10);
+            createLiveEventContent.StartTime = Instant.FromDateTimeUtc(dtProvisionNew);
+            createLiveEventContent.CreatedDate = Instant.FromDateTimeUtc(DateTime.UtcNow);
+
+            var x = _contentData.Properties.FirstOrDefault(r => r.Type == "EnableCatchUp");
+            if (x.Value == "EnableCatchUp")
+            {
+                createLiveEventContent.Archived = true;
+            }
+            else
+            {
+                createLiveEventContent.Archived = false;
+            }
+
+            _liveEventModel = createLiveEventContent;
+        }
+
+        public void createMppVodContent()
+        {
+            var createVodModel = new VodModel();
+            createVodModel.ActiveDirectoryRestricted = false;
+            createVodModel.Id = Guid.NewGuid().ToString();
+            createVodModel.Name = _contentData.Name;
+            createVodModel.ImagePath = new Uri(_ingestConfig.DefaultImageFileName);
+            createVodModel.ThumbnailUrl = _ingestConfig.URIProfile;
+            //createVodModel.WamsAccountId = "15a1bbaf00b64f2fe1a03a150c30f6ef";
+            if (_contentData.PublishInfos.Any())
+            {
+                createVodModel.Status = _contentData.PublishInfos.FirstOrDefault().PublishState.ToString();
+            }
+            else
+            {
+                createVodModel.Status = "Created";
+            }
+
+            createVodModel.CreatedDate = Instant.FromDateTimeUtc(DateTime.UtcNow);
+            createVodModel.Deleted = false;
+            createVodModel.HandledMessages = new List<Guid>()
+            {
+                new Guid(_brokeredMessage.MessageId),
+                new Guid(_brokeredMessage.CorrelationId)
+            };
+
+            createVodModel.ImagePath = null;
+            createVodModel.LastChangeTime = Instant.FromDateTimeUtc(DateTime.UtcNow);
+
+            #region content property
+
+            createVodModel.MetaData = new Dictionary<string, Dictionary<CultureInfo, string>>
+            {
+             
+                {
+                    "EventPeriodTo", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _contentData.EventPeriodTo.ToString()}
+                    }
+                },
+                {
+                    "EventPeriodFrom", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _contentData.EventPeriodFrom.ToString()}
+                    }
+                },
+                {
+                    "ProductionYear", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _contentData.ProductionYear.ToString()}
+                    }
+                },
+                {
+                    "RunningTime", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _contentData.RunningTime.ToString()}
+                    }
+                },
+                {
+                    "CreationDate", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture,_brokeredMessage.Properties["TimeStamp"].ToString()}
+                    }
+                },
+                {
+                    "TemporaryUnavailable", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _contentData.TemporaryUnavailable.ToString()}
+                    }
+                },
+                 {
+                    "description", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _contentData.ContentRightsOwner.Name}
+                    }
+                },
+                 {
+                    "ContentRightsOwner", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _ingestConfig.ContentRightsOwner}
+                    }
+                },
+                 {
+                    "ContentAgreement", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _ingestConfig.ContentAgreement}
+                    }
+                },
+                 {
+                    "DefaultImageClientGuiName", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _ingestConfig.DefaultImageClientGUIName}
+                    }
+                },
+                 {
+                    "DefaultImageFileGuiName", new Dictionary<CultureInfo, string>
+                    {
+                        {CultureInfo.CurrentUICulture, _ingestConfig.DefaultImageFileName}
+                    }
+                }
+            };
+
+            #endregion
+
+            #region language info property
+
+            var lanInfoDic = new Dictionary<string, Dictionary<CultureInfo, string>>();
+            for (int i = 0; i < _contentData.LanguageInfos.Count; i++)
+            {
+                lanInfoDic = new Dictionary<string, Dictionary<CultureInfo, string>>
+                {
+                    {
+                        string.Format("Language_ISO[{0}]", i), new Dictionary<CultureInfo, string>
+                        {
+                            {CultureInfo.CurrentUICulture, _contentData.LanguageInfos[i].ISO}
+                        }
+                    },
+                    {
+                        string.Format("Language_Title[{0}]", i), new Dictionary<CultureInfo, string>
+                        {
+                            {CultureInfo.CurrentUICulture, _contentData.LanguageInfos[i].Title}
+                        }
+                    },
+                    {
+                        string.Format("Language_SortName[{0}]", i), new Dictionary<CultureInfo, string>
+                        {
+                            {CultureInfo.CurrentUICulture, _contentData.LanguageInfos[i].SortName}
+                        }
+                    },
+                    {
+                        string.Format("Language_ShortDescription[{0}]", i), new Dictionary<CultureInfo, string>
+                        {
+                            {CultureInfo.CurrentUICulture, _contentData.LanguageInfos[i].ShortDescription}
+                        }
+                    },
+                    {
+                        string.Format("Language_LongDescription[{0}]", i), new Dictionary<CultureInfo, string>
+                        {
+                            {CultureInfo.CurrentUICulture, _contentData.LanguageInfos[i].LongDescription}
+                        }
+                    },
+                    {
+                        string.Format("Language_SubtitleUrl[{0}]", i), new Dictionary<CultureInfo, string>
+                        {
+                            {CultureInfo.CurrentUICulture, _contentData.LanguageInfos[i].SubtitleURL}
+                        }
+                    }
+                };
+            }
+            #endregion
+
+            createVodModel.MetaData.Concat(lanInfoDic).ToDictionary(x => x.Key, x => x.Value);
+            _vodModel = createVodModel;
+        }
+
+        public class UnderscoreMappingResolver : DefaultContractResolver
+        {
+            protected override string ResolvePropertyName(string propertyName)
+            {
+                return System.Text.RegularExpressions.Regex.Replace(
+                    propertyName, @"([A-Z])([A-Z][a-z])|([a-z0-9])([A-Z])", "$1$3_$2$4").ToLower();
+            }
+        }
+
+        public bool createA_VodinMPP()
+        {
+            var apiBaseUrl = _Mpp5Config.RestApiUrl;
+            // Console.WriteLine(apiBaseUrl);
+
+            var resource = "/" + _mpp5IdentityModel.HolderId + "/vods/";
+            var gs = new GenerateSignature(_mpp5IdentityModel);
+            string signature = gs.Build(HttpMethodType.POST, resource);
+
+            using (var client = new HttpClient())
+            {
+                var request = new HttpRequestMessage(HttpMethod.Post, apiBaseUrl + resource);
+                request.Headers.Add("Authorization", "MAC " + signature);
+                var ms = new MemoryStream();
+                var sw = new StreamWriter(ms);
+                var ser = JsonSerializer.Create(new JsonSerializerSettings
+                {
+                    DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                    ContractResolver = new UnderscoreMappingResolver()
+                });
+                ser.Serialize(sw, _vodModel);
+                sw.Flush();
+                ms.Position = 0;
+                request.Content = new StreamContent(ms);
+                request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response = client.SendAsync(request).Result;
+                Thread.Sleep(10000);
+                if (response.IsSuccessStatusCode)
+                {
+                    var stream = response.Content.ReadAsStreamAsync().Result;
+                    Console.WriteLine("Successful vod creation for id: " + _vodModel.Id);
+                    vodCreationStatus = true;
+                }
+                else
+                {
+                    Console.WriteLine("Failed to create vod API.");
+                    vodCreationStatus = false;
+                }
+            }
+            return vodCreationStatus;
+        }
+
+        public bool createA_LiveEventinMPP()
+        {
+            var apiBaseUrl = _Mpp5Config.RestLiveApiUrl;
+            // Console.WriteLine(apiBaseUrl);
+
+            var resource = "/" + _mpp5IdentityModel.HolderId + "/live-events/";
+            var gs = new GenerateSignature(_mpp5IdentityModel);
+            string signature = gs.Build(HttpMethodType.POST, resource);
+
+            using (var client = new HttpClient())
+            {
+                var request = new HttpRequestMessage(HttpMethod.Post, apiBaseUrl + resource);
+                request.Headers.Add("Authorization", "MAC " + signature);
+                var ms = new MemoryStream();
+                var sw = new StreamWriter(ms);
+                var ser = JsonSerializer.Create(new JsonSerializerSettings
+                {
+                    DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                    ContractResolver = new UnderscoreMappingResolver()
+                });
+                ser.Serialize(sw, _liveEventModel);
+                sw.Flush();
+                ms.Position = 0;
+                request.Content = new StreamContent(ms);
+                request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response = client.SendAsync(request).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    vodCreationStatus = true;
+                    //var stream = response.Content.ReadAsStreamAsync().Result;
+                    //Console.WriteLine("Successful vod creation for id: " + _vodModel.Id);
+                }
+                else
+                {
+                    Console.WriteLine("Failed to create vod API.");
+                    vodCreationStatus = false;
+                }
+            }
+            return true;
+
+        }
+
+        public bool CheckIfVodIsCreated(string vodID)
+        {
+            var apiBaseUrl = _Mpp5Config.RestApiUrl;
+            string id = vodID;
+            var resource = "/" + _mpp5IdentityModel.HolderId + "/vods/" + id;
+            var gs = new GenerateSignature(_mpp5IdentityModel);
+            string AuthenticationMac = gs.Build(HttpMethodType.GET, resource);
+            string url = apiBaseUrl + resource;
+            var webReq = (HttpWebRequest)WebRequest.Create(url);
+            //webReq.ContentType = "application/xml";
+            webReq.Headers.Add("Authorization", "MAC " + AuthenticationMac);
+            webReq.Method = "GET";
+            webReq.ContentType = "application/xml";
+            byte[] byteData = Encoding.ASCII.GetBytes("");
+            webReq.ContentLength = byteData.Length;
+            HttpWebResponse resp = webReq.GetResponse() as HttpWebResponse;
+            if (resp.StatusCode.Equals("OK"))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+}
