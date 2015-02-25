@@ -1,0 +1,10 @@
+C:\MPSbroadband\Edit-master\Edit-master\src\Edit\bin\Debug\Edit.dll
+C:\MPSbroadband\Edit-master\Edit-master\src\Edit\bin\Debug\Edit.pdb
+C:\MPSbroadband\Edit-master\Edit-master\src\Edit\obj\Debug\Edit.csprojResolveAssemblyReference.cache
+C:\MPSbroadband\Edit-master\Edit-master\src\Edit\obj\Debug\Edit.dll
+C:\MPSbroadband\Edit-master\Edit-master\src\Edit\obj\Debug\Edit.pdb
+C:\WFM_MPS\Edit\bin\Debug\Edit.dll
+C:\WFM_MPS\Edit\bin\Debug\Edit.pdb
+C:\WFM_MPS\Edit\obj\Debug\Edit.csprojResolveAssemblyReference.cache
+C:\WFM_MPS\Edit\obj\Debug\Edit.dll
+C:\WFM_MPS\Edit\obj\Debug\Edit.pdb
